@@ -25,6 +25,7 @@ GLOBAL_STYLE = {
 
 # cargamos el app con plantilla bootstrap
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP] , update_title='Cargando...')
+server = app.server
 
 # cargamos la plantilla
 app.layout = html.Div(children=[
