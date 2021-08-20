@@ -1,0 +1,562 @@
+﻿column_name,code,value
+ADUA,1,           Armenia
+ADUA,2,Barranquilla
+ADUA,3,Especial de Aduanas de Bogotá
+ADUA,4,Bucaramanga
+ADUA,5,Cali
+ADUA,6,Especial de Aduanas de Cartagena
+ADUA,7,Cúcuta
+ADUA,10,Manizales
+ADUA,11,Medellín
+ADUA,16,Pereira
+ADUA,19,Santa Marta
+ADUA,25,Riohacha
+ADUA,27,San Andrés
+ADUA,34,Araucs
+ADUA,35,Buenaventura
+ADUA,36,Cartago
+ADUA,37,Ipiales
+ADUA,38,Leticia
+ADUA,39,Maicao
+ADUA,40,Tumaco
+ADUA,41,Urabá
+ADUA,42,Puerto Carreño
+ADUA,43,Inírida
+ADUA,44,Yopal
+ADUA,46,Puerto Asís
+ADUA,47,Administración Especial de Servisios Aduaneros
+ADUA,48,           Cartagena
+ADUA,49,Valledupar
+ADUA,87,           Barranquilla
+ADUA,88,           Cali
+ADUA,89,           Cucuta
+ADUA,90,           Medellin
+COD_SAL,AXM,ARMENIA
+COD_SAL,BAQ,BARRANQUILLA
+COD_SAL,BOG,BOGOTA
+COD_SAL,BGA,BUCARAMANGA
+COD_SAL,CLO,CALI
+COD_SAL,CTG,CARTAGENA
+COD_SAL,CUC,CUCUTA
+COD_SAL,MZL,MANIZALES
+COD_SAL,MDE,MEDELLIN
+COD_SAL,PEI,PEREIRA
+COD_SAL,SMR,SANTA MARTA
+COD_SAL,RCH,RIOHACHA
+COD_SAL,ADZ,SAN ANDRES
+COD_SAL,AUC,ARAUCA
+COD_SAL,BUN,BUENAVENTURA
+COD_SAL,CAR,CARTAGO
+COD_SAL,IPI,IPIALES
+COD_SAL,LET,LETICIA
+COD_SAL,MAI,MAICAO
+COD_SAL,TCO,TUMACO
+COD_SAL,TRB,URABA
+COD_SAL,PCR,PUERTO CARRENO
+COD_SAL,INI,INIRIDA
+COD_SAL,YOP,YOPAL
+COD_SAL,PUU,PUERTO ASIS
+COD_SAL,VUP,VALLEDUPAR.
+COD_SAL,PA_,PAMPLONA
+DPTO2,1,             PETROLEO Y DERIVADO
+DPTO2,5,ANTIOQUIA
+DPTO2,8,ATLANTICO
+DPTO2,11,BOGOTA
+DPTO2,13,BOLIVAR
+DPTO2,15,BOYACA
+DPTO2,17,CALDAS
+DPTO2,18,CAQUETA
+DPTO2,19,CAUCA
+DPTO2,20,CESAR
+DPTO2,23,CORDOBA
+DPTO2,25,CUNDINAMARCA
+DPTO2,27,CHOCO
+DPTO2,41,          HUILA
+DPTO2,44,GUAJIRA
+DPTO2,47,MAGDALENA
+DPTO2,50,META
+DPTO2,52,           NARINO
+DPTO2,54,NORTE DE SANTANDER
+DPTO2,63,QUINDIO
+DPTO2,66,RISARALDA
+DPTO2,68,SANTANDER
+DPTO2,70,SUCRE
+DPTO2,73,TOLIMA
+DPTO2,76,VALLE DEL CAUCA
+DPTO2,81,ARAUCA
+DPTO2,85,CASANARE
+DPTO2,86,PUTUMAYO
+DPTO2,88,SAN ANDRES
+DPTO2,91,AMAZONAS
+DPTO2,94,GUANIA
+DPTO2,95,GUAVIARE
+DPTO2,97,VAUPES
+DPTO2,99,VICHADA
+VIA,1,MARITIMO
+VIA,2,FERREO
+VIA,3,TERRESTRE
+VIA,4,AEREO
+VIA,5,CORREO
+VIA,6,MULTIMODAL
+VIA,7,"INSTALACIONES DE TRANSPORTE FIJAS (TUBERIAS, CABLE, ETC.)"
+VIA,8,VIAS NAVEGABLES INTERIORES
+VIA,9,OTRO MODO DE TRANSPORTE
+BANDERA,27,Aruba
+BANDERA,13,Afganistán
+BANDERA,40,Angola
+BANDERA,41,Anguilla
+BANDERA,15,"Aland,islas"
+BANDERA,17,Albania
+BANDERA,37,Andorra
+BANDERA,244,Emiratos Arabes
+BANDERA,63,Argentina
+BANDERA,26,Armenia
+BANDERA,690,Samoa Americana
+BANDERA,24,Antartida
+BANDERA,786,Territorios Fra
+BANDERA,43,Antigua y Barbu
+BANDERA,69,Australia
+BANDERA,72,Austria
+BANDERA,74,Azerbaiyán
+BANDERA,115,Burundi
+BANDERA,87,Bélgica
+BANDERA,229,Benin
+BANDERA,98,"Bonaire,San Eus"
+BANDERA,31,Burkina Faso
+BANDERA,81,Bangladesh
+BANDERA,111,Bulgaria
+BANDERA,80,Bahrein
+BANDERA,77,Bahamas
+BANDERA,29,Bosnia y Herzeg
+BANDERA,693,San Bartolome
+BANDERA,91,Belarús
+BANDERA,88,Belice
+BANDERA,90,Bermudas
+BANDERA,97,Bolivia
+BANDERA,105,Brasil
+BANDERA,83,Barbados
+BANDERA,108,Brunei Darussal
+BANDERA,119,Bután
+BANDERA,102,"Bouvet,isla"
+BANDERA,101,Botswana
+BANDERA,640,República Centr
+BANDERA,149,Canadá
+BANDERA,165,Cocos (Keeling)
+BANDERA,767,Suiza
+BANDERA,211,Chile
+BANDERA,215,China
+BANDERA,193,Costa de Marfil
+BANDERA,145,"Camerún, Repúbl"
+BANDERA,888,Rep. Democrátic
+BANDERA,177,"Congo, Repúblic"
+BANDERA,183,"Cook, Islas"
+BANDERA,169,Colombia
+BANDERA,173,Comoras
+BANDERA,127,Cabo Verde
+BANDERA,196,Costa Rica
+BANDERA,199,Cuba
+BANDERA,200,Curazao
+BANDERA,511,Navidad (Christ
+BANDERA,137,"Caimán, Islas"
+BANDERA,221,Chipre
+BANDERA,644,Republica Checa
+BANDERA,23,Alemania
+BANDERA,783,Djibouti
+BANDERA,235,Dominica
+BANDERA,232,Dinamarca
+BANDERA,647,República Domin
+BANDERA,59,Argelia
+BANDERA,239,Ecuador
+BANDERA,240,Egipto
+BANDERA,243,Eritrea
+BANDERA,685,Sahara Occident
+BANDERA,245,España
+BANDERA,251,Estonia
+BANDERA,253,Etiopía
+BANDERA,271,Finlandia
+BANDERA,870,Fiji
+BANDERA,275,Francia
+BANDERA,259,"Feroe, Islas"
+BANDERA,494,"Micronesia, Est"
+BANDERA,281,Gabón
+BANDERA,628,Reino Unido
+BANDERA,287,Georgia
+BANDERA,327,Guernsey
+BANDERA,289,Ghana
+BANDERA,293,Gibraltar
+BANDERA,329,Guinea
+BANDERA,309,Guadalupe
+BANDERA,285,Gambia
+BANDERA,334,Guinea Bissau
+BANDERA,331,Guinea Ecuatori
+BANDERA,301,Grecia
+BANDERA,297,Granada
+BANDERA,305,Groenlandia
+BANDERA,317,Guatemala
+BANDERA,325,Guayana Frances
+BANDERA,313,Guam
+BANDERA,337,Guyana
+BANDERA,351,Hong Kong
+BANDERA,343,Heard y Mc Dona
+BANDERA,345,Honduras
+BANDERA,198,Croacia
+BANDERA,341,Haití
+BANDERA,355,Hungría
+BANDERA,365,Indonesia
+BANDERA,468,"Man,isla de"
+BANDERA,361,India
+BANDERA,787,Territorio Brit
+BANDERA,375,Irlanda (Eire)
+BANDERA,372,Irán
+BANDERA,369,Irak
+BANDERA,379,Islandia
+BANDERA,383,Israel
+BANDERA,386,Italia
+BANDERA,391,Jamaica
+BANDERA,401,Jersey
+BANDERA,403,Jordania
+BANDERA,399,Japón
+BANDERA,406,Kazajstán
+BANDERA,410,Kenia
+BANDERA,412,Kirguistán
+BANDERA,141,Camboya
+BANDERA,411,Kiribati
+BANDERA,695,Saint kitts y n
+BANDERA,190,"Corea (Sur), Re"
+BANDERA,413,Kuwait
+BANDERA,420,"Laos, República"
+BANDERA,431,Libano
+BANDERA,434,Liberia
+BANDERA,438,Libia
+BANDERA,715,Santa Lucía
+BANDERA,440,Liechtenstein
+BANDERA,750,Sri Lanka
+BANDERA,426,Lesotho
+BANDERA,443,Lituania
+BANDERA,445,Luxemburgo
+BANDERA,429,Letonia
+BANDERA,447,Macao
+BANDERA,698,San Martin (Par
+BANDERA,474,Marruecos
+BANDERA,498,Mónaco
+BANDERA,496,Moldavia
+BANDERA,450,Madagascar
+BANDERA,461,Maldivas
+BANDERA,493,México
+BANDERA,472,"Marshall, Islas"
+BANDERA,448,Macedonia
+BANDERA,464,Malí
+BANDERA,467,Malta
+BANDERA,93,Myanmar
+BANDERA,500,Montenegro
+BANDERA,497,Mongolia
+BANDERA,469,Marianas septen
+BANDERA,505,Mozambique
+BANDERA,488,Mauritania
+BANDERA,501,"Montserrat, Isl"
+BANDERA,477,Martinica
+BANDERA,485,Mauricio
+BANDERA,458,Malawi
+BANDERA,455,Malasia
+BANDERA,489,Mayote
+BANDERA,507,Namibia
+BANDERA,542,Nueva Caledonia
+BANDERA,525,Níger
+BANDERA,535,"Norfolk, Isla"
+BANDERA,528,Nigeria
+BANDERA,521,Nicaragua
+BANDERA,531,"Niue, Isla"
+BANDERA,573,Países Bajos
+BANDERA,538,Noruega
+BANDERA,517,Nepal
+BANDERA,508,Nauru
+BANDERA,548,Nueva Zelanda
+BANDERA,556,Omán
+BANDERA,576,Pakistán
+BANDERA,580,Panamá
+BANDERA,593,"Pitcairn, Isla"
+BANDERA,589,Perú
+BANDERA,267,Filipinas
+BANDERA,578,"Palau, Islas"
+BANDERA,545,Papúa Nueva Gui
+BANDERA,603,Polonia
+BANDERA,611,Puerto Rico
+BANDERA,187,"Corea (Norte),"
+BANDERA,607,Portugal
+BANDERA,586,Paraguay
+BANDERA,579,Estado de Pales
+BANDERA,599,Polinesia Franc
+BANDERA,618,Qatar
+BANDERA,660,Reunión
+BANDERA,670,Rumania
+BANDERA,676,Rusia
+BANDERA,675,Ruanda
+BANDERA,53,Arabia Saudita
+BANDERA,759,Sudán
+BANDERA,728,Senegal
+BANDERA,741,Singapur
+BANDERA,710,Santa Elena
+BANDERA,772,Svalbard Y Jan
+BANDERA,677,"Salomón, Islas"
+BANDERA,735,Sierra Leona
+BANDERA,242,El Salvador
+BANDERA,697,San Marino
+BANDERA,748,Somalia
+BANDERA,700,San Pedro y Mig
+BANDERA,729,Serbia
+BANDERA,760,Sudan del Sur
+BANDERA,720,Santo Tomé y Pr
+BANDERA,770,Surinam
+BANDERA,246,Eslovaquia
+BANDERA,247,Eslovenia
+BANDERA,764,Suecia
+BANDERA,773,Swazilandia
+BANDERA,699,San Martin (Par
+BANDERA,731,Seychelles
+BANDERA,744,"Siria, Repúblic"
+BANDERA,823,Turcas y Caicos
+BANDERA,203,Chad
+BANDERA,800,Togo
+BANDERA,776,Tailandia
+BANDERA,774,Tayikistán
+BANDERA,805,Tokelau
+BANDERA,825,Turkmenistán
+BANDERA,788,Timor del Este
+BANDERA,810,Tonga
+BANDERA,815,Trinidad y Toba
+BANDERA,820,Túnez
+BANDERA,827,Turquía
+BANDERA,828,Tuvalu
+BANDERA,218,Taiwan
+BANDERA,780,"Tanzania, Repúb"
+BANDERA,833,Uganda
+BANDERA,830,Ucrania
+BANDERA,566,Islas Ultramari
+BANDERA,845,Uruguay
+BANDERA,249,Estados Unidos
+BANDERA,847,Uzbekistan
+BANDERA,159,Santa Sede
+BANDERA,705,San Vicente y l
+BANDERA,850,"Venezuela,Repub"
+BANDERA,863,Virgenes Britan
+BANDERA,866,Virgenes de los
+BANDERA,855,Viet Nam
+BANDERA,551,Vanuatu
+BANDERA,875,Wallis y Futuna
+BANDERA,687,Samoa
+BANDERA,1,ZFPE AGROINDUST
+BANDERA,2,ZFP EL DORADO S
+BANDERA,3,ZFPCA ECOPETROL
+BANDERA,4,ZF  CTIC-CENTRO
+BANDERA,129,ZFP Zofrandina.
+BANDERA,130,ZFPE Colmotores
+BANDERA,131,ZFPE Tablemac S
+BANDERA,132,ZFPE Fundación
+BANDERA,133,ZFPE Aceites Ci
+BANDERA,134,ZFPE Puerto Bri
+BANDERA,135,ZFPE Clinica Ca
+BANDERA,620,ZFPE Puerto Ind
+BANDERA,621,ZFP  INTERNACIO
+BANDERA,622,ZFPE Fresenius
+BANDERA,623,ZFPE Destilería
+BANDERA,624,ZFPE Puerto Bah
+BANDERA,625,ZFPE Medical DU
+BANDERA,626,ZFPE Sociedad P
+BANDERA,631,ZFP  Palermo.
+BANDERA,633,ZFP  FEMSA
+BANDERA,634,ZFPE SYKES.
+BANDERA,635,ZFPE Sociedad P
+BANDERA,636,ZFPE Termotasaj
+BANDERA,637,ZFPE Sociedad P
+BANDERA,638,ZFPE GETCOM.
+BANDERA,650,ZFPE Centro Hos
+BANDERA,651,ZFPE PUERTO MAM
+BANDERA,652,ZFP INTERNACION
+BANDERA,653,ZFPE AGROINDUST
+BANDERA,655,ZFPE Plaza Mayo
+BANDERA,656,ZFPE Clínica de
+BANDERA,657,ZFPE Clínica Un
+BANDERA,791,ZFPE Sociedad P
+BANDERA,792,ZFP Repsol Expl
+BANDERA,794,ZFPE Empresa Co
+BANDERA,795,ZFPE Onelink Co
+BANDERA,796,ZFPCA Petrobras
+BANDERA,797,ZFPE Impala Ter
+BANDERA,902,ZFPE Gecelca 3.
+BANDERA,903,ZFPE CEMENTERA
+BANDERA,904,ZFPE Estractora
+BANDERA,905,ZFPE Olmue.
+BANDERA,907,ZFP  Centro Log
+BANDERA,911,ZFP de Barranqu
+BANDERA,913,ZFP de Palmasec
+BANDERA,914,ZFP de Cúcuta
+BANDERA,915,ZFP de Santa Ma
+BANDERA,916,ZFP de Cartagen
+BANDERA,917,ZFP de Rionegro
+BANDERA,918,ZFP de la Cande
+BANDERA,919,ZFP de Bogotá
+BANDERA,920,ZFP de Pacífico
+BANDERA,924,ZFP Eje Cafeter
+BANDERA,925,ZFPE Cervecería
+BANDERA,926,ZFP Agroindustr
+BANDERA,928,ZFP La Cayena
+BANDERA,929,ZFP Internacion
+BANDERA,930,ZFPE BIO D FACA
+BANDERA,931,ZFPE Biocombust
+BANDERA,933,ZFPE Agroindust
+BANDERA,934,ZFP  Parque Ind
+BANDERA,935,ZFPE Argos S.A
+BANDERA,936,ZFPE Gyplac S.A
+BANDERA,937,ZFPE Kcag
+BANDERA,939,ZFP Intexzona
+BANDERA,940,ZFP Tayrona S.A
+BANDERA,941,ZFP de Urabá  S
+BANDERA,942,ZFPE Corferias.
+BANDERA,943,ZFP Las América
+BANDERA,944,ZFPE Ecodiesel
+BANDERA,945,ZFPE Estrategia
+BANDERA,948,ZFPE Pepsico Al
+BANDERA,950,ZFPE de Servici
+BANDERA,951,ZFPE Vidrio And
+BANDERA,953,ZFPE Refinería
+BANDERA,954,ZFP de Occident
+BANDERA,955,ZFPE Sociedad P
+BANDERA,956,ZFPE de Servici
+BANDERA,957,ZFPE Colombina
+BANDERA,958,ZFPE Termoflore
+BANDERA,959,ZFPE Papelfibra
+BANDERA,960,ZFP de Tocancip
+BANDERA,961,ZFPE Telemark S
+BANDERA,962,ZFPE San Vicent
+BANDERA,963,ZFPE Cerámicas
+BANDERA,964,ZFPE Papeles de
+BANDERA,965,ZFPE Clínica Po
+BANDERA,966,ZFP Santander
+BANDERA,967,ZFPE Protisa
+BANDERA,968,ZFPE Praxair
+BANDERA,969,ZFPE Cencauca (
+BANDERA,972,ZFPE Econtac
+BANDERA,973,ZFPE Clínica lo
+BANDERA,974,ZFP Metropolita
+BANDERA,976,ZFPE Bioenergy
+BANDERA,977,ZFP Puerta de l
+BANDERA,979,ZFPE Productos
+BANDERA,980,ZFPE Sociedad P
+BANDERA,981,ZFPE Fundacion
+BANDERA,982,ZFPE Alimentos
+BANDERA,983,ZFPE Convergys
+BANDERA,984,ZFPE Procesador
+BANDERA,985,ZFP Internacion
+BANDERA,987,ZFP Brisa
+BANDERA,988,ZFPE Loma Fresc
+BANDERA,989,ZFP Parque Cent
+BANDERA,991,ZFP Conjunto In
+BANDERA,996,ZFPE Compañía O
+BANDERA,997,ZFP SurColombia
+BANDERA,998,ZFPE Sociedad P
+BANDERA,880,Yemen
+BANDERA,756,"Sudáfrica, Repú"
+BANDERA,890,Zambia
+BANDERA,665,Zimbabwe
+BANDERA,999,No Declarados
+BANDERA,47,ANTILLAS NEERLANDESAS.
+BANDERA,688,SERBIA Y MONTENEGRO
+BANDERA,885,YUGOSLAVIA(SERBIA Y MONTENEGRO).
+BANDERA,949,ZF PERMANENTE ESPECIAL ACER?AS PAZ DEL R?O
+BANDERA,947,ZF PERMANENTE ESPECIAL SIEMENS.
+BANDERA,900,ZFP Andina.
+MODAD,104,"Exportación definitiva de mercancías que resultaron averiadas, defectuosas o impropias para el fin que se importaron."
+MODAD,105,"Reposición de partes o piezas suministradas como indemnización o seguro, o como garantía otorgada por el fabricante."
+MODAD,106,"Equipo y piezas suministradas para la reparación en barcos, aviones y otros vehículos extranjeros."
+MODAD,107,Donaciones.
+MODAD,198,Exportación definitiva de mercancías de fabricación o producción nacional.
+MODAD,199,Las demás exportaciones definitivas no incluidas en los ítems anteriores.
+MODAD,201,Mercancías exportadas temporalmente para transformación o elaboración.
+MODAD,202,Mercancías exportadas temporalmente para reparación.
+MODAD,301,Bienes destinados exclusivamente para fines experimentales
+MODAD,302,Máquina y equipo para uso en obras públicas y similares.
+MODAD,303,"Mercancías para ferias internacionales, conferencias, seminarios y exposiciones."
+MODAD,304,"Elementos, equipos de utilería sacados temporalmente por compafñías y teatrales, circos, orquestas y bandas."
+MODAD,305,"Vehículos automotores, motocicletas, bicicletas de carrera, etc., salidos temporalmente del país para participar en carreras, concursos o exhibiciones."
+MODAD,306,"Caballos de carreras, bestias de tiro y silla, salidos del país para competencias o exhibiciones."
+MODAD,307,Envases restituibles.
+MODAD,308,"Bienes exportación temporal con fines de exhibición, como fotografías, películas científicas, etc."
+MODAD,309,"Bienes en arriendo, alquiler o préstamo."
+MODAD,310,Exportación de mercancías en consignación
+MODAD,399,"Las mercancías para reimportación en el mismo estado, cuando no estén incluidas en los ítems anteriores."
+MODAD,401,Reexportación definitiva de mercancías que estuvieron sometidas a una modalidad de importación temporal o de transformación o de ensamble.
+MODAD,402,Reexportación definitiva de mercancías importadas temporalmente para perfeccionamiento activo en desarrollo de los sistemas especiales de Importación - Exportación.
+MODAD,403,Reexportación temporal de bienes de capital o sus partes que encontrándose importados temporalmente deban salir para ser objeto de reparación o reemplazo en el exterior o en una zona franca industrial de bienes y de servicios.
+MODAD,500,Reembarques.
+MODAD,600,Programas especiales de exportación PEX.
+MODAD,701,Salida temporal de bienes que en cumplimiento de garantía son reparados en el exterior.
+FINALID,1,Con Reintegro
+FINALID,2,Sin Reintegro
+CER_ORI1,1,CAN
+CER_ORI1,2,ALADI
+CER_ORI1,3,G-3
+CER_ORI1,4,CARICOM
+CER_ORI1,5,ATPA
+CER_ORI1,6,S.G.P.
+CER_ORI1,7,OTROS
+CER_ORI1,8,NINGUNO
+SISESP,1,Si
+SISESP,2,No
+DPTO1,05,ANTIOQUIA
+DPTO1,08,ATLANTICO
+DPTO1,11,BOGOTA
+DPTO1,13,BOLIVAR
+DPTO1,15,BOYACA
+DPTO1,17,CALDAS
+DPTO1,18,CAQUETA
+DPTO1,19,CAUCA
+DPTO1,20,CESAR
+DPTO1,23,CORDOBA
+DPTO1,25,CUNDINAMARCA
+DPTO1,27,CHOCO
+DPTO1,41,HUILA
+DPTO1,44,GUAJIRA
+DPTO1,47,MAGDALENA
+DPTO1,50,META
+DPTO1,52,NARIÑO
+DPTO1,54,NORTE DE SANTANDER
+DPTO1,63,QUINDIO
+DPTO1,66,RISARALDA
+DPTO1,68,SANTANDER
+DPTO1,70,SUCRE
+DPTO1,73,TOLIMA
+DPTO1,76,VALLE DEL CAUCA
+DPTO1,81,ARAUCA
+DPTO1,85,CASANARE
+DPTO1,86,PUTUMAYO
+DPTO1,83,
+DPTO1,88,SAN ANDRES
+DPTO1,91,AMAZONAS
+DPTO1,94,GUANIA
+DPTO1,95,GUAVIARE
+DPTO1,97,VAUPES
+DPTO1,99,VICHADA
+UNID,Kg,Kilogramo
+UNID,c/t,Quilate
+UNID,m,Metro
+UNID,m2,Metro cuadrado
+UNID,m3,Metro cúbico
+UNID,cm3,Centímetro cúbico
+UNID,I,Litro
+UNID,u,Unidades o artículos
+UNID,2u,Par
+UNID,12u,Docena
+UNID,MIL,Millar
+UNID,kWh,Kilovatios hora
+CODUNI2,Kg,Kilogramo
+CODUNI2,c/t,Quilate
+CODUNI2,m,Metro
+CODUNI2,m2,Metro cuadrado
+CODUNI2,m3,Metro cúbico
+CODUNI2,cm3,Centímetro cúbico
+CODUNI2,I,Litro
+CODUNI2,u,Unidades o artículos
+CODUNI2,2u,Par
+CODUNI2,12u,Docena
+CODUNI2,MIL,Millar
+CODUNI2,kWh,Kilovatios hora

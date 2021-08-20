@@ -1,0 +1,30 @@
+﻿column_name,column_description,column_details
+FECH,"        Fecha del Proceso (Año, Mes)      ","Fecha del Proceso (Año, Mes)"
+ADUA,        Código de la Aduana      ,Código de la aduana
+PAIS,        Código país destino (numérico)      ,Código país destino (numérico)
+COD_PAI4,        Código país destino (alfabético)      ,Código país destino (alfabético)
+COD_SAL1,        Código lugar de salida (numérico)      ,Código lugar de salida
+COD_SAL,        Código lugar de salida (alfabético)      ,Código lugar de salida
+DPTO2,        Departamento de procedencia      ,Departamento de procedencia
+VIA,        Código de la vía de transporte      ,Código de la vía de transporte
+BANDERA,        Nacionalidad medio transporte      ,Nacionalidad medio transporte
+REGIM,        Código del regimen (acorde con CAN)      ,Código del regimen (acorde con CAN)
+MODAD,        Código modalidad de la exportación      ,Código de modalidad de la exportación
+FINALID,        Forma de pago (1=Con reintegro  2=Sin reintegro)      ,Forma de pago
+CER_ORI1,        Tipo de certificado de origen (8 opciones)      ,Tipo de certificado de origen
+SISESP,        Sistemas Especiales (1= Si   2= No)      ,Sistemas especiales
+POSAR,        Posición Arancelaria      ,Posición Arancelaria
+DPTO1,        Departamento de origen por posición.      ,Departamento de origen por posición
+UNID,        Código de unidad comercial de medida (numérico)      ,Código de unidad comercial de medida
+CODUNI2,        Código de unidad comercial de medida (alfabético)      ,Código de unidad comercial de medida
+CANTI,        Cantidad de unidades de la posición      ,Cantidad de unidades de la posición
+PBK,        Total kilos brutos de la posición      ,Total kilos brutos de la posición
+PNK,        Total kilos netos de la posición      ,Total kilos netos de la posición
+FOBDOL,        Total valor FOB doláres de la posición      ,Total valor FOB doláres de la posición
+FOBPES,        Total valor FOB pesos de la posición      ,Total valor FOB pesos de la posición
+AGRENA,        Total valor agregado nacional de la posición      ,Total valor agregado nacional de la posición
+FLETES,        Valor fletes de la posición      ,Valor fletes de la posición
+SEGURO,        Valor seguro de la posición      ,Valor seguro de la posición
+OTROSG,        Valor otros gastos de la posición      ,Valor otros gastos de la posición
+NIT,        Nit del exportador      ,Nit del exportador
+RAZ_SIAL,        Razón social del exportador      ,Razón social del exportador
