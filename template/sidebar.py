@@ -74,7 +74,6 @@ def cargar_sidebar(app, pagina, copi) :
             start_date_placeholder_text='Fecha Desde',
             end_date_placeholder_text='Fecha Haste',
         ),
-        html.Div(id='output-container-date-picker-range')
     ])
 
     sidebar = html.Div(
@@ -91,24 +90,6 @@ def cargar_sidebar(app, pagina, copi) :
     )
 
     return sidebar
-
-@app.callback(dash.dependencies.Output('output-container-date-picker-range', 'children'),
-    [dash.dependencies.Input('my-date-picker-range', 'start_date'),
-     dash.dependencies.Input('my-date-picker-range', 'end_date')])
-def update_output(start_date, end_date):
-    string_prefix = 'You have selected: '
-    if start_date is not None:
-        start_date_object = date.fromisoformat(start_date)
-        start_date_string = start_date_object.strftime('%Y%m')
-        string_prefix = string_prefix + 'Fecha Desde: ' + start_date_string + ' | '
-    if end_date is not None:
-        end_date_object = date.fromisoformat(end_date)
-        end_date_string = end_date_object.strftime('%Y%m')
-        string_prefix = string_prefix + 'Fecha Hasta: ' + end_date_string
-    if len(string_prefix) == len('Usted ha seleccionado: '):
-        return 'La fecha se mostrará aquí'
-    else:
-        return string_prefix
 
 def cargar_filtros_exportaciones() :
     filtros = dbc.FormGroup(
