@@ -15,10 +15,10 @@ def cargar_sidebar(app, pagina, copi) :
     day_selected = datetime.today().day
 
     if month_selected > 3 :
-        month_selected = MONTHS[month_selected-4]
+        month_selected = month_selected-3
     else :
         year_selected = year_selected - 1
-        month_selected = MONTHS[month_selected-4+12]
+        month_selected = month_selected-4+12
 
     SIDEBAR_STYLE = {
         "position": "absolute",
