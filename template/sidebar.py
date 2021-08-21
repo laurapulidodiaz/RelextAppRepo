@@ -72,7 +72,7 @@ def cargar_sidebar(app, pagina, copi) :
             max_date_allowed=date(year_selected, month_selected, day_selected),
             display_format='M MM-YYYY',
             start_date_placeholder_text='Fecha Desde',
-            end_date_placeholder_text='Fecha Haste',
+            end_date_placeholder_text='Fecha Hasta',
         ),
     ])
 
