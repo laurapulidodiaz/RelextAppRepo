@@ -141,6 +141,20 @@ def cargar_sidebar(app, pagina, copi) :
         form=True,
     )
 
+    input_posicion_arancelaria = html.Div(
+        [
+            html.P("Posición Arancelaria (producto)"),
+            dbc.Input(id="input_posicion_arancelaria", placeholder="Digite el número...", type="number"),
+        ],
+    )
+
+    input_texto_descripcion = html.Div(
+        [
+            html.P("Producto / Categoría"),
+            dbc.Input(id="input_producto_texto", placeholder="Digite el texto...", type="text"),
+        ],
+    )
+
     sidebar = html.Div(
         [
             html.Img(src=app.get_asset_url('icono_gris.png'), style=ICONO_STYLE),
@@ -152,6 +166,8 @@ def cargar_sidebar(app, pagina, copi) :
             dbc.Label("Rango de Fechas"),
             input_date_picker_desde,
             input_date_picker_hasta,
+            input_posicion_arancelaria,
+            input_texto_descripcion,
         ],
         style=SIDEBAR_STYLE,
     )
