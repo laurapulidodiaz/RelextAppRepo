@@ -144,19 +144,18 @@ def cargar_sidebar(app, pagina, copi) :
     input_posicion_arancelaria = html.Div(
         [
             html.P("Posición Arancelaria (producto)"),
-            dbc.Input(id="input_posicion_arancelaria", placeholder="Digite el número...", type="number"),
+            dbc.Input(id="input_posicion_arancelaria", placeholder="Digite el número...", type="number" style={"font-size":"13px"}),
         ],
     )
 
     input_texto_descripcion = html.Div(
         [
             html.P("Producto / Categoría"),
-            dbc.Input(id="input_producto_texto", placeholder="Digite el texto...", type="text"),
+            dbc.Input(id="input_producto_texto", placeholder="Digite el texto...", type="text", style={"font-size":"13px"}),
         ],
     )
 
-    sidebar = html.Div(
-        [
+    sidebar = html.Div([
             html.Img(src=app.get_asset_url('icono_gris.png'), style=ICONO_STYLE),
             html.H3(pagina, style=PAGINA_STYLE),
             html.H6(copi, style=TEXTO_STYLE),
@@ -173,23 +172,3 @@ def cargar_sidebar(app, pagina, copi) :
     )
 
     return sidebar
-
-def cargar_filtros_exportaciones() :
-    filtros = dbc.FormGroup(
-        [
-            dbc.Label("Tipo de Registro"),
-            dbc.DropdownMenu(
-                children=[
-                    dbc.DropdownMenuItem("Exportaciones", href=EXPORTACIONES),
-                    dbc.DropdownMenuItem("Importaciones", href=IMPORTACIONES),
-                    dbc.DropdownMenuItem("Balanza Comercial", href=BALANZA_COMERCIAL),
-                    dbc.DropdownMenuItem("Producción", href=PRODUCCION),
-                ],
-                nav=True,
-                in_navbar=True,
-                label="Sistema",
-            ),
-        ]
-    )
-
-    return filtros
