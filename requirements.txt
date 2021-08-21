@@ -17,3 +17,4 @@ dash_auth
 plotly
 flask
 flask_sqlalchemy
+whitenoise

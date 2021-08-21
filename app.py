@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
+from whitenoise import WhiteNoise
 
 # contienen funciones para cargar las partes del template
 from template import menu
@@ -26,6 +27,7 @@ GLOBAL_STYLE = {
 # cargamos el app con plantilla bootstrap
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP] , update_title='Cargando...')
 server = app.server
+server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
 
 # cargamos la plantilla
 app.layout = html.Div(children=[

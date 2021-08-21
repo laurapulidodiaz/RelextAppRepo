@@ -1,0 +1,45 @@
+﻿column_name,column_description,column_details
+FECH,        Fecha de proceso      ,Fecha de proceso
+ADUA,        Código de la aduana      ,Código de la aduana
+PAISGEN,        País origen      ,País origen
+PAISPRO,        País de procedencia      ,País de procedencia
+PAISCOM,        País de compra      ,País de  compra
+DEPTODES,        Departamento destino      ,Departamento destino
+VIATRANS,        Código vía de transporte      ,Código vía de transporte
+BANDERA,        Bandera      ,Código de bandera
+REGIMEN,        Código de régimen      ,Código de régimen
+ACUERDO,        Código del acuerdo      ,Código del acuerdo
+PBK,        Peso bruto en kilos      ,Peso bruto en kilos
+PNK,        Peso neto en kilos      ,Peso neto en kilos
+CANU,        Cantidad de unidades      ,Cantidad de unidades
+CODA,        Código de unidad      ,Código de Unidad
+NABAN,        Posición arancelaria      ,Posición arancelaria
+VAFODO,        Valor FOB dólares de la mercancía      ,Valor FOB dólares de la mercancía
+FLETE,        Fletes      ,Fletes
+VACID,        Valor CIF dólares de la mercancía      ,Valor CIF dólares de la mercancía
+VACIP,        Valor CIF pesos de la mercancía      ,Valor CIF pesos de la mercancía
+IMP1,        Impuesto a las ventas      ,Impuesto a las ventas
+OTDER,        Otros Derechos      ,Otros Derechos
+CLASE,        Clase de importador      ,Clase importador
+CUIDAIMP,        Ciudad del importador      ,Ciudad del importador
+CUIDAEXP,        Ciudad del exportador      ,Ciudad del exportador
+ACTECON,        Actividad económica      ,Actividad económica
+CODADAD,        Código administración de aduana      ,Código administración de aduana
+VADUA,        Valor aduana      ,Valor aduana
+VRAJUS,        Valor ajuste      ,Valor ajuste
+BASEIVA,        Base IVA      ,Base IVA
+OTROSP,        Porcentaje otros      ,Porcentaje otros
+OTROSBASE,        Base otros      ,Base otros
+TOTALIVAYO,        Total IVA y otros gastos      ,Total IVA y otros gastos
+SEGUROS,        Seguros      ,Valor seguros
+OTROSG,        Otros gastos      ,Valor otros gastos
+LUIN,        Lugar de ingreso      ,Lugar de ingreso de la mercancía
+CODLUIN,        Código lugar de ingreso      ,Código Lugar ingreso de las mercancías
+DEPIM,        Departamento del importador      ,Código departamento
+COPAEX,        Código país del exportador      ,Código País exportador
+TIPOIM,        Tipo de importación      ,Tipo de importación
+PORARA,        Porcentaje de arancel      ,Porcentaje de arancel
+NIT,        Número de identificación Tributaria      ,Número de identificación Tributaria (NIT)
+DIGV,        Digito de Verificación      ,Dígito de verificación (D.V)
+RZIMPO,        Razon social del importador      ,Razon social del importador
+DEREL,        Derechos Arancelarios      ,Derechos arancelarios
