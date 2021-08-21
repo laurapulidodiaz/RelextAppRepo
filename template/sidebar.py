@@ -70,7 +70,7 @@ def cargar_sidebar(app, pagina, copi) :
             id='my-date-picker-range',
             min_date_allowed=date(2016, 1, 1),
             max_date_allowed=date(year_selected, month_selected, day_selected)
-            display_format='MM-YYYY',
+            display_format='M MM-YYYY',
             start_date_placeholder_text='Fecha Desde'
             end_date_placeholder_text='Fecha Haste'
         ),
@@ -91,7 +91,7 @@ def cargar_sidebar(app, pagina, copi) :
     )
 
     return sidebar
-    
+
 @app.callback(dash.dependencies.Output('output-container-date-picker-range', 'children'),
     [dash.dependencies.Input('my-date-picker-range', 'start_date'),
      dash.dependencies.Input('my-date-picker-range', 'end_date')])
