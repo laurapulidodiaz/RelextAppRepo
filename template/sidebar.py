@@ -64,19 +64,82 @@ def cargar_sidebar(app, pagina, copi) :
         ]
     )
 
-    input_date_picker = html.Div([
-        dbc.Label("Rango de Fechas", html_for="my-date-picker-range"),
-        dcc.DatePickerRange(
-            id='my-date-picker-range',
-            min_date_allowed=date(2016, 1, 1),
-            max_date_allowed=date(year_selected, month_selected, day_selected),
-            display_format='MM-YYYY',
-            initial_visible_month=date(year_selected-1,month_selected,day_selected),
-            end_date=date(year_selected,month_selected,day_selected),
-            start_date_placeholder_text='Fecha Desde',
-            end_date_placeholder_text='Fecha Hasta',
-        ),
-    ])
+    def crear_year_picker(nuevo_id) :
+        years = []
+        for year in range ((year_selected),(year_selected-5),-1) :
+            year_values = {"label": str(year), "value": year}
+            years.append(year_values)
+
+        year_picker = dcc.Dropdown(
+                id=nuevo_id,
+                placeholder="Año",
+                options=years,
+            )
+        return year_picker
+
+
+
+    def crear_month_picker(nuevo_id_month) :
+        months = []
+        contador = 0
+        for month in MONTHS :
+            contador+=1
+            month_values = {"label": month, "value": contador}
+            months.append(month_values)
+
+        month_picker = dcc.Dropdown(
+                id=nuevo_id_month,
+                placeholder="Mes",
+                options=months,
+            )
+        return month_picker
+
+    input_date_picker_desde = dbc.Row(
+        [
+            dbc.Col(
+                dbc.FormGroup(
+                    [
+                        dbc.Label("Desde", html_for="fecha_desde_year"),
+                        crear_year_picker("fecha_desde_year"),
+                    ]
+                ),
+                width=6,
+            ),
+            dbc.Col(
+                dbc.FormGroup(
+                    [
+                        dbc.Label("-", html_for="fecha_desde_month", style={"color":"#fff"}),
+                        crear_month_picker("fecha_desde_month"),
+                    ]
+                ),
+                width=6,
+            ),
+        ],
+        form=True,
+    )
+    input_date_picker_hasta = dbc.Row(
+        [
+            dbc.Col(
+                dbc.FormGroup(
+                    [
+                        dbc.Label("Hasta", html_for="fecha_hasta_year"),
+                        crear_year_picker("fecha_haste_year"),
+                    ]
+                ),
+                width=6,
+            ),
+            dbc.Col(
+                dbc.FormGroup(
+                    [
+                        dbc.Label("-", html_for="fecha_hasta_month", style={"color":"#fff"}),
+                        crear_month_picker("fecha_hasta_month"),
+                    ]
+                ),
+                width=6,
+            ),
+        ],
+        form=True,
+    )
 
     sidebar = html.Div(
         [
@@ -86,7 +149,9 @@ def cargar_sidebar(app, pagina, copi) :
             html.Hr(),
             tipo_registro_input,
             html.Hr(),
-            input_date_picker
+            dbc.Label("Rango de Fechas"),
+            input_date_picker_desde,
+            input_date_picker_hasta,
         ],
         style=SIDEBAR_STYLE,
     )
