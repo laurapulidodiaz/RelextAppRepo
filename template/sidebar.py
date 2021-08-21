@@ -144,7 +144,7 @@ def cargar_sidebar(app, pagina, copi) :
     input_posicion_arancelaria = html.Div(
         [
             html.P("Posición Arancelaria (producto)"),
-            dbc.Input(id="input_posicion_arancelaria", placeholder="Digite el número...", type="number" style={"font-size":"13px"}),
+            dbc.Input(id="input_posicion_arancelaria", placeholder="Digite el número...", type="number", style={"font-size":"13px"}),
         ],
     )
 
