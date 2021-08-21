@@ -1,3 +1,5 @@
+import plotly.express as px
+import plotly.graph_objects as go
 from controller import local_to_dataframes as ltd
 
 def update_choropleth_world(tipo_df='export'):
