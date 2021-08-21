@@ -1,6 +1,5 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-import dash_design_kit as ddk
 import dash_core_components as dcc
 
 IMPORTACIONES = "/consultar/importaciones"
@@ -53,18 +52,6 @@ def cargar_sidebar(app, pagina, copi) :
         ]
     )
 
-    fecha_input = dbc.FormGroup(
-        [
-            dbc.Label("Periodo", html_for="dropdown_tipo_registro"),
-            dcc.DatePickerRange(
-                display_format='MM-YYYY',
-                start_date_placeholder_text="Start Period",
-                end_date_placeholder_text="End Period",
-                calendar_orientation='vertical',
-            ),
-        ]
-    )
-
     sidebar = html.Div(
         [
             html.Img(src=app.get_asset_url('icono_gris.png'), style=ICONO_STYLE),
@@ -73,7 +60,6 @@ def cargar_sidebar(app, pagina, copi) :
             html.Hr(),
             tipo_registro_input,
             html.Hr(),
-            fecha_input,
         ],
         style=SIDEBAR_STYLE,
     )
