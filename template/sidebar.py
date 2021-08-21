@@ -69,10 +69,10 @@ def cargar_sidebar(app, pagina, copi) :
         dcc.DatePickerRange(
             id='my-date-picker-range',
             min_date_allowed=date(2016, 1, 1),
-            max_date_allowed=date(year_selected, month_selected, day_selected)
+            max_date_allowed=date(year_selected, month_selected, day_selected),
             display_format='M MM-YYYY',
-            start_date_placeholder_text='Fecha Desde'
-            end_date_placeholder_text='Fecha Haste'
+            start_date_placeholder_text='Fecha Desde',
+            end_date_placeholder_text='Fecha Haste',
         ),
         html.Div(id='output-container-date-picker-range')
     ])
