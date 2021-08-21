@@ -20,7 +20,6 @@ from view import modelos_view as modelos
 from view import visualizar_view as visualizar
 
 GLOBAL_STYLE = {
-    
     "font-size" : "0.8rem"
 }
 

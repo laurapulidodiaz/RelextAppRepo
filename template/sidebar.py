@@ -1,5 +1,7 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
+import dash_design_kit as ddk
+import dash_core_components as dcc
 
 IMPORTACIONES = "/consultar/importaciones"
 EXPORTACIONES = "/consultar/exportaciones"
@@ -38,17 +40,27 @@ def cargar_sidebar(app, pagina, copi) :
 
     tipo_registro_input = dbc.FormGroup(
         [
-            dbc.Label("Tipo de Registro"),
-            dbc.DropdownMenu(
-                children=[
-                    dbc.DropdownMenuItem("Exportaciones", href=EXPORTACIONES),
-                    dbc.DropdownMenuItem("Importaciones", href=IMPORTACIONES),
-                    dbc.DropdownMenuItem("Balanza Comercial", href=BALANZA_COMERCIAL),
-                    dbc.DropdownMenuItem("Producción", href=PRODUCCION),
+            dbc.Label("Tipo de Registro", html_for="dropdown_tipo_registro"),
+            dcc.Dropdown(
+                id="dropdown_tipo_registro",
+                options=[
+                    {"label": "Exportaciones", "value": 1},
+                    {"label": "Importaciones", "value": 2},
+                    {"label": "Balanza Comercial", "value": 2},
+                    {"label": "Producción", "value": 2},
                 ],
-                nav=True,
-                in_navbar=True,
-                label="Sistema",
+            ),
+        ]
+    )
+
+    fecha_input = dbc.FormGroup(
+        [
+            dbc.Label("Periodo", html_for="dropdown_tipo_registro"),
+            dcc.DatePickerRange(
+                display_format='MM-YYYY',
+                start_date_placeholder_text="Start Period",
+                end_date_placeholder_text="End Period",
+                calendar_orientation='vertical',
             ),
         ]
     )
@@ -61,6 +73,7 @@ def cargar_sidebar(app, pagina, copi) :
             html.Hr(),
             tipo_registro_input,
             html.Hr(),
+            fecha_input,
         ],
         style=SIDEBAR_STYLE,
     )
