@@ -30,6 +30,7 @@ server = app.server
 server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
 
 # cargamos la plantilla
+# prueba
 app.layout = html.Div(children=[
         dcc.Location(id="url"),
         menu.cargar_navbar(app),
