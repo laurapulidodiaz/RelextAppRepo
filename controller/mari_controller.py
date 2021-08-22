@@ -18,7 +18,6 @@ def lineplot(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin):
                 df=df.groupby(by=["Fecha","Descriptiva - SCN - NUEVA BASE 2015"]).sum()[["Total valor FOB doláres de la posición"]].reset_index()
                 fig=px.line(df_plot[df_plot["Descriptiva - SCN - NUEVA BASE 2015"]==cat], x="Fecha", y="Total valor FOB doláres de la posición", title=f'Valor FOB (USD) para la categoría arancelaria {cat}, país:{pais}, departamento:{dpto}', labels={"FOBDOL": "Valor FOB (USD)"})
             else:
-                print(df.columns)
                 df=df.groupby(by=["Fecha"]).sum()[["Total valor FOB doláres de la posición"]].reset_index()
                 fig=px.line(df, x="Fecha", y="Total valor FOB doláres de la posición", title=f'Valor FOB (USD), país:{pais}, departamento:{dpto}', labels={"FOBDOL": "Valor FOB (USD)"})
 
