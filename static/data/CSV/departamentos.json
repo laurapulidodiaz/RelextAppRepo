@@ -1,0 +1,138 @@
+[
+  {
+    "value": 1,
+    "label": "Petróleo Y Derivado"
+  },
+  {
+    "value": 5,
+    "label": "Antioquia"
+  },
+  {
+    "value": 8,
+    "label": "Atlántico"
+  },
+  {
+    "value": 11,
+    "label": "Santafé De Bogotá"
+  },
+  {
+    "value": 13,
+    "label": "Bolívar"
+  },
+  {
+    "value": 15,
+    "label": "Boyacá"
+  },
+  {
+    "value": 17,
+    "label": "Caldas"
+  },
+  {
+    "value": 18,
+    "label": "Caquetá"
+  },
+  {
+    "value": 19,
+    "label": "Cauca"
+  },
+  {
+    "value": 20,
+    "label": "Cesar"
+  },
+  {
+    "value": 23,
+    "label": "Córdoba"
+  },
+  {
+    "value": 25,
+    "label": "Cundinamarca"
+  },
+  {
+    "value": 27,
+    "label": "Choco"
+  },
+  {
+    "value": 41,
+    "label": "Huila"
+  },
+  {
+    "value": 44,
+    "label": "Guajira"
+  },
+  {
+    "value": 47,
+    "label": "Magdalena"
+  },
+  {
+    "value": 50,
+    "label": "Meta"
+  },
+  {
+    "value": 52,
+    "label": "Nariño"
+  },
+  {
+    "value": 54,
+    "label": "Norte De Santander"
+  },
+  {
+    "value": 63,
+    "label": "Quindío"
+  },
+  {
+    "value": 66,
+    "label": "Risaralda"
+  },
+  {
+    "value": 68,
+    "label": "Santander"
+  },
+  {
+    "value": 70,
+    "label": "Sucre"
+  },
+  {
+    "value": 73,
+    "label": "Tolima"
+  },
+  {
+    "value": 76,
+    "label": "Valle Del Cauca"
+  },
+  {
+    "value": 81,
+    "label": "Arauca"
+  },
+  {
+    "value": 85,
+    "label": "Casanare"
+  },
+  {
+    "value": 86,
+    "label": "Putumayo"
+  },
+  {
+    "value": 88,
+    "label": "San Andrés"
+  },
+  {
+    "value": 91,
+    "label": "Amazonas"
+  },
+  {
+    "value": 94,
+    "label": "Guainía"
+  },
+  {
+    "value": 95,
+    "label": "Guaviare"
+  },
+  {
+    "value": 97,
+    "label": "Vaupés"
+  },
+  {
+    "value": 99,
+    "label": "Vichada"
+  }
+]
