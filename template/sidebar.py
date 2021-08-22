@@ -79,7 +79,8 @@ def cargar_sidebar(app, pagina, copi) :
                 id="dropdown_pais",
                 options=cargar_paises(),
             ),
-        ]
+        ],
+        style = {"padding-top":"40px"}
     )
 
     input_departamento = dbc.FormGroup(
@@ -87,7 +88,7 @@ def cargar_sidebar(app, pagina, copi) :
             dbc.Label("Departamento", html_for="dropdown_departamento"),
             dcc.Dropdown(
                 id="dropdown_departamento",
-                options=cargar_paises(),
+                options=cargar_departamentos(),
             ),
         ]
     )
@@ -183,6 +184,14 @@ def cargar_sidebar(app, pagina, copi) :
         ],
     )
 
+    boton_filtrar_s = html.Div([
+        dbc.Button("Filtrar", id="filtrar_superior", color="info", className="mr-1", style={"right":"0", "float":"right"})
+    ])
+
+    boton_filtrar_i = html.Div([
+        dbc.Button("Filtrar", id="filtrar_inferior", color="info", className="mr-1", style={"right":"0", "float":"right"})
+    ])
+
     sidebar = html.Div([
             html.Img(src=app.get_asset_url('icono_gris.png'), style=ICONO_STYLE),
             html.H3(pagina, style=PAGINA_STYLE),
@@ -190,6 +199,7 @@ def cargar_sidebar(app, pagina, copi) :
             html.Hr(),
             tipo_registro_input,
             html.Hr(),
+            boton_filtrar_s,
             input_pais,
             input_departamento,
             dbc.Label("Rango de Fechas"),
@@ -197,6 +207,7 @@ def cargar_sidebar(app, pagina, copi) :
             input_date_picker_hasta,
             input_posicion_arancelaria,
             input_texto_descripcion,
+            boton_filtrar_i,
         ],
         style=SIDEBAR_STYLE,
     )
