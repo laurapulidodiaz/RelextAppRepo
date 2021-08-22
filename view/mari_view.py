@@ -6,18 +6,39 @@ import plotly.express as px
 from controller import mari_controller as mari
 from controller import local_to_dataframes as ld
 
-grafico=mari.lineplot("Exportaciones","","","","","Mayo",2021,"Mayo",2021)
+def cargar_mari():
+    grafico=mari.lineplot("Exportaciones","","","","","Mayo",2021,"Mayo",2021)
 
-layout = html.Div([
-    dbc.Alert([
-        html.H4("Iniciar", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
-        html.P(
-            "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
-            style = {"margin-bottom":"0.2rem"}
-             ),],
+    layout = html.Div([
+        dbc.Alert([
+            html.H4("Iniciar", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
+            html.P(
+                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
+                style = {"margin-bottom":"0.2rem"}
+                 ),],
+                color="info"),
+        dcc.Graph(figure = grafico, style={"font-weight":"normal","font-size":"13px","margin-left":"24px","margin-top":"-18px"})
+    ])
+
+    return layout
+
+def cargar_mari_filtros(tipo=1,pais="",dpto="",pos="",cat="",mesini="",anoini="",mesfin="",anofin=""):
+    grafico = mari.lineplot(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin)
+
+    layout = html.Div([
+        dbc.Alert([
+            html.H4("Iniciar", className="alert-heading",
+                    style={"font-size": "20px", "padding-top": "8px", "font-weight": "400"}),
+            html.P(
+                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
+                style={"margin-bottom": "0.2rem"}
+            ), ],
             color="info"),
-    dcc.Graph(figure = grafico, style={"font-weight":"normal","font-size":"13px","margin-left":"24px","margin-top":"-18px"})
-]),
+        dcc.Graph(figure=grafico,
+                  style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
+    ])
+
+    return layout
 
 
 #mari.lineplot(tipo,pais,dpto,pos,cat,"Enero",2020,"Diciembre",2020)

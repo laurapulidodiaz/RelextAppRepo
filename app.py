@@ -54,7 +54,7 @@ def render_page_content(pathname):
     elif pathname == menu.DANIEL:
         return daniel.layout
     elif pathname == menu.MARI:
-        return mari.layout
+        return mari.cargar_mari()
     elif pathname == menu.MODELOS:
         return modelos.layout
     elif pathname == menu.AYUDA:
@@ -120,7 +120,7 @@ def update_contenido_desde_filtro(tipo_registro, pais, departamento, anio_desde,
         elif pathname == menu.DANIEL:
             return daniel.layout
         elif pathname == menu.MARI:
-            return mari.layout
+            return mari.cargar_mari_filtros(tipo_registro,pais,departamento,posicion,categoria,mes_desde,anio_desde,mes_hasta,anio_hasta)
         elif pathname == menu.MODELOS:
             return modelos.layout
         elif pathname == menu.AYUDA:
