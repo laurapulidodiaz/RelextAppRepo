@@ -298,6 +298,7 @@ def cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_exports["Fecha"]=df_exports["Mes"]+"-"+df_exports["Año"].astype(str)
         df_exports["Departamento de procedencia"] = df_exports["Departamento de procedencia"].astype(int)
         print(df_exports.info())
+        print(df_exports.head(2))
     except :
         pass
     return df_exports
@@ -313,6 +314,7 @@ def cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_imports["Fecha"] = df_imports["Mes"] + "-" + df_imports["Año"].astype(str)
         df_imports["Departamento destino"]=df_imports["Departamento destino"].astype(int)
         print(df_imports.info())
+        print(df_exports.head(2))
     except:
         pass
     return df_imports

@@ -113,7 +113,7 @@ def cargar_sidebar(app, pagina, copi) :
         contador = 0
         for month in MONTHS :
             contador+=1
-            month_values = {"label": month, "value": contador}
+            month_values = {"label": month, "value": month}
             months.append(month_values)
 
         month_picker = dcc.Dropdown(
@@ -152,7 +152,7 @@ def cargar_sidebar(app, pagina, copi) :
                 dbc.FormGroup(
                     [
                         dbc.Label("Hasta", html_for="fecha_hasta_year"),
-                        crear_year_picker("fecha_haste_year"),
+                        crear_year_picker("fecha_hasta_year"),
                     ]
                 ),
                 width=6,

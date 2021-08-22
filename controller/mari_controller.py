@@ -4,7 +4,7 @@ import plotly.express as px
 def lineplot(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin):
     df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca = ld.cargar_dataframes(anoini,mesini,anofin,mesfin)
 
-    if tipo=="Exportaciones":
+    if tipo==1:
         df=df_exports
         if dpto != "":
             df=df[df["Departamento de procedencia"] == dpto]
