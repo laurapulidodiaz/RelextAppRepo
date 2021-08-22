@@ -9,6 +9,7 @@ AYUDA = "/ayuda"
 CLAVE = "/cambiarclave"
 SALIR = "/salir"
 DANIEL = "/daniel"
+MARI = "/mari"
 
 def cargar_navbar(app) :
     BAR_STYLE = {
@@ -90,6 +91,7 @@ def cargar_navbar(app) :
                     dbc.DropdownMenuItem("Visualizar", href=VISUALIZAR),
                     dbc.DropdownMenuItem("Cargar", href=CARGAR),
                     dbc.DropdownMenuItem("Ver Prueba Daniel", href=DANIEL),
+                    dbc.DropdownMenuItem("Ver Prueba Mari", href=MARI),
                 ],
                 nav=True,
                 in_navbar=True,
