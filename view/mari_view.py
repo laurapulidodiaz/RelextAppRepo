@@ -7,7 +7,7 @@ from controller import mari_controller as mari
 from controller import local_to_dataframes as ld
 
 def cargar_mari():
-    grafico=mari.lineplot("Exportaciones","","","","","Mayo",2021,"Mayo",2021)
+    grafico=mari.lineplot(1,"","","","","Mayo",2021,"Mayo",2021)
 
     layout = html.Div([
         dbc.Alert([

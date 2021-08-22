@@ -185,11 +185,11 @@ def cargar_sidebar(app, pagina, copi) :
     )
 
     boton_filtrar_s = html.Div([
-        dbc.Button("Filtrar", id="filtrar_superior", color="info", className="mr-1", style={"right":"0", "float":"right"})
+        dbc.Button("Filtrar", id="filtrar_superior", color="info", className="mr-1", n_clicks=0, style={"right":"0", "float":"right"})
     ])
 
     boton_filtrar_i = html.Div([
-        dbc.Button("Filtrar", id="filtrar_inferior", color="info", className="mr-1", style={"right":"0", "float":"right"})
+        dbc.Button("Filtrar", id="filtrar_inferior", color="info", className="mr-1", n_clicks=0, style={"right":"0", "float":"right"})
     ])
 
     sidebar = html.Div([

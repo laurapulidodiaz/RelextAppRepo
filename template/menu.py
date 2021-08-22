@@ -10,6 +10,9 @@ CLAVE = "/cambiarclave"
 SALIR = "/salir"
 DANIEL = "/daniel"
 MARI = "/mari"
+PAISES = "/paises"
+DEPARTAMENTOS = "/departamentos"
+ZONAS_FRANCAS = "/zonasfrancas"
 
 def cargar_navbar(app) :
     BAR_STYLE = {
@@ -103,6 +106,9 @@ def cargar_navbar(app) :
                 children=[
                     dbc.DropdownMenuItem("Ayuda", href=AYUDA),
                     dbc.DropdownMenuItem("Cambiar Clave", href=CLAVE),
+                    dbc.DropdownMenuItem("Paises", href=PAISES),
+                    dbc.DropdownMenuItem("Departamentos", href=DEPARTAMENTOS),
+                    dbc.DropdownMenuItem("Zonas Francas", href=ZONAS_FRANCAS),
                 ],
                 nav=True,
                 in_navbar=True,
