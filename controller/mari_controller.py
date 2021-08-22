@@ -21,7 +21,7 @@ def lineplot(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin):
                 df=df.groupby(by=["Fecha"]).sum()[["Total valor FOB doláres de la posición"]].reset_index()
                 fig=px.line(df, x="Fecha", y="Total valor FOB doláres de la posición", title=f'Valor FOB (USD), país:{pais}, departamento:{dpto}', labels={"FOBDOL": "Valor FOB (USD)"})
 
-    elif tipo == "Importaciones":
+    elif tipo == "2":
         df=df_imports
         if dpto != "":
             df=df[df["Departamento del importador"] == dpto]
