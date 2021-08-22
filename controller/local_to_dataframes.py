@@ -296,9 +296,7 @@ def cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_exports = df_exports.merge( data_arancel, how = "left", left_on='Posición Arancelaria', right_on='Subpartida Arancelaria')
         df_exports = df_exports.drop(columns = ["Subpartida Arancelaria"])
         df_exports["Fecha"]=df_exports["Mes"]+"-"+df_exports["Año"].astype(str)
-        df_exports["Departamento de procedencia"] = df_exports["Departamento de procedencia"].astype(int)
-        print(df_exports.info())
-        print(df_exports.head(2))
+
     except :
         pass
     return df_exports
@@ -312,9 +310,7 @@ def cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_imports = df_imports.drop(columns = ["Fecha de proceso" ])
         df_imports = df_imports.astype({'Posición arancelaria': 'str', 'Ciudad del importador': 'str'})
         df_imports["Fecha"] = df_imports["Mes"] + "-" + df_imports["Año"].astype(str)
-        df_imports["Departamento destino"]=df_imports["Departamento destino"].astype(int)
-        print(df_imports.info())
-        print(df_exports.head(2))
+
     except:
         pass
     return df_imports
@@ -346,6 +342,9 @@ def ejecutar_datacleaning_exports(df_exports) :
         df_exports["Mes"]=pd.Categorical(df_exports["Mes"],categories=MONTHS, ordered=True)
         df_exports['País destino'] = df_exports['País destino'].apply(lambda x: str(x))
         df_exports['País destino'].replace(replace_dict, inplace=True)
+        df_exports["Departamento de procedencia"] = df_exports["Departamento de procedencia"].astype(int)
+        print(df_exports.info())
+        print(df_exports.head(2))
     except :
         pass
 
@@ -364,6 +363,10 @@ def ejecutar_datacleaning_imports(df_imports) :
         df_imports['País de compra'] = df_imports['País de compra'].apply(lambda x: str(x))
         df_imports['País de procedencia'].replace(replace_dict, inplace=True)
         df_imports['País de compra'].replace(replace_dict, inplace=True)
+        df_imports["Departamento destino"] = df_imports["Departamento destino"].astype(int)
+        print(df_imports.info())
+        print(df_exports.head(2))
+
     except :
         pass
 
