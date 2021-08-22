@@ -12,8 +12,7 @@ layout = html.Div([
     dbc.Alert([
         html.H4("Iniciar", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
         html.P(
-            "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. "
-            " Si es la primera vez que ingresas al sistema quizás quieras empezar por uno de los productos populares en exportaciones en Cundinamarca.",
+            "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
             style = {"margin-bottom":"0.2rem"}
              ),],
             color="info"),
@@ -21,5 +20,4 @@ layout = html.Div([
 ]),
 
 
-grafico=mari.lineplot("Exportaciones","","","","","Mayo",2021,"Mayo",2021)
 #mari.lineplot(tipo,pais,dpto,pos,cat,"Enero",2020,"Diciembre",2020)

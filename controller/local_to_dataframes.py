@@ -297,6 +297,7 @@ def cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_exports = df_exports.drop(columns = ["Subpartida Arancelaria"])
         df_exports["Fecha"]=df_exports["Mes"]+"-"+df_exports["Año"].astype(str)
         print(df_exports.columns)
+        print(df_exports.info())
     except :
         pass
     return df_exports
@@ -310,20 +311,21 @@ def cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_imports = df_imports.drop(columns = ["Fecha de proceso" ])
         df_imports = df_imports.astype({'Posición arancelaria': 'str', 'Ciudad del importador': 'str'})
         df_imports["Fecha"] = df_imports["Mes"] + "-" + df_imports["Año"].astype(str)
+        print(df_imports.info())
     except:
         pass
     return df_imports
 
 def cargar_dataframe_exportacion_cundinamarca(df_exports) :
     try :
-        df_exports_cundinamarca = df_exports[df_exports["Departamento de procedencia"]=="CUNDINAMARCA"]
+        df_exports_cundinamarca = df_exports[df_exports["Departamento de procedencia"]=="25"]
         return df_exports_cundinamarca
     except :
         return 0
 
 def cargar_dataframe_importacion_cundinamarca(df_imports) :
     try :
-        df_imports_cundinamarca = df_imports[df_imports["Departamento destino"]=="CUNDINAMARCA"]
+        df_imports_cundinamarca = df_imports[df_imports["Departamento destino"]=="25"]
         return df_imports_cundinamarca
     except :
         return 0
