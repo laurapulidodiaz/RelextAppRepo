@@ -2,18 +2,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 from controller import local_to_dataframes as ltd
 
-def update_choropleth_world(tipo_df='export'):
+def update_choropleth_world(dff):
     #TODO: Cambiar los inputs con el dropdown
-    df_exports, df_imports = ltd.cargar_dataframes_export(2020, "Enero", 2020, "Enero")
-    if tipo_df=='export':
-        dff = df_exports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index()
-    else:
-        dff = df_imports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index()
 
     fig = go.Figure(data=go.Choropleth(
-        locations=dff['Código país destino'],
-        z=dff['Total valor FOB doláres de la posición'],
-        text=dff['Código país destino'],
+        locations=dff['País'],
+        z=dff['Valor FOB dólares de la mercancía'],
+        text=dff['País'],
         colorscale='Blues',
         autocolorscale=False,
         reversescale=False,

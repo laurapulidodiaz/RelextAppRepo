@@ -18,6 +18,7 @@ from view import consultar_view as consultar
 from view import cargar_view as cargar
 from view import modelos_view as modelos
 from view import visualizar_view as visualizar
+from view import daniel_view as daniel
 
 GLOBAL_STYLE = {
     "font-size" : "0.8rem"
@@ -49,6 +50,8 @@ def render_page_content(pathname):
         return visualizar.layout
     elif pathname == menu.CARGAR:
         return cargar.layout
+    elif pathname == menu.DANIEL:
+        return daniel.layout
     elif pathname == menu.MODELOS:
         return modelos.layout
     elif pathname == menu.AYUDA:
