@@ -6,7 +6,7 @@ import plotly.express as px
 from controller import mari_controller as mari
 from controller import local_to_dataframes as ld
 
-df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca = ld.cargar_dataframes(2020,"Enero",2020,"Diciembre")
+df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca = ld.cargar_dataframes(2021,"Mayo",2021,"Mayo")
 MONTHS = ["Enero","Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 years=[2021,2020,2019,2018,2017]
 
@@ -66,5 +66,5 @@ layout = html.Div([
     #Input('Anofin-dropdown', 'value')
 #)
 
-mari.lineplot("Exportaciones","","","","","Enero",2020,"Diciembre",2020)
+mari.lineplot("Exportaciones","","","","","Mayo",2021,"Mayo",2021)
 #mari.lineplot(tipo,pais,dpto,pos,cat,"Enero",2020,"Diciembre",2020)

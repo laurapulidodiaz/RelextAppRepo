@@ -21,8 +21,8 @@ def data_cundinamarca_top10_export() :
     if type(df_exports_cundinamarca) == int :
         return 0, year_selected, month_selected
     else :
-        df_exports_cundinamarca['Descripción Arancelaria'] = df_exports['Descripción Arancelaria'].astype(str)
-        df_exports_cundinamarca['Descripción Arancelaria Corta'] = df_exports['Descripción Arancelaria'].apply(lambda x : x[:100])
+        df_exports_cundinamarca['Descripción Arancelaria'] = df_exports['Descripción Arancelaria'].astype(str).copy()
+        df_exports_cundinamarca['Descripción Arancelaria Corta'] = df_exports['Descripción Arancelaria'].apply(lambda x : x[:100]).copy()
         df = df_exports_cundinamarca.groupby("Descripción Arancelaria Corta").sum()[["Total valor FOB doláres de la posición"]].reset_index()
         df = df.sort_values(by=["Total valor FOB doláres de la posición"], ascending=False).head(10)
 

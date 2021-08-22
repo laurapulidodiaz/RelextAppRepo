@@ -296,6 +296,7 @@ def cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
         df_exports = df_exports.merge( data_arancel, how = "left", left_on='Posición Arancelaria', right_on='Subpartida Arancelaria')
         df_exports = df_exports.drop(columns = ["Subpartida Arancelaria"])
         df_exports["Fecha"]=df_exports["Mes"]+"-"+df_exports["Año"].astype(str)
+        print(df_exports.columns)
     except :
         pass
     return df_exports
