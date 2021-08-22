@@ -73,6 +73,73 @@ def render_page_content(pathname):
         ]
     )
 
+# actualizar página de acuerdo con los filtros
+@app.callback(
+    Output(content.CONTENT_DIV_ID, "children"),
+    [Input('filtrar_superior', 'n_clicks')],
+    state=[State(component_id='dropdown_tipo_registro', component_property='value'),
+    State(component_id='dropdown_pais', component_property='value'),
+    State(component_id='dropdown_departamento', component_property='value'),
+    State(component_id='fecha_desde_year', component_property='value'),
+    State(component_id='fecha_desde_month', component_property='value'),
+    State(component_id='fecha_hasta_year', component_property='value'),
+    State(component_id='fecha_hasta_month', component_property='value'),
+    State(component_id='input_posicion_arancelaria', component_property='value'),
+    State(component_id='input_producto_texto', component_property='value'),
+    State(component_id='url', component_property='pathname')]
+)
+def update_contenido_desde_filtro_superior(n_clicks, tipo_registro, pais, departamento, anio_desde, mes_desde, anio_hasta, mes_hasta, posicion, categoria, pathname):
+    return update_contenido_desde_filtro(tipo_registro, pais, departamento, anio_desde, mes_desde, anio_hasta, mes_hasta, posicion, categoria, pathname)
+
+@app.callback(
+    Output(content.CONTENT_DIV_ID, "children"),
+    [Input('filtrar_inferior', 'n_clicks')],
+    state=[State(component_id='dropdown_tipo_registro', component_property='value'),
+    State(component_id='dropdown_pais', component_property='value'),
+    State(component_id='dropdown_departamento', component_property='value'),
+    State(component_id='fecha_desde_year', component_property='value'),
+    State(component_id='fecha_desde_month', component_property='value'),
+    State(component_id='fecha_hasta_year', component_property='value'),
+    State(component_id='fecha_hasta_month', component_property='value'),
+    State(component_id='input_posicion_arancelaria', component_property='value'),
+    State(component_id='input_producto_texto', component_property='value'),
+    State(component_id='url', component_property='pathname')]
+)
+def update_contenido_desde_filtro_inferior(n_clicks, input_value):
+    return update_contenido_desde_filtro(tipo_registro, pais, departamento, anio_desde, mes_desde, anio_hasta, mes_hasta, posicion, categoria, pathname)
+
+
+
+def update_contenido_desde_filtro(tipo_registro, pais, departamento, anio_desde, mes_desde, anio_hasta, mes_hasta, posicion, categoria, pathname) :
+        if pathname == menu.CONSULTAR:
+            return consultar.layout
+        elif pathname == menu.VISUALIZAR:
+            return visualizar.layout
+        elif pathname == menu.CARGAR:
+            return cargar.layout
+        elif pathname == menu.DANIEL:
+            return daniel.layout
+        elif pathname == menu.MARI:
+            return mari.layout
+        elif pathname == menu.MODELOS:
+            return modelos.layout
+        elif pathname == menu.AYUDA:
+            return ayuda.layout
+        elif pathname == menu.CLAVE:
+            return cambiarclave.layout
+        elif pathname == menu.SALIR:
+            return html.P("Por implementar... cierre de sesión.")
+
+        # En caso de una ruta inválida
+        return dbc.Jumbotron(
+            [
+                html.H1("Oooops! Página no encontrada!", className="text-danger"),
+                html.Hr(),
+                html.P(f"La ruta {pathname} no se reconoce..."),
+            ]
+        )
+
+
 # inicializamos la aplicacion en el server
 if __name__ == "__main__":
     app.run_server(port=8888)
