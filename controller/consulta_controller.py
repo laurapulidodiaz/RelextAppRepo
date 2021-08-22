@@ -29,18 +29,22 @@ def data_cundinamarca_top10_export() :
         return df, year_selected, month_selected
 
 def loc_grouped(date_start=0, date_end=0):
+    year_selected, month_selected = get_two_months_ago()
+
     #TODO: definir date_start y date_end para convertirlos a el formato de la función
     rename_dict = { 'Código país destino': 'País',
                     'Total valor FOB doláres de la posición':'Valor FOB dólares de la mercancía',
                     'País origen': 'País',}
-    df_exports, df_imports, cund, _ = ltd.cargar_dataframes(2020, "Enero", 2020, "Enero")
-    df_exports = df_exports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index().rename(columns=rename_dict)
-    df_imports = df_imports.groupby('País origen').sum()[['Valor FOB dólares de la mercancía']].reset_index().rename(columns=rename_dict)
+    df_exports, df_imports, cund, _ = ltd.cargar_dataframes(year_selected, month_selected, year_selected, month_selected)
 
-    print('df_exports columns:')
-    print(df_exports.columns)
     if type(cund) == int:
         return 0, 0, 0
     else:
+        df_exports = df_exports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index().rename(columns=rename_dict)
+        df_imports = df_imports.groupby('País origen').sum()[['Valor FOB dólares de la mercancía']].reset_index().rename(columns=rename_dict)
+
+        print('df_exports columns:')
+        print(df_exports.columns)
+
         data_balance = df_exports['Valor FOB dólares de la mercancía'] - df_imports['Valor FOB dólares de la mercancía']
         return df_exports, df_imports, data_balance
