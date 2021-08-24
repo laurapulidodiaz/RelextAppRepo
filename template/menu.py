@@ -13,8 +13,10 @@ MARI = "/mari"
 PAISES = "/paises"
 DEPARTAMENTOS = "/departamentos"
 ZONAS_FRANCAS = "/zonasfrancas"
+JULI_P = "/pruebajuli"
 
-def cargar_navbar(app) :
+
+def cargar_navbar(app):
     BAR_STYLE = {
         "height": "115px",
         "background-color": "#2c3e50",
@@ -66,8 +68,8 @@ def cargar_navbar(app) :
         "position": "relative",
         "top": "-20px",
         "left": "16px",
-        "width":"20%",
-        "display":"inline-block",
+        "width": "20%",
+        "display": "inline-block",
         "filter": "brightness(0.8)"
     }
 
@@ -78,11 +80,11 @@ def cargar_navbar(app) :
                     html.P("Fulanito Pérez Ortega", style=STYLE_USUARIO),
                     html.P("Analista de Datos", style=STYLE_ROL)
                 ],
-                style={"width":"80%", "display":"inline-block"}
+                style={"width": "80%", "display": "inline-block"}
             ),
             html.Img(src=app.get_asset_url('icono_salir.png'), style=STYLE_BTN_SALIR),
         ],
-        style = {"position": "relative", "left": "40px",}
+        style = {"position": "relative", "left": "40px"}
     )
 
     navbar = dbc.NavbarSimple(
@@ -95,6 +97,7 @@ def cargar_navbar(app) :
                     dbc.DropdownMenuItem("Cargar", href=CARGAR),
                     dbc.DropdownMenuItem("Ver Prueba Daniel", href=DANIEL),
                     dbc.DropdownMenuItem("Ver Prueba Mari", href=MARI),
+                    dbc.DropdownMenuItem("Ver prueba Juli", href=JULI_P)
                 ],
                 nav=True,
                 in_navbar=True,

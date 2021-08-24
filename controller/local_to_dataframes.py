@@ -15,16 +15,16 @@ TYPES = {
 MONTHS = ["Enero","Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
 col_dict_exp={"Código país destino (numérico)": "País destino",
-            "Código país destino (alfabético)": "Código país destino",
-         "Código lugar de salida (alfabético)":"Código lugar de salida",
-         "Código de la vía de transporte":"Vía de transporte",
-         "Código modalidad de la exportación": "Modalidad de la exportación",
-         "Código de la Aduana": "Aduana",
-         "Código lugar de salida (numérico)":"Lugar de salida",
-         "Forma de pago (1=Con reintegro 2=Sin reintegro)":"Forma de pago",
-         "Tipo de certificado de origen (8 opciones)":"Tipo de certificado de origen",
-         "Sistemas Especiales (1= Si 2= No)":"Sistemas especiales",
-         "Departamento de origen por posición.":"Departamento de origen por posición"}
+              "Código país destino (alfabético)": "Código país destino",
+              "Código lugar de salida (alfabético)":"Código lugar de salida",
+              "Código de la vía de transporte":"Vía de transporte",
+              "Código modalidad de la exportación": "Modalidad de la exportación",
+              "Código de la Aduana": "Aduana",
+              "Código lugar de salida (numérico)":"Lugar de salida",
+              "Forma de pago (1=Con reintegro 2=Sin reintegro)":"Forma de pago",
+              "Tipo de certificado de origen (8 opciones)":"Tipo de certificado de origen",
+              "Sistemas Especiales (1= Si 2= No)":"Sistemas especiales",
+              "Departamento de origen por posición.":"Departamento de origen por posición"}
 
 cat_dict_exp={"Aduana":"category", "Vía de transporte":"category",
          "Modalidad de la exportación":"category",

@@ -24,13 +24,14 @@ from view import mari_view as mari
 from view.admin import pais_view as paisv
 from view.admin import departamento_view as departamentov
 from view.admin import zona_franca_view as zonafrancav
+from view import juliana_view as juli
 
 GLOBAL_STYLE = {
-    "font-size" : "0.8rem"
+    "font-size": "0.8rem"
 }
 
 # cargamos el app con plantilla bootstrap
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP] , update_title='Cargando...')
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP], update_title='Cargando...')
 server = app.server
 server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
 
@@ -39,11 +40,11 @@ app.layout = html.Div(children=[
         dcc.Location(id="url"),
         menu.cargar_navbar(app),
         html.Div(children=[
-            sidebar.cargar_sidebar(app, "Consulta de Registros","Datos Históricos"),
+            sidebar.cargar_sidebar(app, "Consulta de Registros", "Datos Históricos"),
             content.cargar_content(),
         ],
-        style= GLOBAL_STYLE
-    ),
+            style=GLOBAL_STYLE
+        ),
 ])
 
 
@@ -68,7 +69,8 @@ app.layout = html.Div(children=[
         State(component_id='url', component_property='pathname')
     ]
 )
-def render_page_content(pathname, click1, click2, tipo_registro, pais, departamento, anio_desde, mes_desde, anio_hasta, mes_hasta, posicion, categoria, pathname2):
+def render_page_content(pathname, click1, click2, tipo_registro, pais, departamento, anio_desde, mes_desde,
+                        anio_hasta, mes_hasta, posicion, categoria, pathname2):
     if pathname == menu.CONSULTAR:
         return consultar.layout
     elif pathname == menu.VISUALIZAR:
@@ -78,9 +80,10 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
     elif pathname == menu.DANIEL:
         return daniel.layout
     elif pathname == menu.MARI:
-        if click1 or click2 :
-            return mari.cargar_mari_filtros(tipo_registro,pais,departamento,posicion,categoria,mes_desde,anio_desde,mes_hasta,anio_hasta)
-        else :
+        if click1 or click2:
+            return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion, categoria,
+                                            mes_desde, anio_desde, mes_hasta, anio_hasta)
+        else:
             return mari.cargar_mari()
     elif pathname == menu.MODELOS:
         return modelos.layout
@@ -94,6 +97,8 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
         return departamentov.layout
     elif pathname == menu.ZONAS_FRANCAS:
         return zonafrancav.layout
+    elif pathname == menu.JULI_P:
+        return juli.layout
     elif pathname == menu.SALIR:
         return html.P("Por implementar... cierre de sesión.")
 
@@ -109,4 +114,4 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
 
 # inicializamos la aplicacion en el server
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8888)
+    app.run_server(debug=True, port=8000)
