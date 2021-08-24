@@ -13,7 +13,8 @@ MARI = "/mari"
 PAISES = "/paises"
 DEPARTAMENTOS = "/departamentos"
 ZONAS_FRANCAS = "/zonasfrancas"
-JULI_P = "/pruebajuli"
+BARPLOTS = "/barplots"
+HISTOGRAMS = "/histogramas"
 
 
 def cargar_navbar(app):
@@ -95,9 +96,10 @@ def cargar_navbar(app):
                     dbc.DropdownMenuItem("Consultar", href=CONSULTAR),
                     dbc.DropdownMenuItem("Visualizar", href=VISUALIZAR),
                     dbc.DropdownMenuItem("Cargar", href=CARGAR),
-                    dbc.DropdownMenuItem("Ver Prueba Daniel", href=DANIEL),
-                    dbc.DropdownMenuItem("Ver Prueba Mari", href=MARI),
-                    dbc.DropdownMenuItem("Ver prueba Juli", href=JULI_P)
+                    dbc.DropdownMenuItem("Distribución geográfica", href=DANIEL),
+                    dbc.DropdownMenuItem("Comportamiento histórico", href=MARI),
+                    dbc.DropdownMenuItem("Productos más comercializados", href=BARPLOTS),
+                    dbc.DropdownMenuItem("Gráficos de distribución", href=HISTOGRAMS)
                 ],
                 nav=True,
                 in_navbar=True,
