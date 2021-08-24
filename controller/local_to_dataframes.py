@@ -343,8 +343,7 @@ def ejecutar_datacleaning_exports(df_exports) :
         df_exports['País destino'] = df_exports['País destino'].apply(lambda x: str(x))
         df_exports['País destino'].replace(replace_dict, inplace=True)
         df_exports["Departamento de procedencia"] = df_exports["Departamento de procedencia"].astype(int)
-        print(df_exports.info())
-        print(df_exports.head(2))
+
     except :
         pass
 
@@ -364,8 +363,6 @@ def ejecutar_datacleaning_imports(df_imports) :
         df_imports['País de procedencia'].replace(replace_dict, inplace=True)
         df_imports['País de compra'].replace(replace_dict, inplace=True)
         df_imports["Departamento destino"] = df_imports["Departamento destino"].astype(int)
-        print(df_imports.info())
-        print(df_exports.head(2))
 
     except :
         pass
