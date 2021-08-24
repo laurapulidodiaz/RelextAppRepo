@@ -35,7 +35,7 @@ cat_dict_exp={"Aduana":"category", "Vía de transporte":"category",
               'Posición Arancelaria': 'str',
               'Código del regimen (acorde con CAN)': 'str',
               'Código de unidad comercial de medida (numérico)': 'str',
-             "País destino":"str"}
+             "País destino":"int"}
 
 replace_dict = {'137': 'Islas Caimán',
                 '145': 'República Unida del Camerún',
@@ -115,13 +115,14 @@ def load_metadata(selected_type):
                 dictionary_per_column[column][code] = value
 
     #little fuckit hack
-    dictionary_per_column['PAIS'] = dictionary_per_column['BANDERA']
+    #dictionary_per_column['PAIS'] = dictionary_per_column['BANDERA']
     dictionary_per_column['COD_SAL1'] = dictionary_per_column['ADUA']
     dictionary_per_column['PAISGEN'] = dictionary_per_column['BANDERA']
     dictionary_per_column['PAISPRO'] = dictionary_per_column['BANDERA']
     fr.close()
 
     return dictionary_per_column
+
 
 def get_index_from_month(month) :
     global MONTHS
@@ -187,6 +188,7 @@ def load_dataframes(selected_type, initial_year, initial_month, last_year, last_
     print("COMPLETED!!!")
     print("Time:",diff,"min")
     print("========================")
+
     return data_aws_fulldf
 
 def update_metadata_in_dataframe(data_aws_fulldf_b, dictionary_per_column) :
@@ -198,6 +200,7 @@ def update_metadata_in_dataframe(data_aws_fulldf_b, dictionary_per_column) :
     diff = (final_time - start_time)/60
     print("========================")
     print("Time Update:",diff,"min")
+
     return data_aws_fulldf_c
 
 # load full description headers
@@ -336,13 +339,15 @@ def ejecutar_datacleaning_exports(df_exports) :
     global MONTHS
 
     try :
-        df_exports['Código país destino (numérico)'].replace(replace_dict, inplace=True)
+
+        #df_exports['Código país destino (numérico)'].replace(replace_dict, inplace=True)
         df_exports.rename(columns=col_dict_exp, inplace=True)
         df_exports=df_exports.astype(cat_dict_exp)
         df_exports["Mes"]=pd.Categorical(df_exports["Mes"],categories=MONTHS, ordered=True)
-        df_exports['País destino'] = df_exports['País destino'].apply(lambda x: str(x))
-        df_exports['País destino'].replace(replace_dict, inplace=True)
+        #df_exports['País destino'] = df_exports['País destino'].apply(lambda x: str(x))
+        #df_exports['País destino'].replace(replace_dict, inplace=True)
         df_exports["Departamento de procedencia"] = df_exports["Departamento de procedencia"].astype(int)
+        print("_____________")
 
     except :
         pass
@@ -391,6 +396,7 @@ def cargar_dataframes(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
     df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
     df_exports = ejecutar_datacleaning_exports(df_exports)
     df_imports = ejecutar_datacleaning_imports(df_imports)
+    print("data cleaning", df_exports.info())
 
     df_imports_cundinamarca = cargar_dataframe_importacion_cundinamarca(df_imports)
     df_exports_cundinamarca = cargar_dataframe_exportacion_cundinamarca(df_exports)

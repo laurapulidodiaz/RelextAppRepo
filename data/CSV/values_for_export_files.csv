@@ -87,7 +87,7 @@ BANDERA,74,Azerbaiyán
 BANDERA,115,Burundi
 BANDERA,87,Bélgica
 BANDERA,229,Benin
-"BANDERA,98,""Bonaire,San Eus"""
+BANDERA,98,""Bonaire,San Eus"""
 BANDERA,31,Burkina Faso
 BANDERA,81,Bangladesh
 BANDERA,111,Bulgaria
@@ -103,7 +103,7 @@ BANDERA,105,Brasil
 BANDERA,83,Barbados
 BANDERA,108,Brunei Darussal
 BANDERA,119,Bután
-"BANDERA,102,""Bouvet,isla"""
+BANDERA,102,""Bouvet,isla"""
 BANDERA,101,Botswana
 BANDERA,640,República Centr
 BANDERA,149,Canadá
@@ -112,10 +112,10 @@ BANDERA,767,Suiza
 BANDERA,211,Chile
 BANDERA,215,China
 BANDERA,193,Costa de Marfil
-"BANDERA,145,""Camerún,Repúbl"""
+BANDERA,145,""Camerún,Repúbl"""
 BANDERA,888,Rep. Democrátic
-"BANDERA,177,""Congo,Repúblic"""
-"BANDERA,183,""Cook,Islas"""
+BANDERA,177,""Congo,Repúblic"""
+BANDERA,183,""Cook,Islas"""
 BANDERA,169,Colombia
 BANDERA,173,Comoras
 BANDERA,127,Cabo Verde
@@ -142,8 +142,8 @@ BANDERA,253,Etiopía
 BANDERA,271,Finlandia
 BANDERA,870,Fiji
 BANDERA,275,Francia
-"BANDERA,259,""Feroe,Islas"""
-"BANDERA,494,""Micronesia,Est"""
+BANDERA,259,""Feroe,Islas"""
+BANDERA,494,""Micronesia,Est"""
 BANDERA,281,Gabón
 BANDERA,628,Reino Unido
 BANDERA,287,Georgia
