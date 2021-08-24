@@ -26,6 +26,7 @@ from view.admin import departamento_view as departamentov
 from view.admin import zona_franca_view as zonafrancav
 from view import juliana_view as juli
 
+
 GLOBAL_STYLE = {
     "font-size": "0.8rem"
 }

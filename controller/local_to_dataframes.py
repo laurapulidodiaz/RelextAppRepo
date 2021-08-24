@@ -400,6 +400,13 @@ def cargar_dataframes(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
 
     return df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca
 
+#def dataframes_pais(df_exports,df_imports,PAIS)
+
+
+
+
+    #return
+
 # Ejemplo de uso
 # df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca = cargar_dataframes(2020, "Enero", 2020, "Enero")
 # df_imports, df_imports_cundinamarca = cargar_dataframes_import(2020, "Enero", 2020, "Enero")
