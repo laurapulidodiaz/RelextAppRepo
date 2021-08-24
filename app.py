@@ -98,8 +98,10 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
         return departamentov.layout
     elif pathname == menu.ZONAS_FRANCAS:
         return zonafrancav.layout
-    elif pathname == menu.JULI_P:
-        return juli.layout
+    elif pathname == menu.BARPLOTS:
+        return juli.layout1
+    elif pathname == menu.HISTOGRAMS:
+        return juli.layout2
     elif pathname == menu.SALIR:
         return html.P("Por implementar... cierre de sesión.")
 
@@ -115,4 +117,4 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
 
 # inicializamos la aplicacion en el server
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8000)
+    app.run_server(debug=True, port=8888)
