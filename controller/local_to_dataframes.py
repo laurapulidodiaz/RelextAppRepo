@@ -287,8 +287,9 @@ def pruebas(type_sel, INIT_YEAR, INIT_MONTH, FINAL_YEAR, FINAL_MONTH) :
 
 
 def cargar_data_arancel() :
-    data_arancel = pd.read_excel(BASE_URL+'/Subpartidas/ARANCEL.xlsx', skiprows=[0,1,2], usecols="A,C,M")
+    data_arancel = pd.read_excel(BASE_URL+'/Subpartidas/ARANCEL.xlsx', skiprows=[0,1,2], usecols="A,C,L,M")
     data_arancel.drop_duplicates(subset=["Subpartida Arancelaria"], inplace=True)
+    data_arancel["SCN - BASE 2015"] = (data_arancel["SCN - BASE 2015"].fillna(0).astype(int)).astype(str)
 
     return data_arancel
 
@@ -320,14 +321,14 @@ def cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEA
 
 def cargar_dataframe_exportacion_cundinamarca(df_exports) :
     try :
-        df_exports_cundinamarca = df_exports[df_exports["Departamento de procedencia"]==25]
+        df_exports_cundinamarca = df_exports[df_exports["Departamento de origen por posición"]==25]
         return df_exports_cundinamarca
     except :
         return 0
 
 def cargar_dataframe_importacion_cundinamarca(df_imports) :
     try :
-        df_imports_cundinamarca = df_imports[df_imports["Departamento destino"]==25]
+        df_imports_cundinamarca = df_imports[df_imports["Departamento del importador"]==25]
         return df_imports_cundinamarca
     except :
         return 0
@@ -403,7 +404,44 @@ def cargar_dataframes(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
 
     return df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca
 
-#def dataframes_pais(df_exports,df_imports,PAIS)
+def dataframes_pais(df_exports,df_imports,PAIS=""):
+    if PAIS != "":
+        df_exports=df_exports[df_exports["País destino"]==PAIS]
+        df_imports=df_imports[df_imports["País origen"]==PAIS]
+    return df_exports,df_imports
+
+
+def dataframes_dpto(df_exports, df_imports, DPTO=""):
+    if DPTO != "":
+        df_exports = df_exports[df_exports["Departamento de origen por posición"] == DPTO]
+        df_imports = df_imports[df_imports["Departamento del importador"] == DPTO]
+    return df_exports, df_imports
+
+def dataframes_pos(df_exports,df_imports,POS=""):
+    #POS es un string
+    if POS !="":
+        df_exports=df_exports[df_exports["Posición Arancelaria"]==POS]
+        df_imports=df_imports[df_imports["Posición arancelaria"]==POS]
+    return df_exports, df_imports
+
+def dataframes_cat(df_exports,df_imports, CAT):
+	#CAT es un string
+    if CAT != "":
+        df_exports=df_exports[df_exports["SCN - BASE 2015"]==CAT]
+        df_imports=df_imports[df_imports["SCN - BASE 2015"]==CAT]
+    return df_exports,df_imports
+
+
+def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS, CAT):
+    df_exports, df_imports,_,_=cargar_dataframes(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+    df_exports, df_imports=dataframes_pais(df_exports, df_imports, PAIS)
+    df_exports, df_imports=dataframes_dpto(df_exports, df_imports, DPTO)
+    df_exports, df_imports = dataframes_cat(df_exports, df_imports, CAT)
+    df_exports, df_imports=dataframes_pos(df_exports,df_imports,POS)
+
+
+    return df_exports, df_imports
+
 
 
 
