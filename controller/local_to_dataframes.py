@@ -8,6 +8,8 @@ import time
 
 pd.options.mode.chained_assignment = None
 
+DF_STORE = pd.HDFStore('df_store.h5')
+
 BASE_URL = "data/CSV"
 
 TYPES = {
@@ -378,27 +380,46 @@ def ejecutar_datacleaning_imports(df_imports) :
     return df_imports
 
 def cargar_dataframes_export(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
-    data_arancel = cargar_data_arancel()
-    df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
-    df_exports = ejecutar_datacleaning_exports(df_exports)
+    df_exports = DF_STORE['df_exports']
+    if type(df_exports) == None :
+        data_arancel = cargar_data_arancel()
+        df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+        df_exports = ejecutar_datacleaning_exports(df_exports)
+        DF_STORE['df_exports'] = df_exports
+
     df_exports_cundinamarca = cargar_dataframe_exportacion_cundinamarca(df_exports)
 
     return df_exports, df_exports_cundinamarca
 
 def cargar_dataframes_import(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
-    data_arancel = cargar_data_arancel()
-    df_imports = cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
-    df_imports = ejecutar_datacleaning_imports(df_imports)
-    df_imports_cundinamarca = cargar_dataframe_importacion_cundinamarca(df_imports)
+    df_imports = DF_STORE['df_imports']
+    if type(df_imports) == None :
+        data_arancel = cargar_data_arancel()
+        df_imports = cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+        df_imports = ejecutar_datacleaning_imports(df_imports)
+        df_imports_cundinamarca = cargar_dataframe_importacion_cundinamarca(df_imports)
+        DF_STORE['df_imports'] = df_imports
 
     return df_imports, df_imports_cundinamarca
 
 def cargar_dataframes(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
-    data_arancel = cargar_data_arancel()
-    df_imports = cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
-    df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
-    df_exports = ejecutar_datacleaning_exports(df_exports)
-    df_imports = ejecutar_datacleaning_imports(df_imports)
+    data_arancel = None
+
+    df_exports = DF_STORE['df_exports']
+    if type(df_exports) == None :
+        data_arancel = cargar_data_arancel()
+        df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+        df_exports = ejecutar_datacleaning_exports(df_exports)
+        DF_STORE['df_exports'] = df_exports
+
+    df_imports = DF_STORE['df_imports']
+    if type(df_imports) == None :
+        if type(data_arancel) == None :
+            data_arancel = cargar_data_arancel()
+        df_imports = cargar_dataframe_importacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+        df_imports = ejecutar_datacleaning_imports(df_imports)
+        DF_STORE['df_imports'] = df_imports
+
     print("data cleaning", df_exports.info())
 
     df_imports_cundinamarca = cargar_dataframe_importacion_cundinamarca(df_imports)
@@ -440,7 +461,6 @@ def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS
     df_exports, df_imports=dataframes_dpto(df_exports, df_imports, DPTO)
     df_exports, df_imports = dataframes_cat(df_exports, df_imports, CAT)
     df_exports, df_imports=dataframes_pos(df_exports,df_imports,POS)
-
 
     return df_exports, df_imports
 
