@@ -42,7 +42,7 @@ def loc_grouped(date_start=0, date_end=0):
                     'País origen': 'País',}
     df_exports, df_imports, cund, cund_ = ltd.cargar_dataframes(year_selected, month_selected, year_selected, month_selected)
 
-    if type(cund) or type(cund_) == int:
+    if type(cund) == int or type(cund_) == int:
         return 0, 0, 0
     else:
         df_exports = df_exports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index().rename(columns=rename_dict)
