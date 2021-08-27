@@ -21,8 +21,8 @@ def data_cundinamarca_top10_export() :
     if type(df_exports_cundinamarca) == int :
         return 0, year_selected, month_selected
     else :
-        df_exports_cundinamarca['Descripción Arancelaria'] = df_exports_cundinamarca['Descripción Arancelaria'].astype(str)
-        df_exports_cundinamarca['Descripción Arancelaria Corta'] = df_exports_cundinamarca['Descripción Arancelaria'].apply(lambda x : x[:100])
+        df_exports_cundinamarca['Descripción Arancelaria'] = df_exports_cundinamarca['Descripción Arancelaria'].astype(str).copy()
+        df_exports_cundinamarca['Descripción Arancelaria Corta'] = df_exports_cundinamarca['Descripción Arancelaria'].apply(lambda x : x[:100]).copy()
         df = df_exports_cundinamarca.groupby("Descripción Arancelaria Corta").sum()[["Total valor FOB doláres de la posición"]].reset_index()
         df = df.sort_values(by=["Total valor FOB doláres de la posición"], ascending=False).head(10)
 
@@ -36,13 +36,13 @@ def loc_grouped(date_start=0, date_end=0):
     year_selected, month_selected = get_two_months_ago()
 
     #TODO: definir date_start y date_end para convertirlos a el formato de la función
-    
+
     rename_dict = { 'Código país destino': 'País',
                     'Total valor FOB doláres de la posición':'Valor FOB dólares de la mercancía',
                     'País origen': 'País',}
-    df_exports, df_imports, cund, _ = ltd.cargar_dataframes(year_selected, month_selected, year_selected, month_selected)
+    df_exports, df_imports, cund, cund_ = ltd.cargar_dataframes(year_selected, month_selected, year_selected, month_selected)
 
-    if type(cund) == int:
+    if type(cund) or type(cund_) == int:
         return 0, 0, 0
     else:
         df_exports = df_exports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index().rename(columns=rename_dict)
