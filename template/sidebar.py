@@ -3,6 +3,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 from datetime import datetime, date
 from controller.local_to_dataframes import MONTHS
+from dash.dependencies import Input, Output
 
 IMPORTACIONES = "/consultar/importaciones"
 EXPORTACIONES = "/consultar/exportaciones"
@@ -52,7 +53,7 @@ def cargar_sidebar(app, pagina, copi) :
         [
             dbc.Label("Tipo de Registro", html_for="dropdown_tipo_registro"),
             dcc.Dropdown(
-                id="dropdown_tipo_registro",
+                id="dropdown_tipo_registro", value=1,
                 options=[
                     {"label": "Exportaciones", "value": 1},
                     {"label": "Importaciones", "value": 2},
@@ -74,7 +75,7 @@ def cargar_sidebar(app, pagina, copi) :
 
     input_pais = dbc.FormGroup(
         [
-            dbc.Label("País", html_for="dropdown_pais"),
+            dbc.Label(children='', html_for="dropdown_pais", id='label_pais'),
             dcc.Dropdown(
                 id="dropdown_pais",
                 options=cargar_paises(),
@@ -83,15 +84,49 @@ def cargar_sidebar(app, pagina, copi) :
         style = {"padding-top":"40px"}
     )
 
+    @app.callback(
+        Output('label_pais', 'children'),
+        Input('dropdown_tipo_registro', 'value')
+    )
+    def update_label(input):
+        if input == 1:
+            output = 'País de Destino'
+        elif input == 2:
+            output = 'País de Origen'
+        elif input == 3:
+            output = 'País'
+        elif input == 4:
+            output = ''
+        elif input == '':
+            output = 'País'
+        return output
+
     input_departamento = dbc.FormGroup(
         [
-            dbc.Label("Departamento", html_for="dropdown_departamento"),
+            dbc.Label(children='', html_for="dropdown_departamento", id='label_departamento'),
             dcc.Dropdown(
                 id="dropdown_departamento",
                 options=cargar_departamentos(),
             ),
         ]
     )
+
+    @app.callback(
+        Output('label_departamento', 'children'),
+        Input('dropdown_tipo_registro', 'value')
+    )
+    def update_label(input):
+        if input == 1:
+            output = 'Departamento de Origen'
+        elif input == 2:
+            output = 'Departamento de Destino'
+        elif input == 3:
+            output = 'Departamento'
+        elif input == 4:
+            output = ''
+        elif input == '':
+            output = 'Departamento'
+        return output
 
     def crear_year_picker(nuevo_id) :
         years = []
