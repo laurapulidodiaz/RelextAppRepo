@@ -3,7 +3,6 @@ import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
-import dash_table
 from dash.dependencies import Input, Output, State
 from whitenoise import WhiteNoise
 
@@ -117,4 +116,4 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
 
 # inicializamos la aplicacion en el server
 if __name__ == "__main__":
-    app.run_server(debug=True, processes=4, port=8888)
+    app.run_server(port=8888)
