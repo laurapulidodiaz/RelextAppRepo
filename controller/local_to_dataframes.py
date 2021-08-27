@@ -6,6 +6,8 @@ import csv
 import os
 import time
 
+pd.options.mode.chained_assignment = None
+
 BASE_URL = "data/CSV"
 
 TYPES = {
