@@ -77,5 +77,6 @@ urllib3==1.26.6
 virtualenv==20.7.2
 visdcc==0.0.40
 Werkzeug==2.0.1
+whitenoise
 xlrd==2.0.1
 zipfile36==0.1.3
