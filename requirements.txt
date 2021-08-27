@@ -76,7 +76,8 @@ ua-parser==0.10.0
 urllib3==1.26.6
 virtualenv==20.7.2
 visdcc==0.0.40
-whitenoise
 Werkzeug==2.0.1
 xlrd==2.0.1
 zipfile36==0.1.3
+gevent
+whitenoise
