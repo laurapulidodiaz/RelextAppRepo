@@ -455,11 +455,11 @@ def dataframes_cat(df_exports,df_imports, CAT):
     return df_exports,df_imports
 
 
-def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS, CAT):
+def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS):
     df_exports, df_imports,_,_=cargar_dataframes(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
     df_exports, df_imports=dataframes_pais(df_exports, df_imports, PAIS)
     df_exports, df_imports=dataframes_dpto(df_exports, df_imports, DPTO)
-    df_exports, df_imports = dataframes_cat(df_exports, df_imports, CAT)
+    #df_exports, df_imports = dataframes_cat(df_exports, df_imports, CAT)
     df_exports, df_imports=dataframes_pos(df_exports,df_imports,POS)
 
     return df_exports, df_imports
