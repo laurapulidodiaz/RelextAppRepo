@@ -7,7 +7,7 @@ from controller import mari_controller as mari
 from controller import local_to_dataframes as ld
 
 def cargar_mari():
-    grafico=mari.lineplot(1,"","","","","Mayo",2021,"Mayo",2021)
+    grafico=mari.lineplot(1,"Mayo",2021,"Mayo",2021,"","","","")
 
     layout = html.Div([
         dbc.Alert([
@@ -22,8 +22,10 @@ def cargar_mari():
 
     return layout
 
-def cargar_mari_filtros(tipo=1,pais="",dpto="",pos="",cat="",mesini="",anoini="",mesfin="",anofin=""):
-    grafico = mari.lineplot(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin)
+def cargar_mari_filtros(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin):
+    print("pruebaaaa 1111", mesini,anoini,mesfin,anofin)
+    grafico = mari.lineplot(tipo,mesini,anoini,mesfin,anofin,pais,dpto,pos,cat)
+
 
     layout = html.Div([
         dbc.Alert([
