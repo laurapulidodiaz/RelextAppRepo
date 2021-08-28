@@ -4,8 +4,6 @@ import plotly.express as px
 from controller import consulta_controller as cons
 import plotly.graph_objects as go
 
-#category= "Carbón coque y semicoque, carbón de lignito o carbón de hulla; carbón de retorta; alquitrán de carbón, de carbón lignito, hulla y otras tortas minerales"
-
 # Barplots
 def barplot_10_top(data, country, department, year_start, month_start,year_end, month_end):
     if country == None:
