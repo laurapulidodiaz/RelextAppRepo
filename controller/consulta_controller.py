@@ -31,19 +31,15 @@ def data_cundinamarca_top10_export() :
 
         return df, year_selected, month_selected
 
-def loc_grouped(date_start=0, date_end=0):
+def loc_grouped(anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
     #Devuelve 3 dataframes agrupados por país: exports, imports y balance.
     #Estos dataframes tienen 2 columnas: 'País' y 'Valor FOB dólares de la mercancía'
-
-
-    year_selected, month_selected = get_two_months_ago()
-
-    #TODO: definir date_start y date_end para convertirlos a el formato de la función
 
     rename_dict = { 'Código país destino': 'País',
                     'Total valor FOB doláres de la posición':'Valor FOB dólares de la mercancía',
                     'País origen': 'País',}
-    df_exports, df_imports, cund, cund_ = ltd.cargar_dataframes(year_selected, month_selected, year_selected, month_selected)
+
+    df_exports, df_imports, cund, cund_ = ltd.cargar_dataframes(anoini, mesini, anofin, mesfin)
 
     if type(cund) == int or type(cund_) == int:
         return 0, 0, 0
