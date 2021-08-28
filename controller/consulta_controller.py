@@ -32,8 +32,10 @@ def data_cundinamarca_top10_export() :
         return df, year_selected, month_selected
 
 def loc_grouped(anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
-    #Devuelve 3 dataframes agrupados por país: exports, imports y balance.
-    #Estos dataframes tienen 2 columnas: 'País' y 'Valor FOB dólares de la mercancía'
+    '''
+    Devuelve 3 dataframes agrupados por país: exports, imports y balance.
+    Estos dataframes tienen 2 columnas: 'País' y 'Valor FOB dólares de la mercancía'
+    '''
 
     rename_dict = { 'Código país destino': 'País',
                     'Total valor FOB doláres de la posición':'Valor FOB dólares de la mercancía',
@@ -49,3 +51,12 @@ def loc_grouped(anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
 
         data_balance = df_exports['Valor FOB dólares de la mercancía'] - df_imports['Valor FOB dólares de la mercancía']
         return df_exports, df_imports, data_balance
+
+def balanza_producto(year_start, month_start, year_end, month_end):
+    df_exports, df_imports, _a, _b = ltd.cargar_dataframes(year_start, month_start, year_end, month_end)
+    df_balanza = df_imports.merge(df_exports, how='full', on='Descripción Arancelaria')
+    df_balanza = df_balanza.groupby('Descripción Arancelaria').sum()[['Total valor FOB doláres de la posición', 'Valor CIF dólares de la mercancía']].reset_index()
+    df_balanza = df_balanza.rename({'Total valor FOB doláres de la posición': 'Total Exportaciones',
+                                    'Valor CIF dólares de la mercancía': 'Total Importaciones'})
+    return df_balanza
+

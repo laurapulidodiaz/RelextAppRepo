@@ -23,6 +23,7 @@ def barplot_juli():
         dcc.Graph(figure = grafico1, style={"font-weight":"normal","font-size":"13px","margin-left":"24px","margin-top":"-18px"})
 
     ])
+    return layout1
 
 
 def barplot_juli_filtros(tipo_registro,pais,departamento,posicion,categoria,mes_desde,anio_desde,mes_hasta,anio_hasta):
@@ -42,6 +43,7 @@ def barplot_juli_filtros(tipo_registro,pais,departamento,posicion,categoria,mes_
         dcc.Graph(figure = grafico1, style={"font-weight":"normal","font-size":"13px","margin-left":"24px","margin-top":"-18px"})
 
     ])
+    return layout1
 
 
 def histogram_juli():
@@ -62,6 +64,7 @@ def histogram_juli():
 
 
 ])
+    return layout2
 
 def histogram_juli_filtro(tipo_registro,pais,departamento,categoria,posicion,anio_desde,mes_desde,anio_hasta,mes_hasta):
     grafico2=juli.make_histogram(tipo_registro,pais,departamento,categoria,posicion,anio_desde,mes_desde,anio_hasta,mes_hasta)
@@ -83,3 +86,22 @@ def histogram_juli_filtro(tipo_registro,pais,departamento,categoria,posicion,ani
                   style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
 
     ])
+    return layout2
+
+def balanza_filtros(product, year_start, month_start, year_end, month_end):
+    grafico = juli.balanza_bp(product, year_start, month_start, year_end, month_end)
+
+    layout = html.Div([
+        dbc.Alert([
+            html.H4("Iniciar", className="alert-heading",
+                    style={"font-size": "20px", "padding-top": "8px", "font-weight": "400"}),
+            html.P(
+                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
+                style={"margin-bottom": "0.2rem"}
+            ), ],
+            color="info"),
+        dcc.Graph(figure=grafico,
+                  style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
+    ])
+
+    return layout

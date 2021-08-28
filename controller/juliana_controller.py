@@ -74,12 +74,28 @@ def make_histogram(data, country, department, category, product, year_start, mon
                                                         department, product, category)
     if data == 1:
 
-        fig = px.histogram(df_filtered, x='Total valor FOB doláres de la posición', nbins=1000)
+        fig = px.histogram(df_exports, x='Total valor FOB doláres de la posición', nbins=1000)
 
 
     elif data == 2:
 
-        fig = px.histogram(df_filtered, x='Valor CIF dólares de la mercancía', nbins=1000)
+        fig = px.histogram(df_imports, x='Valor CIF dólares de la mercancía', nbins=1000)
 
+    return fig
+
+# Barplot balanza comercial
+def balanza_bp(product = "", year_start = 2021, month_start= "Mayo", year_end = 2021, month_end = "Mayo"):
+    df_balanza = cons.balanza_producto(year_start, month_start, year_end, month_end)
+    if product != "":
+        df_filtered = df_balanza[df_balanza['Descripción Arancelaria'] == product]
+    else:
+        df_filtered = df_balanza
+    fig = go.Figure()
+    fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Exportaciones'],
+                         marker_color='#53A668', name='Exportaciones'))
+    fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Importaciones'],
+                         marker_color='#1F628C', name='Importaciones'))
+
+    fig.update_layout(barmode='group')
 
     return fig

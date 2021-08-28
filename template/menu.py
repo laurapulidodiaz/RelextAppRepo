@@ -15,6 +15,7 @@ DEPARTAMENTOS = "/departamentos"
 ZONAS_FRANCAS = "/zonasfrancas"
 BARPLOTS = "/barplots"
 HISTOGRAMS = "/histogramas"
+BALANZA = "/trade_balance"
 
 
 def cargar_navbar(app):
@@ -99,7 +100,8 @@ def cargar_navbar(app):
                     dbc.DropdownMenuItem("Distribución geográfica", href=DANIEL),
                     dbc.DropdownMenuItem("Comportamiento histórico", href=MARI),
                     dbc.DropdownMenuItem("Productos más comercializados", href=BARPLOTS),
-                    dbc.DropdownMenuItem("Gráficos de distribución", href=HISTOGRAMS)
+                    dbc.DropdownMenuItem("Gráficos de distribución", href=HISTOGRAMS),
+                    dbc.DropdownMenuItem("Balanza comercial por productos", href=BALANZA)
                 ],
                 nav=True,
                 in_navbar=True,
