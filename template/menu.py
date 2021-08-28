@@ -8,8 +8,8 @@ MODELOS = "/modelos"
 AYUDA = "/ayuda"
 CLAVE = "/cambiarclave"
 SALIR = "/salir"
-DANIEL = "/daniel"
-MARI = "/mari"
+DANIEL = "/geografico"
+MARI = "/historico"
 PAISES = "/paises"
 DEPARTAMENTOS = "/departamentos"
 ZONAS_FRANCAS = "/zonasfrancas"
@@ -94,32 +94,25 @@ def cargar_navbar(app):
             html.Img(src=app.get_asset_url('logo.png'), style=LOGO_STYLE),
             dbc.DropdownMenu(
                 children=[
-                    dbc.DropdownMenuItem("Consultar", href=CONSULTAR),
-                    dbc.DropdownMenuItem("Visualizar", href=VISUALIZAR),
-                    dbc.DropdownMenuItem("Cargar", href=CARGAR),
-                    dbc.DropdownMenuItem("Distribución geográfica", href=DANIEL),
-                    dbc.DropdownMenuItem("Comportamiento histórico", href=MARI),
-                    dbc.DropdownMenuItem("Productos más comercializados", href=BARPLOTS),
-                    dbc.DropdownMenuItem("Gráficos de distribución", href=HISTOGRAMS),
-                    dbc.DropdownMenuItem("Balanza comercial por productos", href=BALANZA)
+                    dbc.DropdownMenuItem("Registros de Datos", href=CONSULTAR),
+                    dbc.DropdownMenuItem("Visualización Geográfica", href=DANIEL),
+                    dbc.DropdownMenuItem("Comportamiento Histórico", href=MARI),
+                    dbc.DropdownMenuItem("Productos TOP", href=BARPLOTS),
+                    dbc.DropdownMenuItem("Gráficos de Distribución", href=HISTOGRAMS)
                 ],
                 nav=True,
                 in_navbar=True,
                 label="Datos",
                 style=NAVBAR_STYLE,
             ),
-            dbc.NavItem(dbc.NavLink("Modelos", href=MODELOS, style=NAVBAR_STYLE)),
             dbc.DropdownMenu(
                 children=[
-                    dbc.DropdownMenuItem("Ayuda", href=AYUDA),
-                    dbc.DropdownMenuItem("Cambiar Clave", href=CLAVE),
-                    dbc.DropdownMenuItem("Paises", href=PAISES),
-                    dbc.DropdownMenuItem("Departamentos", href=DEPARTAMENTOS),
-                    dbc.DropdownMenuItem("Zonas Francas", href=ZONAS_FRANCAS),
+                    dbc.DropdownMenuItem("Configuración de Datos", href=ZONAS_FRANCAS),
+                    dbc.DropdownMenuItem("Carga de Datos", href=CARGAR),
                 ],
                 nav=True,
                 in_navbar=True,
-                label="Sistema",
+                label="Administración",
                 style=NAVBAR_STYLE,
             ),
             usuario_nav

@@ -57,8 +57,7 @@ def cargar_sidebar(app, pagina, copi) :
                 options=[
                     {"label": "Exportaciones", "value": 1},
                     {"label": "Importaciones", "value": 2},
-                    {"label": "Balanza Comercial", "value": 3},
-                    {"label": "Producción", "value": 4},
+                    {"label": "Producción", "value": 3},
                 ],
             ),
         ]
@@ -241,7 +240,6 @@ def cargar_sidebar(app, pagina, copi) :
             input_date_picker_desde,
             input_date_picker_hasta,
             input_posicion_arancelaria,
-            input_texto_descripcion,
             boton_filtrar_i,
         ],
         style=SIDEBAR_STYLE,

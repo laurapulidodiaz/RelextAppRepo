@@ -65,12 +65,11 @@ app.layout = html.Div(children=[
         State(component_id='fecha_hasta_year', component_property='value'),
         State(component_id='fecha_hasta_month', component_property='value'),
         State(component_id='input_posicion_arancelaria', component_property='value'),
-        State(component_id='input_producto_texto', component_property='value'),
         State(component_id='url', component_property='pathname')
     ]
 )
 def render_page_content(pathname, click1, click2, tipo_registro, pais, departamento, anio_desde, mes_desde,
-                        anio_hasta, mes_hasta, posicion, categoria, pathname2):
+                        anio_hasta, mes_hasta, posicion, pathname2):
     if pathname == menu.CONSULTAR:
         return consultar.layout
     elif pathname == menu.VISUALIZAR:
@@ -79,13 +78,13 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
         return cargar.layout
     elif pathname == menu.DANIEL:
         if click1 or click2:
-            return geov.cargar_geo_filtros(tipo_registro, posicion, categoria,
-                                            anio_desde, mes_desde,  anio_hasta, mes_hasta)
+            return geov.cargar_geo_filtros(tipo_registro, pais, departamento, posicion, "",
+                                            mes_desde, anio_desde, mes_hasta, anio_hasta)
         else:
             return geov.cargar_geo()
     elif pathname == menu.MARI:
         if click1 or click2:
-            return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion, categoria,
+            return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion, "",
                                             mes_desde, anio_desde, mes_hasta, anio_hasta)
         else:
             return mari.cargar_mari()
