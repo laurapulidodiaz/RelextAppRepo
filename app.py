@@ -78,10 +78,9 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
     elif pathname == menu.CARGAR:
         return cargar.layout
     elif pathname == menu.DANIEL:
-        ##
         if click1 or click2:
-            return geov.cargar_geo_filtros(tipo_registro, pais, departamento, posicion, categoria,
-                                            mes_desde, anio_desde, mes_hasta, anio_hasta)
+            return geov.cargar_geo_filtros(tipo_registro, posicion, categoria,
+                                            anio_desde, mes_desde,  anio_hasta, mes_hasta)
         else:
             return geov.cargar_geo()
     elif pathname == menu.MARI:

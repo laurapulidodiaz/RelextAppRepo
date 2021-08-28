@@ -3,7 +3,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 from controller import update_graph_controller as ugc
 
-def cargar_geo(tipo=1,pais="",dpto="",pos="",cat="",mesini='Mayo',anoini=2021,mesfin='Mayo',anofin=2021):
+def cargar_geo():
     #Exportaciones Mayo 2021 a Mayo 2021
     grafico= ugc.update_choropleth_world(1,2021,"Mayo",2021,"Mayo")
 
@@ -20,9 +20,9 @@ def cargar_geo(tipo=1,pais="",dpto="",pos="",cat="",mesini='Mayo',anoini=2021,me
 
     return layout
 
-def cargar_geo_filtros(tipo=1,pais="",dpto="",pos="",cat="",mesini='Mayo',anoini=2021,mesfin='Mayo',anofin=2021):
+def cargar_geo_filtros(tipo=1,pos=None,cat=None,anoini=2021,mesini='Mayo',anofin=2021, mesfin='Mayo'):
 
-    grafico= ugc.update_choropleth_world(tipo,mesini,anoini,mesfin,anofin)
+    grafico= ugc.update_choropleth_world(tipo,anoini,mesini,anofin, mesfin)
 
     layout = html.Div([
         dbc.Alert([

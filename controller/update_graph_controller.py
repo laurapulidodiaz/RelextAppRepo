@@ -24,7 +24,7 @@ def update_choropleth_world(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mes
     ))
 
     fig.update_geos(projection_type="natural earth")
-    fig.update_layout(height=500, margin={"r":0,"t":0,"l":0,"b":0})
+    fig.update_layout(height=480, margin={"r":0,"t":10,"l":0,"b":0})
 
     return fig
 
