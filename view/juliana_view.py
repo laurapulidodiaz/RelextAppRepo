@@ -88,6 +88,24 @@ def histogram_juli_filtro(tipo_registro,pais,departamento,categoria,posicion,ani
     ])
     return layout2
 
+def balanza_default():
+    grafico = juli.balanza_bp(product="", year_start=2021, month_start="Mayo", year_end=2021, month_end="Mayo")
+
+    layout = html.Div([
+        dbc.Alert([
+            html.H4("Iniciar", className="alert-heading",
+                    style={"font-size": "20px", "padding-top": "8px", "font-weight": "400"}),
+            html.P(
+                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
+                style={"margin-bottom": "0.2rem"}
+            ), ],
+            color="info"),
+        dcc.Graph(figure=grafico,
+                  style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
+    ])
+
+    return layout
+
 def balanza_filtros(product, year_start, month_start, year_end, month_end):
     grafico = juli.balanza_bp(product, year_start, month_start, year_end, month_end)
 

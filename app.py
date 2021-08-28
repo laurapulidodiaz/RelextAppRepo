@@ -115,10 +115,10 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
         else:
             return juli.histogram_juli()
     elif pathname == menu.BALANZA:
-        if click1 or click2:
+        if click2:
             return juli.balanza_filtros(posicion, anio_desde,mes_desde, anio_hasta, mes_hasta)
         else:
-            return juli.balanza_filtros(product = "", year_start = 2021, month_start= "Mayo", year_end = 2021, month_end = "Mayo")
+            return juli.balanza_default()
     elif pathname == menu.SALIR:
         return html.P("Por implementar... cierre de sesión.")
 

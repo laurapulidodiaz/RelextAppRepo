@@ -1,6 +1,8 @@
 # Imports
 from controller import local_to_dataframes as ltd
 import plotly.express as px
+from controller import consulta_controller as cons
+import plotly.graph_objects as go
 
 #category= "Carbón coque y semicoque, carbón de lignito o carbón de hulla; carbón de retorta; alquitrán de carbón, de carbón lignito, hulla y otras tortas minerales"
 
@@ -90,12 +92,15 @@ def balanza_bp(product = "", year_start = 2021, month_start= "Mayo", year_end = 
         df_filtered = df_balanza[df_balanza['Descripción Arancelaria'] == product]
     else:
         df_filtered = df_balanza
-    fig = go.Figure()
-    fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Exportaciones'],
-                         marker_color='#53A668', name='Exportaciones'))
-    fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Importaciones'],
-                         marker_color='#1F628C', name='Importaciones'))
 
-    fig.update_layout(barmode='group')
+    #fig = go.Figure()
+    #fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Exportaciones'], name='Exportaciones'))
+    #fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Importaciones'], name='Importaciones'))
+    fig = go.Figure(data=[
+        go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Exportaciones'],
+                      name='Exportaciones'),
+        go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Importaciones'],
+               name='Importaciones')
+    ]).update_layout(barmode='group')
 
     return fig
