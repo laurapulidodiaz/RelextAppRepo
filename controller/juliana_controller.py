@@ -7,13 +7,11 @@ import plotly.graph_objects as go
 #category= "Carbón coque y semicoque, carbón de lignito o carbón de hulla; carbón de retorta; alquitrán de carbón, de carbón lignito, hulla y otras tortas minerales"
 
 # Barplots
-def barplot_10_top(data, country, department, category, year_start, month_start,year_end, month_end):
+def barplot_10_top(data, country, department, year_start, month_start,year_end, month_end):
     if country == None:
         country=249
     if department==None:
         department=25
-    if category==None:
-        category=""
     if year_start==None:
         year_start=2021
     if month_start==None:
@@ -25,7 +23,7 @@ def barplot_10_top(data, country, department, category, year_start, month_start,
 
     print("pruebaaa Juli", country, department)
     POS=""
-    df_exports,df_imports=ltd.dataframes_all_filtros(year_start, month_start,year_end,month_end,country,department, POS, category)
+    df_exports,df_imports=ltd.dataframes_all_filtros(year_start, month_start,year_end,month_end,country,department, POS)
 
     # For dataset of exports
     if data == 1:
@@ -55,14 +53,12 @@ def barplot_10_top(data, country, department, category, year_start, month_start,
 #
     # Histograms
 
-def make_histogram(data, country, department, category, product, year_start, month_start,
+def make_histogram(data, country, department, product, year_start, month_start,
                    year_end, month_end ):
     if country == None:
         country=249
     if department==None:
         department=25
-    if category==None:
-        category=""
     if year_start==None:
         year_start=2021
     if month_start==None:
@@ -73,7 +69,7 @@ def make_histogram(data, country, department, category, product, year_start, mon
         month_end="Mayo"
 
     df_exports, df_imports = ltd.dataframes_all_filtros(year_start, month_start, year_end, month_end, country,
-                                                        department, product, category)
+                                                        department, product)
     if data == 1:
 
         fig = px.histogram(df_exports, x='Total valor FOB doláres de la posición', nbins=1000)
