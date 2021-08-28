@@ -22,7 +22,7 @@ def cargar_geo(tipo=1,pais="",dpto="",pos="",cat="",mesini='Mayo',anoini=2021,me
 
 def cargar_geo_filtros(tipo=1,pais="",dpto="",pos="",cat="",mesini='Mayo',anoini=2021,mesfin='Mayo',anofin=2021):
 
-    grafico= ugc.update_choropleth_world(tipo,"","","","",mesini,anoini,mesfin,anofin)
+    grafico= ugc.update_choropleth_world(tipo,mesini,anoini,mesfin,anofin)
 
     layout = html.Div([
         dbc.Alert([

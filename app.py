@@ -18,7 +18,7 @@ from view import consultar_view as consultar
 from view import cargar_view as cargar
 from view import modelos_view as modelos
 from view import visualizar_view as visualizar
-from view import daniel_view as daniel
+from view import geographic_view as geov
 from view import mari_view as mari
 from view.admin import pais_view as paisv
 from view.admin import departamento_view as departamentov
@@ -78,7 +78,12 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
     elif pathname == menu.CARGAR:
         return cargar.layout
     elif pathname == menu.DANIEL:
-        return daniel.layout
+        ##
+        if click1 or click2:
+            return geov.cargar_geo_filtros(tipo_registro, pais, departamento, posicion, categoria,
+                                            mes_desde, anio_desde, mes_hasta, anio_hasta)
+        else:
+            return geov.cargar_geo()
     elif pathname == menu.MARI:
         if click1 or click2:
             return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion, categoria,
@@ -105,7 +110,7 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
             return juli.barplot_juli()
     elif pathname == menu.HISTOGRAMS:
         if click1 or click2:
-            return histogram_juli_filtro(tipo_registro,pais,departamento,categoria,posicion,
+            return juli.histogram_juli_filtro(tipo_registro,pais,departamento,categoria,posicion,
                                          anio_desde,mes_desde,anio_hasta,mes_hasta)
         else:
             return juli.histogram_juli()

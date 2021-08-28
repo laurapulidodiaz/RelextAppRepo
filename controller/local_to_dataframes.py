@@ -379,15 +379,15 @@ def ejecutar_datacleaning_imports(df_imports) :
 
     return df_imports
 
-def cargar_dataframes_export(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH) :
+def cargar_dataframes_export(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
+    
     #df_exports = DF_STORE['df_exports']
     #if type(df_exports) == None :
-        data_arancel = cargar_data_arancel()
-        df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
-        df_exports = ejecutar_datacleaning_exports(df_exports)
-        #DF_STORE['df_exports'] = df_exports
-
-        df_exports_cundinamarca = cargar_dataframe_exportacion_cundinamarca(df_exports)
+    data_arancel = cargar_data_arancel()
+    df_exports = cargar_dataframe_exportacion(data_arancel, FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+    df_exports = ejecutar_datacleaning_exports(df_exports)
+    #DF_STORE['df_exports'] = df_exports
+    df_exports_cundinamarca = cargar_dataframe_exportacion_cundinamarca(df_exports)
 
     return df_exports, df_exports_cundinamarca
 
