@@ -1,4 +1,6 @@
 # Imports
+import numpy as np
+
 from controller import local_to_dataframes as ltd
 import plotly.express as px
 from controller import consulta_controller as cons
@@ -53,6 +55,7 @@ def barplot_10_top(data, country, department, year_start, month_start,year_end, 
 
 def make_histogram(data, country, department, product, year_start, month_start,
                    year_end, month_end ):
+    global fig
     if country == None:
         country=249
     if department==None:
@@ -69,13 +72,17 @@ def make_histogram(data, country, department, product, year_start, month_start,
     df_exports, df_imports = ltd.dataframes_all_filtros(year_start, month_start, year_end, month_end, country,
                                                         department, product)
     if data == 1:
+        df = df_exports
+        df['Log. Valor FOB USD'] = np.log(df['Total valor FOB doláres de la posición'])
 
-        fig = px.histogram(df_exports, x='Total valor FOB doláres de la posición', nbins=1000)
+        fig = px.histogram(df, x='Log. Valor FOB USD', nbins=1000)
 
 
     elif data == 2:
+        df = df_imports
+        df['Log. Valor CIF USD'] = np.log(df['Valor CIF dólares de la mercancía'])
 
-        fig = px.histogram(df_imports, x='Valor CIF dólares de la mercancía', nbins=1000)
+        fig = px.histogram(df_imports, x='Log. Valor CIF USD', nbins=1000)
 
     return fig
 

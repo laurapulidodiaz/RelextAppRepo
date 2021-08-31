@@ -72,13 +72,13 @@ app.layout = html.Div(children=[
 def render_page_content(pathname, click1, click2, tipo_registro, pais, departamento, anio_desde, mes_desde,
                         anio_hasta, mes_hasta, posicion, pathname2):
     if pathname == menu.CONSULTAR:
-        return consultar.layout
+        return table.table_layout()
     elif pathname == menu.VISUALIZAR:
         return visualizar.layout
     elif pathname == menu.CARGAR:
         return cargar.layout
-    elif pathname == menu.TABLE:
-        return table.table_layout()
+    #elif pathname == menu.TABLE:
+    #    return table.table_layout()
     elif pathname == menu.DANIEL:
         if click1 or click2:
             return geov.cargar_geo_filtros(tipo_registro, pais, departamento, posicion, "",
