@@ -34,18 +34,24 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
                 df=df.groupby(by=["Fecha"]).sum()[["Total valor FOB doláres de la posición"]].reset_index()
                 fig=px.line(df, x="Fecha", y="Total valor FOB doláres de la posición",labels={"FOBDOL": "Valor FOB (USD)"})
 
-    elif tipo == "2":
-        df=df_imports
+    else:
+        if tipo == "2":
+            df=df_imports
 
-        if POS != "":
-            df=df.groupby(by=["Fecha","Descripción Arancelaria"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
-            fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
-        else:
-            if POS == "":
-                df=df.groupby(by=["Fecha","SCN - BASE 2015"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
+            if POS != "":
+                df=df.groupby(by=["Fecha","Descripción Arancelaria"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
                 fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
-
             else:
-                df=df.groupby(by=["Fecha"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
-                fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
+                if POS == "":
+                    df=df.groupby(by=["Fecha","SCN - BASE 2015"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
+                    fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
+
+                else:
+                    df=df.groupby(by=["Fecha"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
+                    fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
+        #else:
+            #df=pd.read_csv("Data/CSV/SIPRA_2019_2020_unificado.csv", sep=";",index_col="Unnamed: 0")
+            #if
+
+
     return fig
