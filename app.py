@@ -20,6 +20,7 @@ from view import modelos_view as modelos
 from view import visualizar_view as visualizar
 from view import geographic_view as geov
 from view import mari_view as mari
+from view import table_view as table
 from view.admin import pais_view as paisv
 from view.admin import departamento_view as departamentov
 from view.admin import zona_franca_view as zonafrancav
@@ -76,6 +77,8 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
         return visualizar.layout
     elif pathname == menu.CARGAR:
         return cargar.layout
+    elif pathname == menu.TABLE:
+        return table.table_layout()
     elif pathname == menu.DANIEL:
         if click1 or click2:
             return geov.cargar_geo_filtros(tipo_registro, pais, departamento, posicion, "",
