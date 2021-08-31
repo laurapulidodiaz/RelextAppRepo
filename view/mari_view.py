@@ -7,7 +7,7 @@ from controller import mari_controller as mari
 from controller import local_to_dataframes as ld
 
 def cargar_mari():
-    grafico=mari.lineplot(1,"Mayo",2021,"Mayo",2021,"","","","")
+    grafico=mari.lineplot(1,"Mayo",2021,"Mayo",2021,"","","")
 
     layout = html.Div([
         dbc.Alert([
@@ -17,14 +17,16 @@ def cargar_mari():
                 style = {"margin-bottom":"0.2rem"}
                  ),],
                 color="info"),
+        html.P("Comportamiento histórico ", style={"font-weight": "600", "font-size": "16px", "margin-top": "24px"}),
+        html.P("Según su sumatoria de valores FOB en dólares.",style={"font-weight": "normal", "font-size": "13px", "margin-top": "-16px"}),
         dcc.Graph(figure = grafico, style={"font-weight":"normal","font-size":"13px","margin-left":"24px","margin-top":"-18px"})
-    ])
 
+    ])
     return layout
 
-def cargar_mari_filtros(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin):
+def cargar_mari_filtros(tipo,pais,dpto,pos,mesini,anoini,mesfin,anofin):
     print("pruebaaaa 1111", mesini,anoini,mesfin,anofin)
-    grafico = mari.lineplot(tipo,mesini,anoini,mesfin,anofin,pais,dpto,pos,cat)
+    grafico = mari.lineplot(tipo,mesini,anoini,mesfin,anofin,pais,dpto,pos)
 
 
     layout = html.Div([
@@ -36,6 +38,9 @@ def cargar_mari_filtros(tipo,pais,dpto,pos,cat,mesini,anoini,mesfin,anofin):
                 style={"margin-bottom": "0.2rem"}
             ), ],
             color="info"),
+        html.P("Comportamiento histórico ", style={"font-weight": "600", "font-size": "16px", "margin-top": "24px"}),
+        html.P("Según su sumatoria de valores FOB en dólares.",
+               style={"font-weight": "normal", "font-size": "13px", "margin-top": "-16px"}),
         dcc.Graph(figure=grafico,
                   style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
     ])

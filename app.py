@@ -84,7 +84,7 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
             return geov.cargar_geo()
     elif pathname == menu.MARI:
         if click1 or click2:
-            return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion, "",
+            return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion,
                                             mes_desde, anio_desde, mes_hasta, anio_hasta)
         else:
             return mari.cargar_mari()
