@@ -10,15 +10,15 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
     if POS==None:
         POS=""
     if FROM_MONTH==None:
-        FROM_MONTH="Mayo"
+        FROM_MONTH="Enero"
     if FROM_YEAR_EXP==None:
-        FROM_YEAR_EXP=2021
+        FROM_YEAR_EXP=2020
     if TO_MONTH==None:
-        TO_MONTH="Mayo"
+        TO_MONTH="Diciembre"
     if TO_YEAR_EXP==None:
-        TO_YEAR_EXP=2021
+        TO_YEAR_EXP=2020
 
-    df_exports, df_imports=ltd.dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS)
+    df_exports, df_imports=ltd.dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS)
 
     if tipo==1:
         df=df_exports

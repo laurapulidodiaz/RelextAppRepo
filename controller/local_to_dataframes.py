@@ -465,11 +465,32 @@ def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS
 
     return df_exports, df_imports
 
+def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
 
+    MONTHS = ["Enero","Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
+    df_exports_line=pd.read_csv("data/CSV/df_exports_grouped.csv", low_memory=False)
+    df_imports_line=pd.read_csv("data/CSV/df_imports_grouped.csv", low_memory=False)
 
+    df_exports_line["Mes"] = pd.Categorical(df_exports_line["Mes"], categories=MONTHS, ordered=True)
+    df_imports_line["Mes"] = pd.Categorical(df_imports_line["Mes"], categories=MONTHS, ordered=True)
+    df_imports_line["Posición arancelaria"]=df_imports_line["Posición arancelaria"].astype(str)
+    df_exports_line["Posición Arancelaria"]=df_exports_line["Posición Arancelaria"].astype(str)
+    df_exports_line["Fecha"] = df_exports_line["Mes"].astype(str) + "-" + df_exports_line["Año"].astype(str)
+    df_imports_line["Fecha"] = df_imports_line["Mes"].astype(str) + "-" + df_imports_line["Año"].astype(str)
 
-    #return
+    df_exports_line=df_exports_line[(df_exports_line["Mes"]>=FROM_MONTH) & (df_exports_line["Año"]>=FROM_YEAR_EXP)]
+    df_exports_line = df_exports_line[(df_exports_line["Mes"] <= TO_MONTH) & (df_exports_line["Año"] >= TO_YEAR_EXP)]
+
+    return df_exports_line,df_imports_line
+
+def dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS):
+    df_exports, df_imports=cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
+    df_exports, df_imports=dataframes_pais(df_exports, df_imports, PAIS)
+    df_exports, df_imports=dataframes_dpto(df_exports, df_imports, DPTO)
+    df_exports, df_imports=dataframes_pos(df_exports,df_imports,POS)
+
+    return df_exports,df_imports
 
 # Ejemplo de uso
 # df_exports, df_imports, df_exports_cundinamarca, df_imports_cundinamarca = cargar_dataframes(2020, "Enero", 2020, "Enero")
