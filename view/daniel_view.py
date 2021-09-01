@@ -15,10 +15,10 @@ else :
 
 layout = html.Div([
             dbc.Alert([
-                        html.H4("Iniciar", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
+                        html.H4("Sugerencia", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
                         html.P(
-                            "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. "
-                            " Si es la primera vez que ingresas al sistema quizás quieras empezar por uno de los productos populares en exportaciones en Cundinamarca.",
+                            "Por favor, haz tu selección en algunos filtros para obtener información particular de los registros históricos. "
+                            "Por defecto, este mapa muestra las exportaciones según el país de destino en Mayo de 2021.",
                             style = {"margin-bottom":"0.2rem"}
                         ),
                     ],

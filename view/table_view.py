@@ -1,6 +1,5 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-import dash_core_components as dcc
 from controller import table_controller as tab_c
 
 def table_layout():
@@ -8,9 +7,10 @@ def table_layout():
 
     layout = html.Div([
         dbc.Alert([
-            html.H4("Iniciar", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
+            html.H4("Sugerencia", className="alert-heading", style={"font-size":"20px","padding-top":"8px", "font-weight":"400"}),
             html.P(
-                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
+                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. "
+                "Si es la primera vez que ingresas al sistema quizás quieras empezar por uno de los productos populares en exportaciones en Cundinamarca.",
                 style = {"margin-bottom":"0.2rem"}
                  ),],
                 color="info"),
