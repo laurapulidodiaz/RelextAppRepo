@@ -81,7 +81,7 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
     #    return table.table_layout()
     elif pathname == menu.DANIEL:
         if click1 or click2:
-            return geov.cargar_geo_filtros(tipo_registro, pais, departamento, posicion, "",
+            return geov.cargar_geo_filtros(tipo_registro, departamento, posicion,
                                             mes_desde, anio_desde, mes_hasta, anio_hasta)
         else:
             return geov.cargar_geo()
@@ -105,14 +105,14 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
         return zonafrancav.layout
     elif pathname == menu.BARPLOTS:
         if click1 or click2:
-            return juli.barplot_juli_filtros(tipo_registro,pais,departamento,posicion,categoria,
-                                 mes_desde,anio_desde,mes_hasta,anio_hasta)
+            return juli.barplot_juli_filtros(tipo_registro,pais,departamento,
+                                             mes_desde,anio_desde,mes_hasta,anio_hasta)
         else:
             return juli.barplot_juli()
     elif pathname == menu.HISTOGRAMS:
         if click1 or click2:
-            return juli.histogram_juli_filtro(tipo_registro,pais,departamento,categoria,posicion,
-                                         anio_desde,mes_desde,anio_hasta,mes_hasta)
+            return juli.histogram_juli_filtro(tipo_registro,pais,departamento,posicion,
+                                              anio_desde,mes_desde,anio_hasta,mes_hasta)
         else:
             return juli.histogram_juli()
     elif pathname == menu.BALANZA:

@@ -27,7 +27,7 @@ def barplot_juli():
 
 
 def barplot_juli_filtros(tipo_registro,pais,departamento,mes_desde,anio_desde,mes_hasta,anio_hasta):
-    grafico1 = juli.barplot_10_top(tipo_registro,pais,departamento,anio_desde,mes_desde,anio_hasta,mes_hasta)
+    grafico1 = juli.barplot_10_top(tipo_registro,pais,departamento, mes_desde, anio_desde,mes_hasta,anio_hasta)
 
     layout1 = html.Div([
         dbc.Alert([
