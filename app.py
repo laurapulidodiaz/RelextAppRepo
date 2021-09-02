@@ -54,7 +54,7 @@ app.layout = html.Div(children=[
     Output(content.CONTENT_DIV_ID, "children"),
     [
         Input("url", "pathname"),
-        Input('filtrar_superior', 'n_clicks'),
+        #Input('filtrar_superior', 'n_clicks'),
         Input('filtrar_inferior', 'n_clicks'),
     ],
     [
@@ -69,7 +69,7 @@ app.layout = html.Div(children=[
         State(component_id='url', component_property='pathname')
     ]
 )
-def render_page_content(pathname, click1, click2, tipo_registro, pais, departamento, anio_desde, mes_desde,
+def render_page_content(pathname, click1, tipo_registro, pais, departamento, anio_desde, mes_desde,
                         anio_hasta, mes_hasta, posicion, pathname2):
     if pathname == menu.CONSULTAR:
         return table.table_layout()
@@ -80,13 +80,13 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
     #elif pathname == menu.TABLE:
     #    return table.table_layout()
     elif pathname == menu.DANIEL:
-        if click1 or click2:
+        if click1:
             return geov.cargar_geo_filtros(tipo_registro, departamento, posicion,
                                             mes_desde, anio_desde, mes_hasta, anio_hasta)
         else:
             return geov.cargar_geo()
     elif pathname == menu.MARI:
-        if click1 or click2:
+        if click1:
             return mari.cargar_mari_filtros(tipo_registro, pais, departamento, posicion,
                                             mes_desde, anio_desde, mes_hasta, anio_hasta)
         else:
@@ -104,13 +104,13 @@ def render_page_content(pathname, click1, click2, tipo_registro, pais, departame
     elif pathname == menu.ZONAS_FRANCAS:
         return zonafrancav.layout
     elif pathname == menu.BARPLOTS:
-        if click1 or click2:
+        if click1:
             return juli.barplot_juli_filtros(tipo_registro,pais,departamento,
                                              mes_desde,anio_desde,mes_hasta,anio_hasta)
         else:
             return juli.barplot_juli()
     elif pathname == menu.HISTOGRAMS:
-        if click1 or click2:
+        if click1:
             return juli.histogram_juli_filtro(tipo_registro,pais,departamento,posicion,
                                               anio_desde,mes_desde,anio_hasta,mes_hasta)
         else:

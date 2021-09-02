@@ -18,7 +18,7 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
     if TO_YEAR_EXP==None:
         TO_YEAR_EXP=2020
     print("AAAAAAAAAAAAAAAAAAAAAAa")
-    print(type(POS))
+    print(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS,DPTO,POS)
 
     df_exports, df_imports=ltd.dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS)
 
@@ -27,13 +27,13 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
 
         if POS != "":
             df=df.groupby(by=["Mes","Año","Descripción Arancelaria"]).sum()[["Total valor FOB doláres de la posición"]].reset_index()
-            #df.sort_values(by=["Mes","Año"], inplace=True)
+            df.sort_values(by=["Año","Mes"], inplace=True)
             df["Fecha"] = df["Mes"].astype(str) + "-" + df["Año"].astype(str)
 
             fig=px.line(df, x="Fecha", y="Total valor FOB doláres de la posición", labels={"FOBDOL": "Valor FOB (USD)"})
         else:
             df=df.groupby(by=["Mes","Año"]).sum()[["Total valor FOB doláres de la posición"]].reset_index()
-            #df.sort_values(by=["Mes","Año"], inplace=True)
+            df.sort_values(by=["Año","Mes"], inplace=True)
             df["Fecha"] = df["Mes"].astype(str) + "-" + df["Año"].astype(str)
             fig=px.line(df, x="Fecha", y="Total valor FOB doláres de la posición",labels={"FOBDOL": "Valor FOB (USD)"})
 
@@ -44,11 +44,13 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
 
             if POS != "":
                 df=df.groupby(by=["Mes","Año","Descripción Arancelaria"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
+                df.sort_values(by=["Año", "Mes"], inplace=True)
                 df["Fecha"] = df["Mes"].astype(str) + "-" + df["Año"].astype(str)
                 fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
             else:
                 df=df.groupby(by=["Mes","Año"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
+                df.sort_values(by=["Año", "Mes"], inplace=True)
                 df["Fecha"] = df["Mes"].astype(str) + "-" + df["Año"].astype(str)
                 fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
 
-    return df,df_exports
+    return fig
