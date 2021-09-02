@@ -489,9 +489,6 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
     df_exports_line["Mes"] = pd.Categorical(df_exports_line["Mes"], categories=MONTHS, ordered=True)
     df_imports_line["Mes"] = pd.Categorical(df_imports_line["Mes"], categories=MONTHS, ordered=True)
 
-    print(df_exports_line.columns)
-    print(df_imports_line.columns)
-
     df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].replace(paises_dict)
     df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].astype(int)
 
