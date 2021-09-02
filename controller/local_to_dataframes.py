@@ -465,16 +465,21 @@ def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS
 
     return df_exports, df_imports
 
-def dict_paises():
+def dicts():
     paises = pd.read_csv("data/CSV/paisesall.csv", low_memory=False, delimiter=";").set_index("value")
     paises_dict = paises.to_dict()
     paises_dict = paises_dict["code"]
 
-    return paises_dict
+    dptos=pd.read_csv("data/CSV/dpto.csv", low_memory=False, delimiter=";").set_index("Dpto")
+    dptos_dict=dptos.to_dict()
+    dptos_dict=dptos_dict["Código"]
+
+
+    return paises_dict, dptos_dict
 
 def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
 
-    paises_dict=dict_paises()
+    paises_dict,dptos_dict=dicts()
 
     MONTHS = ["Enero","Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
@@ -493,8 +498,9 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
     df_imports_line["País origen"]=df_imports_line["País origen"].replace(paises_dict)
     df_imports_line["País origen"]=df_imports_line["País origen"].astype(int)
 
-    #df_imports_line["Departamento del importador"] = df_imports_line["Departamento del importador"].astype(int)
-    #df_exports_line["Departamento de origen por posición"] = df_exports_line["Departamento de origen por posición"].astype(int)
+    df_imports_line["Departamento del importador"] = df_imports_line["Departamento del importador"].replace({' ':0}).astype(int)
+    df_exports_line["Departamento de origen por posición."]=df_exports_line["Departamento de origen por posición."].replace(dptos_dict)
+    df_exports_line["Departamento de origen por posición."] = df_exports_line["Departamento de origen por posición."].replace({' ':0}).astype(int)
 
     df_imports_line["Posición arancelaria"] = df_imports_line["Posición arancelaria"].astype(str)
     df_exports_line["Posición Arancelaria"] = df_exports_line["Posición Arancelaria"].astype(str)

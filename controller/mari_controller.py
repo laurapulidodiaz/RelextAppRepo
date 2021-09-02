@@ -17,6 +17,8 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
         TO_MONTH="Diciembre"
     if TO_YEAR_EXP==None:
         TO_YEAR_EXP=2020
+    print("AAAAAAAAAAAAAAAAAAAAAAa")
+    print(type(POS))
 
     df_exports, df_imports=ltd.dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS)
 
@@ -49,4 +51,4 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
                 df["Fecha"] = df["Mes"].astype(str) + "-" + df["Año"].astype(str)
                 fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
 
-    return df,df_imports
+    return df,df_exports

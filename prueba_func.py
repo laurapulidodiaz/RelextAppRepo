@@ -14,12 +14,12 @@ def dict_paises():
 
 paises_dict=dict_paises()
 
-df,df_imports=mc.lineplot(2,"Enero",2020,"Diciembre",2020,"","","")
+df,df_exports=mc.lineplot(2,"Enero",2020,"Diciembre",2020,"","","")
 
-df_imports["Departamento del importador"] = df_imports["Departamento del importador"].astype(int)
+df_exports["Departamento de origen por posición"] = df_exports["Departamento de origen por posición"].replace({' ':0}).astype(int)
 
 print("PRUEBAAAAAAAAAAAAAAAA")
-print(df_imports.info())
-print(df_imports.head(10))
+print(df_exports.info())
+print(df_exports.head(10))
 
 
