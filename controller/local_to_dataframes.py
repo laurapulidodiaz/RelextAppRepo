@@ -465,7 +465,16 @@ def dataframes_all_filtros(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS
 
     return df_exports, df_imports
 
+def dict_paises():
+    paises = pd.read_csv("data/CSV/paisesall.csv", low_memory=False, delimiter=";").set_index("value")
+    paises_dict = paises.to_dict()
+    paises_dict = paises_dict["code"]
+
+    return paises_dict
+
 def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
+
+    paises_dict=dict_paises()
 
     MONTHS = ["Enero","Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
@@ -474,6 +483,15 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
 
     df_exports_line["Mes"] = pd.Categorical(df_exports_line["Mes"], categories=MONTHS, ordered=True)
     df_imports_line["Mes"] = pd.Categorical(df_imports_line["Mes"], categories=MONTHS, ordered=True)
+
+    print(df_exports_line.columns)
+    print(df_imports_line.columns)
+
+    df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].replace(paises_dict)
+    df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].astype(int)
+
+    #df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].replace(paises_dict)
+    #df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].astype(int)
 
     #df_imports_line["País origen"]=df_imports_line["País origen"].astype(int)
     #df_exports_line["País destino"]=df_exports_line["País destino"].astype(int)

@@ -54,4 +54,4 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
             #if
 
 
-    return df,df_exports
+    return df,df_imports
