@@ -4,7 +4,7 @@ import dash_core_components as dcc
 from controller import mari_controller as mari
 
 def cargar_mari():
-    grafico=mari.lineplot(1,"Mayo",2021,"Mayo",2021,"","","")
+    grafico=mari.lineplot(1,"Enero",2020,"Diciembre",2020,"","","")
 
     layout = html.Div([
         dbc.Alert([
