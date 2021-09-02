@@ -10,7 +10,7 @@ EXPORTACIONES = "/consultar/exportaciones"
 BALANZA_COMERCIAL = "/consultar/balanza_comercial"
 PRODUCCION = "/consultar/produccion"
 
-def cargar_sidebar(app, pagina, copi) :
+def cargar_sidebar(app, copi) :
     year_selected = datetime.today().year
     month_selected = datetime.today().month
     day_selected = datetime.today().day
@@ -26,7 +26,7 @@ def cargar_sidebar(app, pagina, copi) :
         "top": "115px",
         "left": 0,
         "width": "18rem",
-        "padding": "2rem 1rem",
+        "padding": "1.5rem 1rem",
         "background-color": "#fff",
         "border-right": "solid 2px #88888840",
         "border-bottom": "solid 2px #88888850",
@@ -34,7 +34,7 @@ def cargar_sidebar(app, pagina, copi) :
     }
 
     ICONO_STYLE = {
-        "padding": "18px 12px 12px 0px",
+        "padding": "0px 12px 12px 0px",
         "width": "48px",
     }
 
@@ -231,7 +231,7 @@ def cargar_sidebar(app, pagina, copi) :
 
     sidebar = html.Div([
             html.Img(src=app.get_asset_url('icono_gris.png'), style=ICONO_STYLE),
-            html.H3(pagina, style=PAGINA_STYLE),
+            html.H3(children='', style=PAGINA_STYLE, id='title_pagina'),
             html.H6(copi, style=TEXTO_STYLE),
             html.Hr(),
             tipo_registro_input,

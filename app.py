@@ -42,7 +42,7 @@ app.layout = html.Div(children=[
         dcc.Location(id="url"),
         menu.cargar_navbar(app),
         html.Div(children=[
-            sidebar.cargar_sidebar(app, "Consulta de Registros", "Datos Históricos"),
+            sidebar.cargar_sidebar(app, "Datos Históricos"),
             content.cargar_content(),
         ],
             style=GLOBAL_STYLE
@@ -131,6 +131,23 @@ def render_page_content(pathname, click1, tipo_registro, pais, departamento, ani
             html.P(f"La ruta {pathname} no se reconoce..."),
         ]
     )
+
+# Definimos callback para cambiar título de página
+@app.callback(
+    Output('title_pagina', "children"),
+    Input("url", "pathname")
+)
+def cambiar_titulo_pagina(pathname):
+    if pathname == menu.CONSULTAR:
+        return 'Consulta de Registros'
+    elif pathname == menu.DANIEL:
+        return 'Visualización Geográfica'
+    elif pathname == menu.MARI:
+        return 'Comportamiento Histórico'
+    elif pathname == menu.BARPLOTS:
+        return 'Productos Top'
+    elif pathname == menu.HISTOGRAMS:
+        return 'Gráficos de Distribución'
 
 
 # inicializamos la aplicacion en el server

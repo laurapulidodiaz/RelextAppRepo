@@ -95,10 +95,10 @@ def cargar_navbar(app):
             html.Img(src=app.get_asset_url('logo.png'), style=LOGO_STYLE),
             dbc.DropdownMenu(
                 children=[
-                    dbc.DropdownMenuItem("Registros de Datos", href=CONSULTAR),
+                    dbc.DropdownMenuItem("Consulta de Registros", href=CONSULTAR),
                     dbc.DropdownMenuItem("Visualización Geográfica", href=DANIEL),
                     dbc.DropdownMenuItem("Comportamiento Histórico", href=MARI),
-                    dbc.DropdownMenuItem("Productos TOP", href=BARPLOTS),
+                    dbc.DropdownMenuItem("Productos Top", href=BARPLOTS),
                     dbc.DropdownMenuItem("Gráficos de Distribución", href=HISTOGRAMS)
                 ],
                 nav=True,
