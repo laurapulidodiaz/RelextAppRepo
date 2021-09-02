@@ -490,13 +490,10 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
     df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].replace(paises_dict)
     df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].astype(int)
 
-    #df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].replace(paises_dict)
-    #df_exports_line["Código país destino (numérico)"] = df_exports_line["Código país destino (numérico)"].astype(int)
+    df_imports_line["País origen"]=df_imports_line["País origen"].replace(paises_dict)
+    df_imports_line["País origen"]=df_imports_line["País origen"].astype(int)
 
-    #df_imports_line["País origen"]=df_imports_line["País origen"].astype(int)
-    #df_exports_line["País destino"]=df_exports_line["País destino"].astype(int)
-
-    #df_imports_line[" Departamento del importador"] = df_imports_line[" Departamento del importador"].astype(int)
+    #df_imports_line["Departamento del importador"] = df_imports_line["Departamento del importador"].astype(int)
     #df_exports_line["Departamento de origen por posición"] = df_exports_line["Departamento de origen por posición"].astype(int)
 
     df_imports_line["Posición arancelaria"] = df_imports_line["Posición arancelaria"].astype(str)
@@ -513,9 +510,6 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
 
 def dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS):
     df_exports, df_imports=cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH)
-    print(df_exports.info())
-    print("--------------------")
-    print(df_imports.head(3))
     df_exports, df_imports=dataframes_pais(df_exports, df_imports, PAIS)
     df_exports, df_imports=dataframes_dpto(df_exports, df_imports, DPTO)
     df_exports, df_imports=dataframes_pos(df_exports,df_imports,POS)

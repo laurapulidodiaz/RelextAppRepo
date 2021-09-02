@@ -16,15 +16,10 @@ paises_dict=dict_paises()
 
 df,df_imports=mc.lineplot(2,"Enero",2020,"Diciembre",2020,"","","")
 
-#print(df_exports["País destino"].value_counts().sort_values(ascending=True)[0:100])
-#df_imports["País destino"]=df_exports["País destino"].replace(paises_dict)
-#df_exports["País destino"]=df_exports["País destino"].astype(int)
+df_imports["Departamento del importador"] = df_imports["Departamento del importador"].astype(int)
 
-
-df_imports["País origen"]=df_imports["País origen"].replace(paises_dict)
-df_imports["País origen"]=df_imports["País origen"].astype(int)
 print("PRUEBAAAAAAAAAAAAAAAA")
-print(df_exports.info())
-print(df_exports.head(10))
+print(df_imports.info())
+print(df_imports.head(10))
 
 

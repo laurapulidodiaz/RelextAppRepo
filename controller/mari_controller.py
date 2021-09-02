@@ -17,7 +17,6 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
         TO_MONTH="Diciembre"
     if TO_YEAR_EXP==None:
         TO_YEAR_EXP=2020
-    print("--PRUEBAAAAAAAAA---")
 
     df_exports, df_imports=ltd.dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS)
 
@@ -49,9 +48,5 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
                 df=df.groupby(by=["Mes","Año"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
                 df["Fecha"] = df["Mes"].astype(str) + "-" + df["Año"].astype(str)
                 fig=px.line(df, x="Fecha", y="Valor CIF dólares de la mercancía", labels={"Valor CIF dólares de la mercancía": "Valor CIF (USD)"})
-        #else:
-            #df=pd.read_csv("Data/CSV/SIPRA_2019_2020_unificado.csv", sep=";",index_col="Unnamed: 0")
-            #if
-
 
     return df,df_imports
