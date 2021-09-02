@@ -77,10 +77,11 @@ def cargar_sidebar(app, pagina, copi) :
             dbc.Label(children='', html_for="dropdown_pais", id='label_pais'),
             dcc.Dropdown(
                 id="dropdown_pais",
-                options=cargar_paises(),
-            ),
+                options=cargar_paises()
+            )
         ],
-        style = {"padding-top":"40px"}
+        id='block_pais',
+        style={'display': 'block'}
     )
 
     @app.callback(
@@ -92,13 +93,21 @@ def cargar_sidebar(app, pagina, copi) :
             output = 'País de Destino'
         elif input == 2:
             output = 'País de Origen'
-        elif input == 3:
-            output = 'País'
-        elif input == 4:
-            output = ''
         elif input == '':
             output = 'País'
         return output
+
+    @app.callback(
+        Output('block_pais', 'style'),
+        Input('dropdown_tipo_registro', 'value')
+    )
+    def show_hide_pais(input):
+        if input == 1:
+            return {'display': 'block'}
+        elif input == 2:
+            return {'display': 'block'}
+        elif input == 3:
+            return {'display': 'none'}
 
     input_departamento = dbc.FormGroup(
         [
@@ -121,8 +130,6 @@ def cargar_sidebar(app, pagina, copi) :
             output = 'Departamento de Destino'
         elif input == 3:
             output = 'Departamento'
-        elif input == 4:
-            output = ''
         elif input == '':
             output = 'Departamento'
         return output
@@ -218,10 +225,6 @@ def cargar_sidebar(app, pagina, copi) :
         ],
     )
 
-    boton_filtrar_s = html.Div([
-        dbc.Button("Filtrar", id="filtrar_superior", color="info", className="mr-1", n_clicks=0, style={"right":"0", "float":"right"})
-    ])
-
     boton_filtrar_i = html.Div([
         dbc.Button("Filtrar", id="filtrar_inferior", color="info", className="mr-1", n_clicks=0, style={"right":"0", "float":"right"})
     ])
@@ -233,7 +236,6 @@ def cargar_sidebar(app, pagina, copi) :
             html.Hr(),
             tipo_registro_input,
             html.Hr(),
-            boton_filtrar_s,
             input_pais,
             input_departamento,
             dbc.Label("Rango de Fechas"),
