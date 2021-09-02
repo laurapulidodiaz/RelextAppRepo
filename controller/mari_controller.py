@@ -18,7 +18,7 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
     if TO_YEAR_EXP==None:
         TO_YEAR_EXP=2020
     print("--PRUEBAAAAAAAAA---")
-    print(PAIS)
+
     df_exports, df_imports=ltd.dataframes_all_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH,PAIS, DPTO, POS)
 
     if tipo==1:
@@ -37,8 +37,9 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
             fig=px.line(df, x="Fecha", y="Total valor FOB doláres de la posición",labels={"FOBDOL": "Valor FOB (USD)"})
 
     else:
-        if tipo == "2":
+        if tipo == 2:
             df=df_imports
+
 
             if POS != "":
                 df=df.groupby(by=["Mes","Año","Descripción Arancelaria"]).sum()[["Valor CIF dólares de la mercancía"]].reset_index()
@@ -53,4 +54,4 @@ def lineplot(tipo,FROM_MONTH,FROM_YEAR_EXP,TO_MONTH,TO_YEAR_EXP,PAIS="",DPTO="",
             #if
 
 
-    return fig
+    return df,df_exports
