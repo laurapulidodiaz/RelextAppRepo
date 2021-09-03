@@ -4,3 +4,5 @@ README.md
 *.pyd
 __pycache__
 .pytest_cache
+*.pyc
+data/CSV/Importaciones/2021/M10421.csv

@@ -92,7 +92,7 @@ def cargar_navbar(app):
 
     navbar = dbc.NavbarSimple(
         children=[
-            html.Img(src=app.get_asset_url('logo.png'), style=LOGO_STYLE),
+            html.Img(src=app.get_asset_url('logo.png'), style=LOGO_STYLE, id='logo_nav', n_clicks=0),
             dbc.DropdownMenu(
                 children=[
                     dbc.DropdownMenuItem("Consulta de Registros", href=CONSULTAR),
