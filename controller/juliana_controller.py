@@ -3,11 +3,9 @@ import numpy as np
 import pandas as pd
 from controller import local_to_dataframes as ltd
 import plotly.express as px
-from controller import consulta_controller as cons
-import plotly.graph_objects as go
 
-
-# Barplots
+# Function to create Barplots for the top 10 products according to the user inputs
+# This is shown in the tab 'Productos TOP'
 def barplot_10_top(data, country, department, year_start, month_start, year_end, month_end):
     if country == None:
         country = ""
@@ -68,8 +66,8 @@ def barplot_10_top(data, country, department, year_start, month_start, year_end,
     return fig
 
 
-#
-# Histograms
+# Function to create Histograms of the value of transactions
+# This is shown in the tab 'Gráficos de Distribución'
 
 def make_histogram(data, country, department, product, year_start, month_start,
                    year_end, month_end):
@@ -91,38 +89,20 @@ def make_histogram(data, country, department, product, year_start, month_start,
     # Loading data filtered according to inputs
     df_exports, df_imports = ltd.dataframes_all_filtros(year_start, month_start, year_end, month_end, country,
                                                         department, product)
+    # For exports datasets
     if data == 1:
         df = df_exports
+        # Setting values into a logarithmic scale
         df['Log. Valor FOB USD'] = np.log(df['Total valor FOB doláres de la posición'])
-
+        # Creating histogram
         fig = px.histogram(df, x='Log. Valor FOB USD', nbins=1000)
 
-
+    # For imports datasets
     elif data == 2:
         df = df_imports
+        # Setting values into a logarithmic scale
         df['Log. Valor CIF USD'] = np.log(df['Valor CIF dólares de la mercancía'])
-
+        # Creating histogram
         fig = px.histogram(df_imports, x='Log. Valor CIF USD', nbins=1000)
-    print(data, country, department, product, year_start, month_start, year_end, month_end)
-    return fig
-
-
-# Barplot balanza comercial
-def balanza_bp(product="", year_start=2021, month_start="Mayo", year_end=2021, month_end="Mayo"):
-    df_balanza = cons.balanza_producto(year_start, month_start, year_end, month_end)
-    if product != "":
-        df_filtered = df_balanza[df_balanza['Descripción Arancelaria'] == product]
-    else:
-        df_filtered = df_balanza
-
-    # fig = go.Figure()
-    # fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Exportaciones'], name='Exportaciones'))
-    # fig.add_trace(go.Bar(x = df_filtered['Descripción Arancelaria'], y = df_filtered['Total Importaciones'], name='Importaciones'))
-    fig = go.Figure(data=[
-        go.Bar(x=df_filtered['Descripción Arancelaria'], y=df_filtered['Total Exportaciones'],
-               name='Exportaciones'),
-        go.Bar(x=df_filtered['Descripción Arancelaria'], y=df_filtered['Total Importaciones'],
-               name='Importaciones')
-    ]).update_layout(barmode='group')
 
     return fig
