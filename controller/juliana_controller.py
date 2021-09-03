@@ -1,6 +1,6 @@
 # Imports
 import numpy as np
-
+import pandas as pd
 from controller import local_to_dataframes as ltd
 import plotly.express as px
 from controller import consulta_controller as cons
@@ -10,9 +10,9 @@ import plotly.graph_objects as go
 # Barplots
 def barplot_10_top(data, country, department, year_start, month_start, year_end, month_end):
     if country == None:
-        country = 249
+        country = ""
     if department == None:
-        department = 25
+        department = ""
     if year_start == None:
         year_start = 2021
     if month_start == None:
@@ -22,7 +22,6 @@ def barplot_10_top(data, country, department, year_start, month_start, year_end,
     if month_end == None:
         month_end = "Mayo"
 
-    print("pruebaaa Juli", country, department)
     POS = ""
     df_exports, df_imports = ltd.dataframes_all_filtros(year_start, month_start, year_end, month_end, country,
                                                         department, POS)
@@ -51,6 +50,19 @@ def barplot_10_top(data, country, department, year_start, month_start, year_end,
         df_plot = df_plot.sort_values(by='Valor CIF dólares de la mercancía', ascending=False).reset_index().head(10)
         # Barplot
         fig = px.bar(df_plot, x='Valor CIF dólares de la mercancía', y='Descripción Arancelaria Corta')
+    # For production
+
+    elif data == 3:
+        # Reading production data
+        df_prod = pd.read_csv('./data/CSV/SIPRA_2019_2020_unificado.csv', sep = ";", low_memory=False)
+        # Filtering data
+        if department != "":
+            df_prod = df_prod[df_prod['Codigo del departamento']==department]
+        # Organizing data to plot
+        df_plot = df_prod.groupby('Cultivo').sum()['Producción (t)'].reset_index()
+        df_plot = df_plot.sort_values(by='Producción (t)', ascending=False).head(10)
+        # Barplot
+        fig = px.bar(df_plot, x='Producción (t)', y='Cultivo')
 
     return fig
 
@@ -62,9 +74,9 @@ def make_histogram(data, country, department, product, year_start, month_start,
                    year_end, month_end):
     global fig
     if country == None:
-        country = 249
+        country = ""
     if department == None:
-        department = 25
+        department = ""
     if year_start == None:
         year_start = 2021
     if month_start == None:
