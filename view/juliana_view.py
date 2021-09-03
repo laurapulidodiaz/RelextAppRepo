@@ -3,9 +3,12 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 
-#grafico1 = juli.barplot_10_top(1, "USA", 25, 'dollars', "", 2021, "Mayo", 2021, "Mayo", )
-#componente_grafico1 = dcc.Graph(figure = grafico1, style={"font-weight":"normal","font-size":"13px","margin-left":"24px","margin-top":"-18px"})
+'''
+This script defines the layouts that should be call when entering in the tabs: 
+'Productos TOP' and 'Gráficos de Distribución'
+'''
 
+# Defining the default plot
 def barplot_juli():
     grafico1 = juli.barplot_10_top(1,249,25, 2021, "Mayo", 2021, "Mayo")
 
@@ -26,7 +29,7 @@ def barplot_juli():
     ])
     return layout1
 
-
+# Defining the plot when user use the dropdowns
 def barplot_juli_filtros(tipo_registro,pais,departamento,mes_desde,anio_desde,mes_hasta,anio_hasta):
     grafico1 = juli.barplot_10_top(tipo_registro,pais,departamento, mes_desde, anio_desde,mes_hasta,anio_hasta)
 
@@ -38,7 +41,7 @@ def barplot_juli_filtros(tipo_registro,pais,departamento,mes_desde,anio_desde,me
     ])
     return layout1
 
-
+# Defining the default plot
 def histogram_juli():
     grafico2 = juli.make_histogram(1, 249, 25, '', 2021, "Mayo", 2021, "Mayo")
 
@@ -61,6 +64,7 @@ def histogram_juli():
 ])
     return layout2
 
+# Defining the plot when user use the dropdowns
 def histogram_juli_filtro(tipo_registro,pais,departamento,posicion,anio_desde,mes_desde,anio_hasta,mes_hasta):
     grafico2=juli.make_histogram(tipo_registro,pais,departamento,posicion,anio_desde,mes_desde,anio_hasta,mes_hasta)
 
@@ -74,39 +78,3 @@ def histogram_juli_filtro(tipo_registro,pais,departamento,posicion,anio_desde,me
 
     ])
     return layout2
-
-def balanza_default():
-    grafico = juli.balanza_bp(product="", year_start=2021, month_start="Mayo", year_end=2021, month_end="Mayo")
-
-    layout = html.Div([
-        dbc.Alert([
-            html.H4("Sugerencia", className="alert-heading",
-                    style={"font-size": "20px", "padding-top": "8px", "font-weight": "400"}),
-            html.P(
-                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
-                style={"margin-bottom": "0.2rem"}
-            ), ],
-            color="info"),
-        dcc.Graph(figure=grafico,
-                  style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
-    ])
-
-    return layout
-
-def balanza_filtros(product, year_start, month_start, year_end, month_end):
-    grafico = juli.balanza_bp(product, year_start, month_start, year_end, month_end)
-
-    layout = html.Div([
-        dbc.Alert([
-            html.H4("Iniciar", className="alert-heading",
-                    style={"font-size": "20px", "padding-top": "8px", "font-weight": "400"}),
-            html.P(
-                "Por favor, haz tu selección en algunos filtros para obtener información de registros históricos. ",
-                style={"margin-bottom": "0.2rem"}
-            ), ],
-            color="info"),
-        dcc.Graph(figure=grafico,
-                  style={"font-weight": "normal", "font-size": "13px", "margin-left": "24px", "margin-top": "-18px"})
-    ])
-
-    return layout
