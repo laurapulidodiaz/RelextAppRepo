@@ -14,6 +14,8 @@ def get_table(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
             for i in df.columns
         ],
         data=df.to_dict('records'),  # the contents of the table
+        hidden_columns=['FECH', 'Aduana', 'País destino', 'Lugar de Salida', 'Mes', 'Año', 'Razón social del exportador', 'Nit del exportador',
+                        'Posición Arancelaria', 'Código de unidad comercial de medida (numérico)', 'ññññ'],
         editable=True,              # allow editing of data inside all cells
         filter_action="native",     # allow filtering of data by user ('native') or not ('none')
         sort_action="native",       # enables data to be sorted per-column by user or not ('none')
@@ -25,9 +27,9 @@ def get_table(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
         selected_rows=[],           # indices of rows that user selects
         page_action="native",       # all data is passed to the table up-front or not ('none')
         page_current=0,             # page number that user is on
-        page_size=6,                # number of rows visible per page
+        page_size=15,                # number of rows visible per page
         style_cell={                # ensure adequate header width when text is shorter than cell's text
-            'minWidth': 95, 'maxWidth': 95, 'width': 95
+            'minWidth': 105, 'maxWidth': 105, 'width': 105
         },
         #style_cell_conditional=[    # align text columns to left. By default they are aligned to right
         #     {
