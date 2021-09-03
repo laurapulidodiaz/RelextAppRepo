@@ -484,7 +484,7 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
     MONTHS = ["Enero","Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
     df_exports_line=pd.read_csv("data/CSV/df_exports_grouped.csv", low_memory=False)
-    df_imports_line=pd.read_csv("data/CSV/df_imports_grouped2.csv", low_memory=False)
+    df_imports_line=pd.read_csv("data/CSV/df_imports_grouped.csv", low_memory=False)
 
     df_exports_line["Mes"] = pd.Categorical(df_exports_line["Mes"], categories=MONTHS, ordered=True)
     df_imports_line["Mes"] = pd.Categorical(df_imports_line["Mes"], categories=MONTHS, ordered=True)
