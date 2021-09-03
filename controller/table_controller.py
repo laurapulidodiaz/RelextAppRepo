@@ -10,12 +10,23 @@ def get_name_dpt(n, json_file):
 
 
 def get_table(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
+
+    if anoini is None:
+        anoini = 2017
+    if mesini is None:
+        mesini = 'Enero'
+    if anofin is None:
+        anofin = 2021
+    if mesfin is None:
+        mesfin = 'Diciembre'
+
     dff = ltd.cargar_dataframes(anoini, mesini, anofin, mesfin)
 
     json_dpts = "data/CSV/departamentos.json"
     dpts = json.loads(open(json_dpts).read())
     if tipo<=3:
         df = dff[tipo - 1]
+
 
 
     if tipo == 1:

@@ -72,7 +72,10 @@ app.layout = html.Div(children=[
 def render_page_content(pathname, click1, tipo_registro, pais, departamento, anio_desde, mes_desde,
                         anio_hasta, mes_hasta, posicion, pathname2):
     if pathname == menu.CONSULTAR:
-        return table.table_layout()
+        if click1:
+            return table.table_layout(tipo=tipo_registro, anoini=anio_desde, mesini=mes_desde, anofin=anio_hasta, mesfin=mes_hasta)
+        else:
+            return table.table_layout()
     elif pathname == menu.VISUALIZAR:
         return visualizar.layout
     elif pathname == menu.CARGAR:
