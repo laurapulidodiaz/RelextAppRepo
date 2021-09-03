@@ -1,13 +1,30 @@
 import dash_table
+import json
 from controller import local_to_dataframes as ltd
+
+def get_name_dpt(n, json_file):
+    for j in json_file:
+        if j['value'] == n:
+            return j['label']
+    return n
+
 
 def get_table(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
     dff = ltd.cargar_dataframes(anoini, mesini, anofin, mesfin)
 
+    json_dpts = "data/CSV/departamentos.json"
+    dpts = json.loads(open(json_dpts).read())
     if tipo<=3:
         df = dff[tipo - 1]
 
-    init_columns = ['Código país destino', 'Código lugar de salida', 'Total kilos brutos de la posición',
+
+    if tipo == 1:
+        df['Departamento de procedencia nombre'] = df['Departamento de procedencia'].apply(lambda x: get_name_dpt(x, dpts))
+
+
+    
+
+    init_columns = ['Código país destino', 'Fecha', 'Departamento de procedencia nombre',
      'Total valor FOB doláres de la posición', 'Descripción Arancelaria', 'SCN - Base 2015']
 
     
@@ -33,7 +50,7 @@ def get_table(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
         page_current=0,             # page number that user is on
         page_size=15,                # number of rows visible per page
         style_cell={                # ensure adequate header width when text is shorter than cell's text
-            'minWidth': 90, 'maxWidth': 115, 'width': 90
+            'minWidth': 50, 'maxWidth': 95, 'width': 50
         },
         #style_cell_conditional=[    # align text columns to left. By default they are aligned to right
         #     {
