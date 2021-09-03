@@ -23,6 +23,7 @@ def barplot_10_top(data, country, department, year_start, month_start, year_end,
         month_end = "Mayo"
 
     POS = ""
+    # Loading exports and imports data filtered according to inputs
     df_exports, df_imports = ltd.dataframes_all_filtros(year_start, month_start, year_end, month_end, country,
                                                         department, POS)
 
@@ -59,10 +60,10 @@ def barplot_10_top(data, country, department, year_start, month_start, year_end,
         if department != "":
             df_prod = df_prod[df_prod['Codigo del departamento']==department]
         # Organizing data to plot
-        df_plot = df_prod.groupby('Cultivo').sum()['Producción (t)'].reset_index()
-        df_plot = df_plot.sort_values(by='Producción (t)', ascending=False).head(10)
+        df_plot = df_prod.groupby('Cultivo').sum()['Area Cosechada (ha)'].reset_index()
+        df_plot = df_plot.sort_values(by='Area Cosechada (ha)', ascending=False).head(10)
         # Barplot
-        fig = px.bar(df_plot, x='Producción (t)', y='Cultivo')
+        fig = px.bar(df_plot, x='Area Cosechada (ha)', y='Cultivo')
 
     return fig
 
@@ -87,7 +88,7 @@ def make_histogram(data, country, department, product, year_start, month_start,
         month_end = "Mayo"
     if product == None:
         product = ""
-
+    # Loading data filtered according to inputs
     df_exports, df_imports = ltd.dataframes_all_filtros(year_start, month_start, year_end, month_end, country,
                                                         department, product)
     if data == 1:
