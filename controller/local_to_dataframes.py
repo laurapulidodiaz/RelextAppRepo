@@ -504,10 +504,13 @@ def cargar_lineplot(FROM_YEAR_EXP, FROM_MONTH, TO_YEAR_EXP, TO_MONTH):
 
     df_exports_line.rename(columns={"Código país destino (numérico)":"País destino","Departamento de origen por posición.":"Departamento de origen por posición"}, inplace=True)
 
-    df_exports_line=df_exports_line[(df_exports_line["Mes"]>=FROM_MONTH) & (df_exports_line["Año"]>=FROM_YEAR_EXP)]
-    df_exports_line = df_exports_line[(df_exports_line["Mes"] <= TO_MONTH) & (df_exports_line["Año"] <= TO_YEAR_EXP)]
-    df_imports_line = df_imports_line[(df_imports_line["Mes"] >= FROM_MONTH) & (df_imports_line["Año"] >= FROM_YEAR_EXP)]
-    df_imports_line = df_imports_line[(df_imports_line["Mes"] <= TO_MONTH) & (df_imports_line["Año"] <= TO_YEAR_EXP)]
+    df_exports_line = df_exports_line[((df_exports_line["Año"]>FROM_YEAR_EXP) & (df_exports_line["Año"]<TO_YEAR_EXP)) |
+                             ((df_exports_line["Año"]==FROM_YEAR_EXP) & (df_exports_line["Mes"]>=FROM_MONTH)) |
+                             ((df_exports_line["Año"]==TO_YEAR_EXP) & (df_exports_line["Mes"]<=TO_MONTH))]
+
+    df_imports_line = df_imports_line[((df_imports_line["Año"]>FROM_YEAR_EXP) & (df_imports_line["Año"]<TO_YEAR_EXP)) |
+                             ((df_imports_line["Año"]==FROM_YEAR_EXP) & (df_imports_line["Mes"]>=FROM_MONTH)) |
+                             ((df_imports_line["Año"]==TO_YEAR_EXP) & (df_imports_line["Mes"]<=TO_MONTH))]
 
     return df_exports_line,df_imports_line
 
