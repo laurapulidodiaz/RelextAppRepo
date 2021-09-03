@@ -50,6 +50,8 @@ def loc_grouped(anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
         df_imports = df_imports.groupby('País origen').sum()[['Valor FOB dólares de la mercancía']].reset_index().rename(columns=rename_dict)
 
         data_balance = df_exports['Valor FOB dólares de la mercancía'] - df_imports['Valor FOB dólares de la mercancía']
+
+        print(df_imports.head())
         return df_exports, df_imports, data_balance
 
 def balanza_producto(year_start, month_start, year_end, month_end):

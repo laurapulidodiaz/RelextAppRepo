@@ -3,7 +3,16 @@ import plotly.graph_objects as go
 from controller import local_to_dataframes as ltd
 from controller import consulta_controller as conc
 
-def update_choropleth_world(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
+def update_choropleth_world(tipo=1, anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo', dpt=None):
+
+    if anoini is None:
+        anoini = 2017
+    if mesini is None:
+        mesini = 'Enero'
+    if anofin is None:
+        anofin = 2021
+    if mesfin is None:
+        mesfin = 'Diciembre' 
 
     dataframes = conc.loc_grouped(anoini, mesini, anofin, mesfin)
 
