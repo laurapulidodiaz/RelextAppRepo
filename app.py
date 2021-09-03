@@ -76,7 +76,7 @@ def render_page_content(pathname, click1, tipo_registro, pais, departamento, ani
     elif pathname == menu.VISUALIZAR:
         return visualizar.layout
     elif pathname == menu.CARGAR:
-        return cargar.layout
+        return cargar.cargar_mensaje_inicial()
     #elif pathname == menu.TABLE:
     #    return table.table_layout()
     elif pathname == menu.DANIEL:
@@ -131,6 +131,14 @@ def render_page_content(pathname, click1, tipo_registro, pais, departamento, ani
             html.P(f"La ruta {pathname} no se reconoce..."),
         ]
     )
+
+@app.callback(Output('url', 'pathname'),
+          [Input('logo_nav', 'n_clicks')])
+def redirigir_a_home(n_clicks):
+    if n_clicks > 0 :
+        return '/'
+    else :
+        pass
 
 # Cambiar título de página
 @app.callback(
@@ -204,6 +212,26 @@ def update_label_departamento(input):
 def ocultar_pais(pathname, tipo_registro):
     if pathname == menu.DANIEL or tipo_registro == 3:
         return {'display': 'none'}
+
+@app.callback(
+    Output("loading-output_full", "children"),
+    [Input("loading-button_full", "n_clicks")]
+)
+def load_output_full(n_clicks):
+    if n_clicks:
+        return cargar.iniciar_carga(True)
+    else :
+        pass
+
+@app.callback(
+    Output("loading-output", "children"),
+    [Input("loading-button", "n_clicks")]
+)
+def load_output(n_clicks):
+    if n_clicks:
+        return cargar.iniciar_carga(False)
+    else :
+        pass
 
 # inicializamos la aplicacion en el server
 if __name__ == "__main__":

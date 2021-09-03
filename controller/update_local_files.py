@@ -1,4 +1,4 @@
-import urllib 
+import urllib
 from bs4 import BeautifulSoup
 import pandas as pd
 from zipfile import ZipFile
@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 from datetime import datetime
 import time
-                          
+
 URL_IMPORTS = "http://microdatos.dane.gov.co/index.php/catalog/473/get_microdata"
 URL_EXPORTS = "http://microdatos.dane.gov.co/index.php/catalog/472/get_microdata"
 
@@ -17,8 +17,9 @@ URL_METADATA_EXPORTACIONES = "http://microdatos.dane.gov.co/index.php/catalog/47
 
 PATH = "Data/CSV/"
 
-INIT_YEAR = 2011
 FINAL_YEAR = datetime.today().year
+INIT_YEAR = FINAL_YEAR-5
+
 EXT = ".csv"
 
 def url_list_from_web_e(URL) :
@@ -28,7 +29,7 @@ def url_list_from_web_e(URL) :
     r = urllib.request.urlopen(URL)
     site_content = r.read().decode('utf-8')
 
-    with open('saved_temp.html', 'w') as f:
+    with open('saved_temp.html', 'w', encoding="utf-8") as f:
         f.write(site_content)
 
     soup = BeautifulSoup(site_content, 'html.parser')
@@ -36,12 +37,12 @@ def url_list_from_web_e(URL) :
     for span_block in soup.findAll('span', href=False, attrs={'class':'resource-file-size'}):
         input_block = span_block.find('input', attrs={'src':'images/page_white_compressed.png'})
         try:
-            value = input_block['onclick'].split(",")        
+            value = input_block['onclick'].split(",")
             file_name.append(value[0][14:-2])
-            file_url.append(value[1][2:-3]) 
+            file_url.append(value[1][2:-3])
         except:pass
 
-    df = pd.DataFrame({'file_name':file_name,'file_url':file_url}) 
+    df = pd.DataFrame({'file_name':file_name,'file_url':file_url})
     f.close()
     os.remove("saved_temp.html")
     return df
@@ -52,7 +53,7 @@ def get_year_from_name(file_name) :
 def get_list_of_files() :
     global URL_EXPORTS
     global URL_IMPORTS
-    
+
     df_exports = url_list_from_web_e(URL_EXPORTS)
     df_exports['type'] = "Exportaciones"
     df_exports['year'] = df_exports.apply(lambda x: get_year_from_name(x['file_name']),axis=1)
@@ -83,14 +84,14 @@ def save_file_data(file, path_file, filename) :
     except Exception as e:
         print("Ya existe.")
         print(e)
-        
+
 def check_full_year(type_s, year) :
     global PATH
     DIR = PATH+type_s+"/"+str(year)
     try :
         count_of_files = len(os.listdir(DIR))
-        return count_of_files >= 12 
-    except : 
+        return count_of_files >= 12
+    except :
         return False
 
 def download_new_data_from_dane(df) :
@@ -134,7 +135,7 @@ def download_new_data_from_dane(df) :
             for name in year_zipfile.namelist():
                 if name.endswith('.zip') :
                     head, tail = os.path.split(name)
-                    zip_to_open = tail 
+                    zip_to_open = tail
                     head, sep, tail = tail.partition(' ')
                     if head.endswith('.zip') :
                         name_for_file = head[0:-5]
@@ -162,7 +163,7 @@ def download_new_data_from_dane(df) :
                                 if check_file_exist(type_s,year_s,name) != True :
                                     print("Tipo: "+type_s+", Año: "+str(year_s), "Archivo: "+name+EXT)
                                     save_file_data(month_csv, path_data, name+EXT)
-                    except BadZipFile : 
+                    except BadZipFile :
                         pass
             if len(adjust_names) > 0 :
                 pending = ""
@@ -178,7 +179,7 @@ def download_new_data_from_dane(df) :
                         os.rename(old_file, new_file)
                     except :
                         continue
-                        
+
 def url_list_from_web(URL) :
     column_name = []
     column_description = []
@@ -196,10 +197,10 @@ def url_list_from_web(URL) :
 
     for tr_block in soup.findAll('tr', href=False, attrs={'title':'Haga clic aquí para ver información de la variable'}):
         td_block = tr_block.findAll('td')
-        try:     
+        try:
             for br in td_block[2].find_all("br"):
                 br.replace_with("-o-")
-            
+
             value_string = td_block[2].text
             value_string_tolist = value_string.split("-o-")
             counter = 0
@@ -209,24 +210,24 @@ def url_list_from_web(URL) :
                 if value_str != "" :
                     if counter == 0 :
                         column_name.append(td_block[0].text)
-                        column_description.append(td_block[1].text) 
-                        column_details.append(value_str) 
+                        column_description.append(td_block[1].text)
+                        column_details.append(value_str)
                         counter+=1
                     else :
                         column_details_name.append(td_block[0].text)
                         column_details_values.append(value_str)
         except:pass
 
-    df = pd.DataFrame({'column_name':column_name,'column_description':column_description,'column_details':column_details}) 
+    df = pd.DataFrame({'column_name':column_name,'column_description':column_description,'column_details':column_details})
     df['column_description'] = df['column_description'].replace(to_replace=[r"\\t|\\n|\\r", "\t|\n|\r"], value=["",""], regex=True)
-        
-    df_values = pd.DataFrame({'column_name':column_details_name,'column_values':column_details_values}) 
+
+    df_values = pd.DataFrame({'column_name':column_details_name,'column_values':column_details_values})
     df_values[['code','value']] = df_values["column_values"].str.split(" ", 1, expand=True)
     df_values = df_values[['column_name','code','value']]
-    
+
     f.close()
     os.remove("saved_temp.html")
-    
+
     return df, df_values
 
 def download_metadata() :
@@ -239,18 +240,43 @@ def download_metadata() :
     df_values_imports.to_csv(PATH+'values_for_import_files.csv',encoding='utf-8-sig', index = False)
 
 def sync_data() :
+    global FINAL_YEAR
+    global INIT_YEAR
+
+    FINAL_YEAR = datetime.today().year
+    INIT_YEAR = FINAL_YEAR-1
+
     start_time = time.time()
     print("========================")
     print("START!!!")
     print("========================")
     df = get_list_of_files()
     download_new_data_from_dane(df)
-    download_metadata()
+    # download_metadata()
     final_time = time.time()
     diff = (final_time - start_time)/60
     print("==================")
     print("Time:",diff,"min")
     print("END!!!")
     print("==================")
-    
-sync_data()
+
+def sync_data_2011() :
+    global FINAL_YEAR
+    global INIT_YEAR
+
+    FINAL_YEAR = datetime.today().year
+    INIT_YEAR = 2011
+
+    start_time = time.time()
+    print("========================")
+    print("START!!!")
+    print("========================")
+    df = get_list_of_files()
+    download_new_data_from_dane(df)
+    # download_metadata()
+    final_time = time.time()
+    diff = (final_time - start_time)/60
+    print("==================")
+    print("Time:",diff,"min")
+    print("END!!!")
+    print("==================")
