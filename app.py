@@ -134,8 +134,8 @@ def render_page_content(pathname, click1, tipo_registro, pais, departamento, ani
 
 # Cambiar título de página
 @app.callback(
-    Output('title_pagina', "children"),
-    Input("url", "pathname")
+    Output('title_pagina', 'children'),
+    Input('url', 'pathname')
 )
 def cambiar_titulo_pagina(pathname):
     if pathname == menu.CONSULTAR:
@@ -149,40 +149,56 @@ def cambiar_titulo_pagina(pathname):
     elif pathname == menu.HISTOGRAMS:
         return 'Gráficos de Distribución'
 
+# Cambiar opciones en "Tipo de Registro"
+@app.callback(
+    Output('dropdown_tipo_registro', 'options'),
+    Input("url", "pathname")
+)
+def cambiar_tipo_registro(pathname):
+    if pathname == menu.DANIEL or pathname == menu.MARI:
+        return [
+            {"label": "Exportaciones", "value": 1},
+            {"label": "Importaciones", "value": 2}
+        ]
+    else:
+        return [
+        {"label": "Exportaciones", "value": 1},
+        {"label": "Importaciones", "value": 2},
+        {"label": "Producción", "value": 3}
+    ]
+
 # Cambiar label_pais
 @app.callback(
     Output('label_pais', 'children'),
     Input('dropdown_tipo_registro', 'value')
 )
-def update_label(input):
+def update_label_pais(input):
     if input == 1:
-        output = 'País de Destino'
+        return 'País de Destino'
     elif input == 2:
-        output = 'País de Origen'
-    elif input == '':
-        output = 'País'
-    return output
+        return 'País de Origen'
+    else:
+        return 'País'
 
 # Cambiar label_departamento
 @app.callback(
     Output('label_departamento', 'children'),
     Input('dropdown_tipo_registro', 'value')
 )
-def update_label(input):
+def update_label_departamento(input):
     if input == 1:
-        output = 'Departamento de Origen'
+        return 'Departamento de Origen'
     elif input == 2:
-        output = 'Departamento de Destino'
+        return 'Departamento de Destino'
     elif input == 3:
-        output = 'Departamento'
-    elif input == '':
-        output = 'Departamento'
-    return output
+        return 'Departamento'
+    else:
+        return 'Departamento'
 
 # Mostrar u ocultar dropdown de País
 @app.callback(
     Output('block_pais', 'style'),
-    Input("url", "pathname"),
+    Input('url', 'pathname'),
     Input('dropdown_tipo_registro', 'value')
 )
 def ocultar_pais(pathname, tipo_registro):

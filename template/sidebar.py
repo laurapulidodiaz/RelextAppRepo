@@ -3,7 +3,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 from datetime import datetime, date
 from controller.local_to_dataframes import MONTHS
-from dash.dependencies import Input, Output
+
 
 IMPORTACIONES = "/consultar/importaciones"
 EXPORTACIONES = "/consultar/exportaciones"
@@ -53,12 +53,13 @@ def cargar_sidebar(app, copi) :
         [
             dbc.Label("Tipo de Registro", html_for="dropdown_tipo_registro"),
             dcc.Dropdown(
-                id="dropdown_tipo_registro", value=1,
+                id="dropdown_tipo_registro",
+                value=1,
                 options=[
                     {"label": "Exportaciones", "value": 1},
                     {"label": "Importaciones", "value": 2},
-                    {"label": "Producción", "value": 3},
-                ],
+                    {"label": "Producción", "value": 3}
+                ]
             ),
         ]
     )
@@ -69,12 +70,12 @@ def cargar_sidebar(app, copi) :
         return paises
 
     def cargar_departamentos() :
-        departamentos = [{"value":1,"label":"Petróleo Y Derivado"},{"value":5,"label":"Antioquia"},{"value":8,"label":"Atlántico"},{"value":11,"label":"Santafé De Bogotá"},{"value":13,"label":"Bolívar"},{"value":15,"label":"Boyacá"},{"value":17,"label":"Caldas"},{"value":18,"label":"Caquetá"},{"value":19,"label":"Cauca"},{"value":20,"label":"Cesar"},{"value":23,"label":"Córdoba"},{"value":25,"label":"Cundinamarca"},{"value":27,"label":"Choco"},{"value":41,"label":"Huila"},{"value":44,"label":"Guajira"},{"value":47,"label":"Magdalena"},{"value":50,"label":"Meta"},{"value":52,"label":"Nariño"},{"value":54,"label":"Norte De Santander"},{"value":63,"label":"Quindío"},{"value":66,"label":"Risaralda"},{"value":68,"label":"Santander"},{"value":70,"label":"Sucre"},{"value":73,"label":"Tolima"},{"value":76,"label":"Valle Del Cauca"},{"value":81,"label":"Arauca"},{"value":85,"label":"Casanare"},{"value":86,"label":"Putumayo"},{"value":88,"label":"San Andrés"},{"value":91,"label":"Amazonas"},{"value":94,"label":"Guainía"},{"value":95,"label":"Guaviare"},{"value":97,"label":"Vaupés"},{"value":99,"label":"Vichada"}]
+        departamentos = [{"value":5,"label":"Antioquia"},{"value":8,"label":"Atlántico"},{"value":11,"label":"Santafé De Bogotá"},{"value":13,"label":"Bolívar"},{"value":15,"label":"Boyacá"},{"value":17,"label":"Caldas"},{"value":18,"label":"Caquetá"},{"value":19,"label":"Cauca"},{"value":20,"label":"Cesar"},{"value":23,"label":"Córdoba"},{"value":25,"label":"Cundinamarca"},{"value":27,"label":"Choco"},{"value":41,"label":"Huila"},{"value":44,"label":"Guajira"},{"value":47,"label":"Magdalena"},{"value":50,"label":"Meta"},{"value":52,"label":"Nariño"},{"value":54,"label":"Norte De Santander"},{"value":63,"label":"Quindío"},{"value":66,"label":"Risaralda"},{"value":68,"label":"Santander"},{"value":70,"label":"Sucre"},{"value":73,"label":"Tolima"},{"value":76,"label":"Valle Del Cauca"},{"value":81,"label":"Arauca"},{"value":85,"label":"Casanare"},{"value":86,"label":"Putumayo"},{"value":88,"label":"San Andrés"},{"value":91,"label":"Amazonas"},{"value":94,"label":"Guainía"},{"value":95,"label":"Guaviare"},{"value":97,"label":"Vaupés"},{"value":99,"label":"Vichada"}]
         return departamentos
 
     input_pais = dbc.FormGroup(
         [
-            dbc.Label(children='', html_for="dropdown_pais", id='label_pais'),
+            dbc.Label(children='País', html_for="dropdown_pais", id='label_pais'),
             dcc.Dropdown(
                 id="dropdown_pais",
                 options=cargar_paises()
@@ -86,7 +87,7 @@ def cargar_sidebar(app, copi) :
 
     input_departamento = dbc.FormGroup(
         [
-            dbc.Label(children='', html_for="dropdown_departamento", id='label_departamento'),
+            dbc.Label(children='Departamento', html_for="dropdown_departamento", id='label_departamento'),
             dcc.Dropdown(
                 id="dropdown_departamento",
                 options=cargar_departamentos(),
