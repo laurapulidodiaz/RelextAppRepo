@@ -84,31 +84,6 @@ def cargar_sidebar(app, copi) :
         style={'display': 'block'}
     )
 
-    @app.callback(
-        Output('label_pais', 'children'),
-        Input('dropdown_tipo_registro', 'value')
-    )
-    def update_label(input):
-        if input == 1:
-            output = 'País de Destino'
-        elif input == 2:
-            output = 'País de Origen'
-        elif input == '':
-            output = 'País'
-        return output
-
-    @app.callback(
-        Output('block_pais', 'style'),
-        Input('dropdown_tipo_registro', 'value')
-    )
-    def show_hide_pais(input):
-        if input == 1:
-            return {'display': 'block'}
-        elif input == 2:
-            return {'display': 'block'}
-        elif input == 3:
-            return {'display': 'none'}
-
     input_departamento = dbc.FormGroup(
         [
             dbc.Label(children='', html_for="dropdown_departamento", id='label_departamento'),
@@ -118,21 +93,6 @@ def cargar_sidebar(app, copi) :
             ),
         ]
     )
-
-    @app.callback(
-        Output('label_departamento', 'children'),
-        Input('dropdown_tipo_registro', 'value')
-    )
-    def update_label(input):
-        if input == 1:
-            output = 'Departamento de Origen'
-        elif input == 2:
-            output = 'Departamento de Destino'
-        elif input == 3:
-            output = 'Departamento'
-        elif input == '':
-            output = 'Departamento'
-        return output
 
     def crear_year_picker(nuevo_id) :
         years = []

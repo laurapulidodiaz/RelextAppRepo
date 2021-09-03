@@ -132,7 +132,7 @@ def render_page_content(pathname, click1, tipo_registro, pais, departamento, ani
         ]
     )
 
-# Definimos callback para cambiar título de página
+# Cambiar título de página
 @app.callback(
     Output('title_pagina', "children"),
     Input("url", "pathname")
@@ -149,6 +149,45 @@ def cambiar_titulo_pagina(pathname):
     elif pathname == menu.HISTOGRAMS:
         return 'Gráficos de Distribución'
 
+# Cambiar label_pais
+@app.callback(
+    Output('label_pais', 'children'),
+    Input('dropdown_tipo_registro', 'value')
+)
+def update_label(input):
+    if input == 1:
+        output = 'País de Destino'
+    elif input == 2:
+        output = 'País de Origen'
+    elif input == '':
+        output = 'País'
+    return output
+
+# Cambiar label_departamento
+@app.callback(
+    Output('label_departamento', 'children'),
+    Input('dropdown_tipo_registro', 'value')
+)
+def update_label(input):
+    if input == 1:
+        output = 'Departamento de Origen'
+    elif input == 2:
+        output = 'Departamento de Destino'
+    elif input == 3:
+        output = 'Departamento'
+    elif input == '':
+        output = 'Departamento'
+    return output
+
+# Mostrar u ocultar dropdown de País
+@app.callback(
+    Output('block_pais', 'style'),
+    Input("url", "pathname"),
+    Input('dropdown_tipo_registro', 'value')
+)
+def ocultar_pais(pathname, tipo_registro):
+    if pathname == menu.DANIEL or tipo_registro == 3:
+        return {'display': 'none'}
 
 # inicializamos la aplicacion en el server
 if __name__ == "__main__":
