@@ -2,7 +2,7 @@ from controller import local_to_dataframes as ltd
 from datetime import datetime
 from controller.local_to_dataframes import MONTHS
 import pandas as pd
-
+import json
 pd.options.mode.chained_assignment = None
 
 def get_two_months_ago() :
@@ -31,6 +31,12 @@ def data_cundinamarca_top10_export() :
 
         return df, year_selected, month_selected
 
+def get_ISO_alpha(pais, data):
+    try:
+        return data[data['Nombre del país'] == pais]['ISO_alpha_3'].iloc[0]
+    except:
+        return pais
+
 def loc_grouped(anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
     '''
     Devuelve 3 dataframes agrupados por país: exports, imports y balance.
@@ -41,18 +47,21 @@ def loc_grouped(anoini=2021, mesini='Mayo', anofin=2021, mesfin='Mayo'):
                     'Total valor FOB doláres de la posición':'Valor FOB dólares de la mercancía',
                     'País origen': 'País',}
 
-    df_exports, df_imports, cund, cund_ = ltd.cargar_dataframes(anoini, mesini, anofin, mesfin)
+    df_exports, df_imports, cund, cund_ = ltd.cargar_dataframes(FROM_YEAR_EXP = anoini, FROM_MONTH = mesini, TO_YEAR_EXP = anofin, TO_MONTH = mesfin)
+
+    ISO = pd.read_csv("data/CSV/ISO_alpha.csv")
+
 
     if type(cund) == int or type(cund_) == int:
-        return 0, 0, 0
+        return 0, 0
     else:
         df_exports = df_exports.groupby('Código país destino').sum()[['Total valor FOB doláres de la posición']].reset_index().rename(columns=rename_dict)
         df_imports = df_imports.groupby('País origen').sum()[['Valor FOB dólares de la mercancía']].reset_index().rename(columns=rename_dict)
 
-        data_balance = df_exports['Valor FOB dólares de la mercancía'] - df_imports['Valor FOB dólares de la mercancía']
+        df_imports['País'] = df_imports['País'].apply(lambda x: get_ISO_alpha(x, ISO))
 
-        print(df_imports.head())
-        return df_exports, df_imports, data_balance
+
+        return df_exports, df_imports
 
 def balanza_producto(year_start, month_start, year_end, month_end):
     df_exports, df_imports, _a, _b = ltd.cargar_dataframes(year_start, month_start, year_end, month_end)

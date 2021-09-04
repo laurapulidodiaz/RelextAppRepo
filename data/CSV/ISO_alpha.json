@@ -1,0 +1,1442 @@
+[
+  {
+    "ISO_alpha_2": "AD",
+    "Nombre del país": "Andorra",
+    "ISO_num": 20,
+    "ISO_alpha_3": "AND"
+  },
+  {
+    "ISO_alpha_2": "AE",
+    "Nombre del país": "Emiratos Árabes Unidos",
+    "ISO_num": 784,
+    "ISO_alpha_3": "ARE"
+  },
+  {
+    "ISO_alpha_2": "AF",
+    "Nombre del país": "Afganistán",
+    "ISO_num": 4,
+    "ISO_alpha_3": "AFG"
+  },
+  {
+    "ISO_alpha_2": "AG",
+    "Nombre del país": "Antigua y Barbuda",
+    "ISO_num": 28,
+    "ISO_alpha_3": "ATG"
+  },
+  {
+    "ISO_alpha_2": "AI",
+    "Nombre del país": "Anguila",
+    "ISO_num": 660,
+    "ISO_alpha_3": "AIA"
+  },
+  {
+    "ISO_alpha_2": "AL",
+    "Nombre del país": "Albania",
+    "ISO_num": 8,
+    "ISO_alpha_3": "ALB"
+  },
+  {
+    "ISO_alpha_2": "AM",
+    "Nombre del país": "Armenia",
+    "ISO_num": 51,
+    "ISO_alpha_3": "ARM"
+  },
+  {
+    "ISO_alpha_2": "AN",
+    "Nombre del país": "Antillas Neerlandesas",
+    "ISO_num": 530,
+    "ISO_alpha_3": "ANT"
+  },
+  {
+    "ISO_alpha_2": "AO",
+    "Nombre del país": "Angola",
+    "ISO_num": 24,
+    "ISO_alpha_3": "AGO"
+  },
+  {
+    "ISO_alpha_2": "AQ",
+    "Nombre del país": "Antártida",
+    "ISO_num": 10,
+    "ISO_alpha_3": "ATA"
+  },
+  {
+    "ISO_alpha_2": "AR",
+    "Nombre del país": "Argentina",
+    "ISO_num": 32,
+    "ISO_alpha_3": "ARG"
+  },
+  {
+    "ISO_alpha_2": "AS",
+    "Nombre del país": "Samoa Americana",
+    "ISO_num": 16,
+    "ISO_alpha_3": "ASM"
+  },
+  {
+    "ISO_alpha_2": "AT",
+    "Nombre del país": "Austria",
+    "ISO_num": 40,
+    "ISO_alpha_3": "AUT"
+  },
+  {
+    "ISO_alpha_2": "AU",
+    "Nombre del país": "Australia",
+    "ISO_num": 36,
+    "ISO_alpha_3": "AUS"
+  },
+  {
+    "ISO_alpha_2": "AW",
+    "Nombre del país": "Aruba",
+    "ISO_num": 533,
+    "ISO_alpha_3": "ABW"
+  },
+  {
+    "ISO_alpha_2": "AX",
+    "Nombre del país": "Islas Áland",
+    "ISO_num": 248,
+    "ISO_alpha_3": "ALA"
+  },
+  {
+    "ISO_alpha_2": "AZ",
+    "Nombre del país": "Azerbaiyán",
+    "ISO_num": 31,
+    "ISO_alpha_3": "AZE"
+  },
+  {
+    "ISO_alpha_2": "BA",
+    "Nombre del país": "Bosnia y Herzegovina",
+    "ISO_num": 70,
+    "ISO_alpha_3": "BIH"
+  },
+  {
+    "ISO_alpha_2": "BB",
+    "Nombre del país": "Barbados",
+    "ISO_num": 52,
+    "ISO_alpha_3": "BRB"
+  },
+  {
+    "ISO_alpha_2": "BD",
+    "Nombre del país": "Bangladesh",
+    "ISO_num": 50,
+    "ISO_alpha_3": "BGD"
+  },
+  {
+    "ISO_alpha_2": "BE",
+    "Nombre del país": "Bélgica",
+    "ISO_num": 56,
+    "ISO_alpha_3": "BEL"
+  },
+  {
+    "ISO_alpha_2": "BF",
+    "Nombre del país": "Burkina Faso",
+    "ISO_num": 854,
+    "ISO_alpha_3": "BFA"
+  },
+  {
+    "ISO_alpha_2": "BG",
+    "Nombre del país": "Bulgaria",
+    "ISO_num": 100,
+    "ISO_alpha_3": "BGR"
+  },
+  {
+    "ISO_alpha_2": "BH",
+    "Nombre del país": "Bahréin",
+    "ISO_num": 48,
+    "ISO_alpha_3": "BHR"
+  },
+  {
+    "ISO_alpha_2": "BI",
+    "Nombre del país": "Burundi",
+    "ISO_num": 108,
+    "ISO_alpha_3": "BDI"
+  },
+  {
+    "ISO_alpha_2": "BJ",
+    "Nombre del país": "Benin",
+    "ISO_num": 204,
+    "ISO_alpha_3": "BEN"
+  },
+  {
+    "ISO_alpha_2": "BL",
+    "Nombre del país": "San Bartolomé",
+    "ISO_num": 652,
+    "ISO_alpha_3": "BLM"
+  },
+  {
+    "ISO_alpha_2": "BM",
+    "Nombre del país": "Bermudas",
+    "ISO_num": 60,
+    "ISO_alpha_3": "BMU"
+  },
+  {
+    "ISO_alpha_2": "BN",
+    "Nombre del país": "Brunéi",
+    "ISO_num": 96,
+    "ISO_alpha_3": "BRN"
+  },
+  {
+    "ISO_alpha_2": "BO",
+    "Nombre del país": "Bolivia",
+    "ISO_num": 68,
+    "ISO_alpha_3": "BOL"
+  },
+  {
+    "ISO_alpha_2": "BR",
+    "Nombre del país": "Brasil",
+    "ISO_num": 76,
+    "ISO_alpha_3": "BRA"
+  },
+  {
+    "ISO_alpha_2": "BS",
+    "Nombre del país": "Bahamas",
+    "ISO_num": 44,
+    "ISO_alpha_3": "BHS"
+  },
+  {
+    "ISO_alpha_2": "BT",
+    "Nombre del país": "Bhután",
+    "ISO_num": 64,
+    "ISO_alpha_3": "BTN"
+  },
+  {
+    "ISO_alpha_2": "BV",
+    "Nombre del país": "Isla Bouvet",
+    "ISO_num": 74,
+    "ISO_alpha_3": "BVT"
+  },
+  {
+    "ISO_alpha_2": "BW",
+    "Nombre del país": "Botsuana",
+    "ISO_num": 72,
+    "ISO_alpha_3": "BWA"
+  },
+  {
+    "ISO_alpha_2": "BY",
+    "Nombre del país": "Belarús",
+    "ISO_num": 112,
+    "ISO_alpha_3": "BLR"
+  },
+  {
+    "ISO_alpha_2": "BZ",
+    "Nombre del país": "Belice",
+    "ISO_num": 84,
+    "ISO_alpha_3": "BLZ"
+  },
+  {
+    "ISO_alpha_2": "CA",
+    "Nombre del país": "Canadá",
+    "ISO_num": 124,
+    "ISO_alpha_3": "CAN"
+  },
+  {
+    "ISO_alpha_2": "CC",
+    "Nombre del país": "Islas Cocos",
+    "ISO_num": 166,
+    "ISO_alpha_3": "CCK"
+  },
+  {
+    "ISO_alpha_2": "CF",
+    "Nombre del país": "República Centro-Africana",
+    "ISO_num": 140,
+    "ISO_alpha_3": "CAF"
+  },
+  {
+    "ISO_alpha_2": "CG",
+    "Nombre del país": "Congo",
+    "ISO_num": 178,
+    "ISO_alpha_3": "COG"
+  },
+  {
+    "ISO_alpha_2": "CH",
+    "Nombre del país": "Suiza",
+    "ISO_num": 756,
+    "ISO_alpha_3": "CHE"
+  },
+  {
+    "ISO_alpha_2": "CI",
+    "Nombre del país": "Costa de Marfil",
+    "ISO_num": 384,
+    "ISO_alpha_3": "CIV"
+  },
+  {
+    "ISO_alpha_2": "CK",
+    "Nombre del país": "Islas Cook",
+    "ISO_num": 184,
+    "ISO_alpha_3": "COK"
+  },
+  {
+    "ISO_alpha_2": "CL",
+    "Nombre del país": "Chile",
+    "ISO_num": 152,
+    "ISO_alpha_3": "CHL"
+  },
+  {
+    "ISO_alpha_2": "CM",
+    "Nombre del país": "Camerún",
+    "ISO_num": 120,
+    "ISO_alpha_3": "CMR"
+  },
+  {
+    "ISO_alpha_2": "CN",
+    "Nombre del país": "China",
+    "ISO_num": 156,
+    "ISO_alpha_3": "CHN"
+  },
+  {
+    "ISO_alpha_2": "CO",
+    "Nombre del país": "Colombia",
+    "ISO_num": 170,
+    "ISO_alpha_3": "COL"
+  },
+  {
+    "ISO_alpha_2": "CR",
+    "Nombre del país": "Costa Rica",
+    "ISO_num": 188,
+    "ISO_alpha_3": "CRI"
+  },
+  {
+    "ISO_alpha_2": "CU",
+    "Nombre del país": "Cuba",
+    "ISO_num": 192,
+    "ISO_alpha_3": "CUB"
+  },
+  {
+    "ISO_alpha_2": "CV",
+    "Nombre del país": "Cabo Verde",
+    "ISO_num": 132,
+    "ISO_alpha_3": "CPV"
+  },
+  {
+    "ISO_alpha_2": "CX",
+    "Nombre del país": "Islas Christmas",
+    "ISO_num": 162,
+    "ISO_alpha_3": "CXR"
+  },
+  {
+    "ISO_alpha_2": "CY",
+    "Nombre del país": "Chipre",
+    "ISO_num": 196,
+    "ISO_alpha_3": "CYP"
+  },
+  {
+    "ISO_alpha_2": "CZ",
+    "Nombre del país": "República Checa",
+    "ISO_num": 203,
+    "ISO_alpha_3": "CZE"
+  },
+  {
+    "ISO_alpha_2": "DE",
+    "Nombre del país": "Alemania",
+    "ISO_num": 276,
+    "ISO_alpha_3": "DEU"
+  },
+  {
+    "ISO_alpha_2": "DJ",
+    "Nombre del país": "Yibuti",
+    "ISO_num": 262,
+    "ISO_alpha_3": "DJI"
+  },
+  {
+    "ISO_alpha_2": "DK",
+    "Nombre del país": "Dinamarca",
+    "ISO_num": 208,
+    "ISO_alpha_3": "DNK"
+  },
+  {
+    "ISO_alpha_2": "DM",
+    "Nombre del país": "Domínica",
+    "ISO_num": 212,
+    "ISO_alpha_3": "DMA"
+  },
+  {
+    "ISO_alpha_2": "DO",
+    "Nombre del país": "República Dominicana",
+    "ISO_num": 214,
+    "ISO_alpha_3": "DOM"
+  },
+  {
+    "ISO_alpha_2": "DZ",
+    "Nombre del país": "Argel",
+    "ISO_num": 12,
+    "ISO_alpha_3": "DZA"
+  },
+  {
+    "ISO_alpha_2": "EC",
+    "Nombre del país": "Ecuador",
+    "ISO_num": 218,
+    "ISO_alpha_3": "ECU"
+  },
+  {
+    "ISO_alpha_2": "EE",
+    "Nombre del país": "Estonia",
+    "ISO_num": 233,
+    "ISO_alpha_3": "EST"
+  },
+  {
+    "ISO_alpha_2": "EG",
+    "Nombre del país": "Egipto",
+    "ISO_num": 818,
+    "ISO_alpha_3": "EGY"
+  },
+  {
+    "ISO_alpha_2": "EH",
+    "Nombre del país": "Sahara Occidental",
+    "ISO_num": 732,
+    "ISO_alpha_3": "ESH"
+  },
+  {
+    "ISO_alpha_2": "ER",
+    "Nombre del país": "Eritrea",
+    "ISO_num": 232,
+    "ISO_alpha_3": "ERI"
+  },
+  {
+    "ISO_alpha_2": "ES",
+    "Nombre del país": "España",
+    "ISO_num": 724,
+    "ISO_alpha_3": "ESP"
+  },
+  {
+    "ISO_alpha_2": "ET",
+    "Nombre del país": "Etiopía",
+    "ISO_num": 231,
+    "ISO_alpha_3": "ETH"
+  },
+  {
+    "ISO_alpha_2": "FI",
+    "Nombre del país": "Finlandia",
+    "ISO_num": 246,
+    "ISO_alpha_3": "FIN"
+  },
+  {
+    "ISO_alpha_2": "FJ",
+    "Nombre del país": "Fiji",
+    "ISO_num": 242,
+    "ISO_alpha_3": "FJI"
+  },
+  {
+    "ISO_alpha_2": "FK",
+    "Nombre del país": "Islas Malvinas",
+    "ISO_num": 238,
+    "ISO_alpha_3": "KLK"
+  },
+  {
+    "ISO_alpha_2": "FM",
+    "Nombre del país": "Micronesia",
+    "ISO_num": 583,
+    "ISO_alpha_3": "FSM"
+  },
+  {
+    "ISO_alpha_2": "FO",
+    "Nombre del país": "Islas Faroe",
+    "ISO_num": 234,
+    "ISO_alpha_3": "FRO"
+  },
+  {
+    "ISO_alpha_2": "FR",
+    "Nombre del país": "Francia",
+    "ISO_num": 250,
+    "ISO_alpha_3": "FRA"
+  },
+  {
+    "ISO_alpha_2": "GA",
+    "Nombre del país": "Gabón",
+    "ISO_num": 266,
+    "ISO_alpha_3": "GAB"
+  },
+  {
+    "ISO_alpha_2": "GB",
+    "Nombre del país": "Reino Unido",
+    "ISO_num": 826,
+    "ISO_alpha_3": "GBR"
+  },
+  {
+    "ISO_alpha_2": "GD",
+    "Nombre del país": "Granada",
+    "ISO_num": 308,
+    "ISO_alpha_3": "GRD"
+  },
+  {
+    "ISO_alpha_2": "GE",
+    "Nombre del país": "Georgia",
+    "ISO_num": 268,
+    "ISO_alpha_3": "GEO"
+  },
+  {
+    "ISO_alpha_2": "GF",
+    "Nombre del país": "Guayana Francesa",
+    "ISO_num": 254,
+    "ISO_alpha_3": "GUF"
+  },
+  {
+    "ISO_alpha_2": "GG",
+    "Nombre del país": "Guernsey",
+    "ISO_num": 831,
+    "ISO_alpha_3": "GGY"
+  },
+  {
+    "ISO_alpha_2": "GH",
+    "Nombre del país": "Ghana",
+    "ISO_num": 288,
+    "ISO_alpha_3": "GHA"
+  },
+  {
+    "ISO_alpha_2": "GI",
+    "Nombre del país": "Gibraltar",
+    "ISO_num": 292,
+    "ISO_alpha_3": "GIB"
+  },
+  {
+    "ISO_alpha_2": "GL",
+    "Nombre del país": "Groenlandia",
+    "ISO_num": 304,
+    "ISO_alpha_3": "GRL"
+  },
+  {
+    "ISO_alpha_2": "GM",
+    "Nombre del país": "Gambia",
+    "ISO_num": 270,
+    "ISO_alpha_3": "GMB"
+  },
+  {
+    "ISO_alpha_2": "GN",
+    "Nombre del país": "Guinea",
+    "ISO_num": 324,
+    "ISO_alpha_3": "GIN"
+  },
+  {
+    "ISO_alpha_2": "GP",
+    "Nombre del país": "Guadalupe",
+    "ISO_num": 312,
+    "ISO_alpha_3": "GLP"
+  },
+  {
+    "ISO_alpha_2": "GQ",
+    "Nombre del país": "Guinea Ecuatorial",
+    "ISO_num": 226,
+    "ISO_alpha_3": "GNQ"
+  },
+  {
+    "ISO_alpha_2": "GR",
+    "Nombre del país": "Grecia",
+    "ISO_num": 300,
+    "ISO_alpha_3": "GRC"
+  },
+  {
+    "ISO_alpha_2": "GS",
+    "Nombre del país": "Georgia del Sur e Islas Sandwich del Sur",
+    "ISO_num": 239,
+    "ISO_alpha_3": "SGS"
+  },
+  {
+    "ISO_alpha_2": "GT",
+    "Nombre del país": "Guatemala",
+    "ISO_num": 320,
+    "ISO_alpha_3": "GTM"
+  },
+  {
+    "ISO_alpha_2": "GU",
+    "Nombre del país": "Guam",
+    "ISO_num": 316,
+    "ISO_alpha_3": "GUM"
+  },
+  {
+    "ISO_alpha_2": "GW",
+    "Nombre del país": "Guinea-Bissau",
+    "ISO_num": 624,
+    "ISO_alpha_3": "GNB"
+  },
+  {
+    "ISO_alpha_2": "GY",
+    "Nombre del país": "Guayana",
+    "ISO_num": 328,
+    "ISO_alpha_3": "GUY"
+  },
+  {
+    "ISO_alpha_2": "HK",
+    "Nombre del país": "Hong Kong",
+    "ISO_num": 344,
+    "ISO_alpha_3": "HKG"
+  },
+  {
+    "ISO_alpha_2": "HM",
+    "Nombre del país": "Islas Heard y McDonald",
+    "ISO_num": 334,
+    "ISO_alpha_3": "HMD"
+  },
+  {
+    "ISO_alpha_2": "HN",
+    "Nombre del país": "Honduras",
+    "ISO_num": 340,
+    "ISO_alpha_3": "HND"
+  },
+  {
+    "ISO_alpha_2": "HR",
+    "Nombre del país": "Croacia",
+    "ISO_num": 191,
+    "ISO_alpha_3": "HRV"
+  },
+  {
+    "ISO_alpha_2": "HT",
+    "Nombre del país": "Haití",
+    "ISO_num": 332,
+    "ISO_alpha_3": "HTI"
+  },
+  {
+    "ISO_alpha_2": "HU",
+    "Nombre del país": "Hungría",
+    "ISO_num": 348,
+    "ISO_alpha_3": "HUN"
+  },
+  {
+    "ISO_alpha_2": "ID",
+    "Nombre del país": "Indonesia",
+    "ISO_num": 360,
+    "ISO_alpha_3": "IDN"
+  },
+  {
+    "ISO_alpha_2": "IE",
+    "Nombre del país": "Irlanda",
+    "ISO_num": 372,
+    "ISO_alpha_3": "IRL"
+  },
+  {
+    "ISO_alpha_2": "IL",
+    "Nombre del país": "Israel",
+    "ISO_num": 376,
+    "ISO_alpha_3": "ISR"
+  },
+  {
+    "ISO_alpha_2": "IM",
+    "Nombre del país": "Isla de Man",
+    "ISO_num": 833,
+    "ISO_alpha_3": "IMN"
+  },
+  {
+    "ISO_alpha_2": "IN",
+    "Nombre del país": "India",
+    "ISO_num": 356,
+    "ISO_alpha_3": "IND"
+  },
+  {
+    "ISO_alpha_2": "IO",
+    "Nombre del país": "Territorio Británico del Océano Índico",
+    "ISO_num": 86,
+    "ISO_alpha_3": "IOT"
+  },
+  {
+    "ISO_alpha_2": "IQ",
+    "Nombre del país": "Irak",
+    "ISO_num": 368,
+    "ISO_alpha_3": "IRQ"
+  },
+  {
+    "ISO_alpha_2": "IR",
+    "Nombre del país": "Irán",
+    "ISO_num": 364,
+    "ISO_alpha_3": "IRN"
+  },
+  {
+    "ISO_alpha_2": "IS",
+    "Nombre del país": "Islandia",
+    "ISO_num": 352,
+    "ISO_alpha_3": "ISL"
+  },
+  {
+    "ISO_alpha_2": "IT",
+    "Nombre del país": "Italia",
+    "ISO_num": 380,
+    "ISO_alpha_3": "ITA"
+  },
+  {
+    "ISO_alpha_2": "JE",
+    "Nombre del país": "Jersey",
+    "ISO_num": 832,
+    "ISO_alpha_3": "JEY"
+  },
+  {
+    "ISO_alpha_2": "JM",
+    "Nombre del país": "Jamaica",
+    "ISO_num": 388,
+    "ISO_alpha_3": "JAM"
+  },
+  {
+    "ISO_alpha_2": "JO",
+    "Nombre del país": "Jordania",
+    "ISO_num": 400,
+    "ISO_alpha_3": "JOR"
+  },
+  {
+    "ISO_alpha_2": "JP",
+    "Nombre del país": "Japón",
+    "ISO_num": 392,
+    "ISO_alpha_3": "JPN"
+  },
+  {
+    "ISO_alpha_2": "KE",
+    "Nombre del país": "Kenia",
+    "ISO_num": 404,
+    "ISO_alpha_3": "KEN"
+  },
+  {
+    "ISO_alpha_2": "KG",
+    "Nombre del país": "Kirguistán",
+    "ISO_num": 417,
+    "ISO_alpha_3": "KGZ"
+  },
+  {
+    "ISO_alpha_2": "KH",
+    "Nombre del país": "Camboya",
+    "ISO_num": 116,
+    "ISO_alpha_3": "KHM"
+  },
+  {
+    "ISO_alpha_2": "KI",
+    "Nombre del país": "Kiribati",
+    "ISO_num": 296,
+    "ISO_alpha_3": "KIR"
+  },
+  {
+    "ISO_alpha_2": "KM",
+    "Nombre del país": "Comoros",
+    "ISO_num": 174,
+    "ISO_alpha_3": "COM"
+  },
+  {
+    "ISO_alpha_2": "KN",
+    "Nombre del país": "San Cristóbal y Nieves",
+    "ISO_num": 659,
+    "ISO_alpha_3": "KNA"
+  },
+  {
+    "ISO_alpha_2": "KP",
+    "Nombre del país": "Corea del Norte",
+    "ISO_num": 408,
+    "ISO_alpha_3": "PRK"
+  },
+  {
+    "ISO_alpha_2": "KR",
+    "Nombre del país": "Corea del Sur",
+    "ISO_num": 410,
+    "ISO_alpha_3": "KOR"
+  },
+  {
+    "ISO_alpha_2": "KW",
+    "Nombre del país": "Kuwait",
+    "ISO_num": 414,
+    "ISO_alpha_3": "KWT"
+  },
+  {
+    "ISO_alpha_2": "KY",
+    "Nombre del país": "Islas Caimán",
+    "ISO_num": 136,
+    "ISO_alpha_3": "CYM"
+  },
+  {
+    "ISO_alpha_2": "KZ",
+    "Nombre del país": "Kazajstán",
+    "ISO_num": 398,
+    "ISO_alpha_3": "KAZ"
+  },
+  {
+    "ISO_alpha_2": "LA",
+    "Nombre del país": "Laos",
+    "ISO_num": 418,
+    "ISO_alpha_3": "LAO"
+  },
+  {
+    "ISO_alpha_2": "LB",
+    "Nombre del país": "Líbano",
+    "ISO_num": 422,
+    "ISO_alpha_3": "LBN"
+  },
+  {
+    "ISO_alpha_2": "LC",
+    "Nombre del país": "Santa Lucía",
+    "ISO_num": 662,
+    "ISO_alpha_3": "LCA"
+  },
+  {
+    "ISO_alpha_2": "LI",
+    "Nombre del país": "Liechtenstein",
+    "ISO_num": 438,
+    "ISO_alpha_3": "LIE"
+  },
+  {
+    "ISO_alpha_2": "LK",
+    "Nombre del país": "Sri Lanka",
+    "ISO_num": 144,
+    "ISO_alpha_3": "LKA"
+  },
+  {
+    "ISO_alpha_2": "LR",
+    "Nombre del país": "Liberia",
+    "ISO_num": 430,
+    "ISO_alpha_3": "LBR"
+  },
+  {
+    "ISO_alpha_2": "LS",
+    "Nombre del país": "Lesotho",
+    "ISO_num": 426,
+    "ISO_alpha_3": "LSO"
+  },
+  {
+    "ISO_alpha_2": "LT",
+    "Nombre del país": "Lituania",
+    "ISO_num": 440,
+    "ISO_alpha_3": "LTU"
+  },
+  {
+    "ISO_alpha_2": "LU",
+    "Nombre del país": "Luxemburgo",
+    "ISO_num": 442,
+    "ISO_alpha_3": "LUX"
+  },
+  {
+    "ISO_alpha_2": "LV",
+    "Nombre del país": "Letonia",
+    "ISO_num": 428,
+    "ISO_alpha_3": "LVA"
+  },
+  {
+    "ISO_alpha_2": "LY",
+    "Nombre del país": "Libia",
+    "ISO_num": 434,
+    "ISO_alpha_3": "LBY"
+  },
+  {
+    "ISO_alpha_2": "MA",
+    "Nombre del país": "Marruecos",
+    "ISO_num": 504,
+    "ISO_alpha_3": "MAR"
+  },
+  {
+    "ISO_alpha_2": "MC",
+    "Nombre del país": "Mónaco",
+    "ISO_num": 492,
+    "ISO_alpha_3": "MCO"
+  },
+  {
+    "ISO_alpha_2": "MD",
+    "Nombre del país": "Moldova",
+    "ISO_num": 498,
+    "ISO_alpha_3": "MDA"
+  },
+  {
+    "ISO_alpha_2": "ME",
+    "Nombre del país": "Montenegro",
+    "ISO_num": 499,
+    "ISO_alpha_3": "MNE"
+  },
+  {
+    "ISO_alpha_2": "MG",
+    "Nombre del país": "Madagascar",
+    "ISO_num": 450,
+    "ISO_alpha_3": "MDG"
+  },
+  {
+    "ISO_alpha_2": "MH",
+    "Nombre del país": "Islas Marshall",
+    "ISO_num": 584,
+    "ISO_alpha_3": "MHL"
+  },
+  {
+    "ISO_alpha_2": "MK",
+    "Nombre del país": "Macedonia",
+    "ISO_num": 807,
+    "ISO_alpha_3": "MKD"
+  },
+  {
+    "ISO_alpha_2": "ML",
+    "Nombre del país": "Mali",
+    "ISO_num": 466,
+    "ISO_alpha_3": "MLI"
+  },
+  {
+    "ISO_alpha_2": "MM",
+    "Nombre del país": "Myanmar",
+    "ISO_num": 104,
+    "ISO_alpha_3": "MMR"
+  },
+  {
+    "ISO_alpha_2": "MN",
+    "Nombre del país": "Mongolia",
+    "ISO_num": 496,
+    "ISO_alpha_3": "MNG"
+  },
+  {
+    "ISO_alpha_2": "MO",
+    "Nombre del país": "Macao",
+    "ISO_num": 446,
+    "ISO_alpha_3": "MAC"
+  },
+  {
+    "ISO_alpha_2": "MQ",
+    "Nombre del país": "Martinica",
+    "ISO_num": 474,
+    "ISO_alpha_3": "MTQ"
+  },
+  {
+    "ISO_alpha_2": "MR",
+    "Nombre del país": "Mauritania",
+    "ISO_num": 478,
+    "ISO_alpha_3": "MRT"
+  },
+  {
+    "ISO_alpha_2": "MS",
+    "Nombre del país": "Montserrat",
+    "ISO_num": 500,
+    "ISO_alpha_3": "MSR"
+  },
+  {
+    "ISO_alpha_2": "MT",
+    "Nombre del país": "Malta",
+    "ISO_num": 470,
+    "ISO_alpha_3": "MLT"
+  },
+  {
+    "ISO_alpha_2": "MU",
+    "Nombre del país": "Mauricio",
+    "ISO_num": 480,
+    "ISO_alpha_3": "MUS"
+  },
+  {
+    "ISO_alpha_2": "MV",
+    "Nombre del país": "Maldivas",
+    "ISO_num": 462,
+    "ISO_alpha_3": "MDV"
+  },
+  {
+    "ISO_alpha_2": "MW",
+    "Nombre del país": "Malawi",
+    "ISO_num": 454,
+    "ISO_alpha_3": "MWI"
+  },
+  {
+    "ISO_alpha_2": "MX",
+    "Nombre del país": "México",
+    "ISO_num": 484,
+    "ISO_alpha_3": "MEX"
+  },
+  {
+    "ISO_alpha_2": "MY",
+    "Nombre del país": "Malasia",
+    "ISO_num": 458,
+    "ISO_alpha_3": "MYS"
+  },
+  {
+    "ISO_alpha_2": "MZ",
+    "Nombre del país": "Mozambique",
+    "ISO_num": 508,
+    "ISO_alpha_3": "MOZ"
+  },
+  {
+    "ISO_alpha_2": "NA",
+    "Nombre del país": "Namibia",
+    "ISO_num": 516,
+    "ISO_alpha_3": "NAM"
+  },
+  {
+    "ISO_alpha_2": "NC",
+    "Nombre del país": "Nueva Caledonia",
+    "ISO_num": 540,
+    "ISO_alpha_3": "NCL"
+  },
+  {
+    "ISO_alpha_2": "NE",
+    "Nombre del país": "Níger",
+    "ISO_num": 562,
+    "ISO_alpha_3": "NER"
+  },
+  {
+    "ISO_alpha_2": "NF",
+    "Nombre del país": "Islas Norkfolk",
+    "ISO_num": 574,
+    "ISO_alpha_3": "NFK"
+  },
+  {
+    "ISO_alpha_2": "NG",
+    "Nombre del país": "Nigeria",
+    "ISO_num": 566,
+    "ISO_alpha_3": "NGA"
+  },
+  {
+    "ISO_alpha_2": "NI",
+    "Nombre del país": "Nicaragua",
+    "ISO_num": 558,
+    "ISO_alpha_3": "NIC"
+  },
+  {
+    "ISO_alpha_2": "NL",
+    "Nombre del país": "Países Bajos",
+    "ISO_num": 528,
+    "ISO_alpha_3": "NLD"
+  },
+  {
+    "ISO_alpha_2": "NO",
+    "Nombre del país": "Noruega",
+    "ISO_num": 578,
+    "ISO_alpha_3": "NOR"
+  },
+  {
+    "ISO_alpha_2": "NP",
+    "Nombre del país": "Nepal",
+    "ISO_num": 524,
+    "ISO_alpha_3": "NPL"
+  },
+  {
+    "ISO_alpha_2": "NR",
+    "Nombre del país": "Nauru",
+    "ISO_num": 520,
+    "ISO_alpha_3": "NRU"
+  },
+  {
+    "ISO_alpha_2": "NU",
+    "Nombre del país": "Niue",
+    "ISO_num": 570,
+    "ISO_alpha_3": "NIU"
+  },
+  {
+    "ISO_alpha_2": "NZ",
+    "Nombre del país": "Nueva Zelanda",
+    "ISO_num": 554,
+    "ISO_alpha_3": "NZL"
+  },
+  {
+    "ISO_alpha_2": "OM",
+    "Nombre del país": "Omán",
+    "ISO_num": 512,
+    "ISO_alpha_3": "OMN"
+  },
+  {
+    "ISO_alpha_2": "PA",
+    "Nombre del país": "Panamá",
+    "ISO_num": 591,
+    "ISO_alpha_3": "PAN"
+  },
+  {
+    "ISO_alpha_2": "PE",
+    "Nombre del país": "Perú",
+    "ISO_num": 604,
+    "ISO_alpha_3": "PER"
+  },
+  {
+    "ISO_alpha_2": "PF",
+    "Nombre del país": "Polinesia Francesa",
+    "ISO_num": 258,
+    "ISO_alpha_3": "PYF"
+  },
+  {
+    "ISO_alpha_2": "PG",
+    "Nombre del país": "Papúa Nueva Guinea",
+    "ISO_num": 598,
+    "ISO_alpha_3": "PNG"
+  },
+  {
+    "ISO_alpha_2": "PH",
+    "Nombre del país": "Filipinas",
+    "ISO_num": 608,
+    "ISO_alpha_3": "PHL"
+  },
+  {
+    "ISO_alpha_2": "PK",
+    "Nombre del país": "Pakistán",
+    "ISO_num": 586,
+    "ISO_alpha_3": "PAK"
+  },
+  {
+    "ISO_alpha_2": "PL",
+    "Nombre del país": "Polonia",
+    "ISO_num": 616,
+    "ISO_alpha_3": "POL"
+  },
+  {
+    "ISO_alpha_2": "PM",
+    "Nombre del país": "San Pedro y Miquelón",
+    "ISO_num": 666,
+    "ISO_alpha_3": "SPM"
+  },
+  {
+    "ISO_alpha_2": "PN",
+    "Nombre del país": "Islas Pitcairn",
+    "ISO_num": 612,
+    "ISO_alpha_3": "PCN"
+  },
+  {
+    "ISO_alpha_2": "PR",
+    "Nombre del país": "Puerto Rico",
+    "ISO_num": 630,
+    "ISO_alpha_3": "PRI"
+  },
+  {
+    "ISO_alpha_2": "PS",
+    "Nombre del país": "Palestina",
+    "ISO_num": 275,
+    "ISO_alpha_3": "PSE"
+  },
+  {
+    "ISO_alpha_2": "PT",
+    "Nombre del país": "Portugal",
+    "ISO_num": 620,
+    "ISO_alpha_3": "PRT"
+  },
+  {
+    "ISO_alpha_2": "PW",
+    "Nombre del país": "Islas Palaos",
+    "ISO_num": 585,
+    "ISO_alpha_3": "PLW"
+  },
+  {
+    "ISO_alpha_2": "PY",
+    "Nombre del país": "Paraguay",
+    "ISO_num": 600,
+    "ISO_alpha_3": "PRY"
+  },
+  {
+    "ISO_alpha_2": "QA",
+    "Nombre del país": "Qatar",
+    "ISO_num": 634,
+    "ISO_alpha_3": "QAT"
+  },
+  {
+    "ISO_alpha_2": "RE",
+    "Nombre del país": "Reunión",
+    "ISO_num": 638,
+    "ISO_alpha_3": "REU"
+  },
+  {
+    "ISO_alpha_2": "RO",
+    "Nombre del país": "Rumanía",
+    "ISO_num": 642,
+    "ISO_alpha_3": "ROU"
+  },
+  {
+    "ISO_alpha_2": "RS",
+    "Nombre del país": "Serbia y Montenegro",
+    "ISO_num": 688,
+    "ISO_alpha_3": "SRB"
+  },
+  {
+    "ISO_alpha_2": "RU",
+    "Nombre del país": "Rusia",
+    "ISO_num": 643,
+    "ISO_alpha_3": "RUS"
+  },
+  {
+    "ISO_alpha_2": "RW",
+    "Nombre del país": "Ruanda",
+    "ISO_num": 646,
+    "ISO_alpha_3": "RWA"
+  },
+  {
+    "ISO_alpha_2": "SA",
+    "Nombre del país": "Arabia Saudita",
+    "ISO_num": 682,
+    "ISO_alpha_3": "SAU"
+  },
+  {
+    "ISO_alpha_2": "SB",
+    "Nombre del país": "Islas Solomón",
+    "ISO_num": 90,
+    "ISO_alpha_3": "SLB"
+  },
+  {
+    "ISO_alpha_2": "SC",
+    "Nombre del país": "Seychelles",
+    "ISO_num": 690,
+    "ISO_alpha_3": "SYC"
+  },
+  {
+    "ISO_alpha_2": "SD",
+    "Nombre del país": "Sudán",
+    "ISO_num": 736,
+    "ISO_alpha_3": "SDN"
+  },
+  {
+    "ISO_alpha_2": "SE",
+    "Nombre del país": "Suecia",
+    "ISO_num": 752,
+    "ISO_alpha_3": "SWE"
+  },
+  {
+    "ISO_alpha_2": "SG",
+    "Nombre del país": "Singapur",
+    "ISO_num": 702,
+    "ISO_alpha_3": "SGP"
+  },
+  {
+    "ISO_alpha_2": "SH",
+    "Nombre del país": "Santa Elena",
+    "ISO_num": 654,
+    "ISO_alpha_3": "SHN"
+  },
+  {
+    "ISO_alpha_2": "SI",
+    "Nombre del país": "Eslovenia",
+    "ISO_num": 705,
+    "ISO_alpha_3": "SVN"
+  },
+  {
+    "ISO_alpha_2": "SJ",
+    "Nombre del país": "Islas Svalbard y Jan Mayen",
+    "ISO_num": 744,
+    "ISO_alpha_3": "SJM"
+  },
+  {
+    "ISO_alpha_2": "SK",
+    "Nombre del país": "Eslovaquia",
+    "ISO_num": 703,
+    "ISO_alpha_3": "SVK"
+  },
+  {
+    "ISO_alpha_2": "SL",
+    "Nombre del país": "Sierra Leona",
+    "ISO_num": 694,
+    "ISO_alpha_3": "SLE"
+  },
+  {
+    "ISO_alpha_2": "SM",
+    "Nombre del país": "San Marino",
+    "ISO_num": 674,
+    "ISO_alpha_3": "SMR"
+  },
+  {
+    "ISO_alpha_2": "SN",
+    "Nombre del país": "Senegal",
+    "ISO_num": 686,
+    "ISO_alpha_3": "SEN"
+  },
+  {
+    "ISO_alpha_2": "SO",
+    "Nombre del país": "Somalia",
+    "ISO_num": 706,
+    "ISO_alpha_3": "SOM"
+  },
+  {
+    "ISO_alpha_2": "SR",
+    "Nombre del país": "Surinam",
+    "ISO_num": 740,
+    "ISO_alpha_3": "SUR"
+  },
+  {
+    "ISO_alpha_2": "ST",
+    "Nombre del país": "Santo Tomé y Príncipe",
+    "ISO_num": 678,
+    "ISO_alpha_3": "STP"
+  },
+  {
+    "ISO_alpha_2": "SV",
+    "Nombre del país": "El Salvador",
+    "ISO_num": 222,
+    "ISO_alpha_3": "SLV"
+  },
+  {
+    "ISO_alpha_2": "SY",
+    "Nombre del país": "Siria",
+    "ISO_num": 760,
+    "ISO_alpha_3": "SYR"
+  },
+  {
+    "ISO_alpha_2": "SZ",
+    "Nombre del país": "Suazilandia",
+    "ISO_num": 748,
+    "ISO_alpha_3": "SWZ"
+  },
+  {
+    "ISO_alpha_2": "TC",
+    "Nombre del país": "Islas Turcas y Caicos",
+    "ISO_num": 796,
+    "ISO_alpha_3": "TCA"
+  },
+  {
+    "ISO_alpha_2": "TD",
+    "Nombre del país": "Chad",
+    "ISO_num": 148,
+    "ISO_alpha_3": "TCD"
+  },
+  {
+    "ISO_alpha_2": "TF",
+    "Nombre del país": "Territorios Australes Franceses",
+    "ISO_num": 260,
+    "ISO_alpha_3": "ATF"
+  },
+  {
+    "ISO_alpha_2": "TG",
+    "Nombre del país": "Togo",
+    "ISO_num": 768,
+    "ISO_alpha_3": "TGO"
+  },
+  {
+    "ISO_alpha_2": "TH",
+    "Nombre del país": "Tailandia",
+    "ISO_num": 764,
+    "ISO_alpha_3": "THA"
+  },
+  {
+    "ISO_alpha_2": "TH",
+    "Nombre del país": "Tanzania",
+    "ISO_num": 834,
+    "ISO_alpha_3": "TZA"
+  },
+  {
+    "ISO_alpha_2": "TJ",
+    "Nombre del país": "Tayikistán",
+    "ISO_num": 762,
+    "ISO_alpha_3": "TJK"
+  },
+  {
+    "ISO_alpha_2": "TK",
+    "Nombre del país": "Tokelau",
+    "ISO_num": 772,
+    "ISO_alpha_3": "TKL"
+  },
+  {
+    "ISO_alpha_2": "TL",
+    "Nombre del país": "Timor-Leste",
+    "ISO_num": 626,
+    "ISO_alpha_3": "TLS"
+  },
+  {
+    "ISO_alpha_2": "TM",
+    "Nombre del país": "Turkmenistán",
+    "ISO_num": 795,
+    "ISO_alpha_3": "TKM"
+  },
+  {
+    "ISO_alpha_2": "TN",
+    "Nombre del país": "Túnez",
+    "ISO_num": 788,
+    "ISO_alpha_3": "TUN"
+  },
+  {
+    "ISO_alpha_2": "TO",
+    "Nombre del país": "Tonga",
+    "ISO_num": 776,
+    "ISO_alpha_3": "TON"
+  },
+  {
+    "ISO_alpha_2": "TR",
+    "Nombre del país": "Turquía",
+    "ISO_num": 792,
+    "ISO_alpha_3": "TUR"
+  },
+  {
+    "ISO_alpha_2": "TT",
+    "Nombre del país": "Trinidad y Tobago",
+    "ISO_num": 780,
+    "ISO_alpha_3": "TTO"
+  },
+  {
+    "ISO_alpha_2": "TV",
+    "Nombre del país": "Tuvalu",
+    "ISO_num": 798,
+    "ISO_alpha_3": "TUV"
+  },
+  {
+    "ISO_alpha_2": "TW",
+    "Nombre del país": "Taiwán",
+    "ISO_num": 158,
+    "ISO_alpha_3": "TWN"
+  },
+  {
+    "ISO_alpha_2": "UA",
+    "Nombre del país": "Ucrania",
+    "ISO_num": 804,
+    "ISO_alpha_3": "UKR"
+  },
+  {
+    "ISO_alpha_2": "UG",
+    "Nombre del país": "Uganda",
+    "ISO_num": 800,
+    "ISO_alpha_3": "UGA"
+  },
+  {
+    "ISO_alpha_2": "US",
+    "Nombre del país": "Estados Unidos de América",
+    "ISO_num": 840,
+    "ISO_alpha_3": "USA"
+  },
+  {
+    "ISO_alpha_2": "UY",
+    "Nombre del país": "Uruguay",
+    "ISO_num": 858,
+    "ISO_alpha_3": "URY"
+  },
+  {
+    "ISO_alpha_2": "UZ",
+    "Nombre del país": "Uzbekistán",
+    "ISO_num": 860,
+    "ISO_alpha_3": "UZB"
+  },
+  {
+    "ISO_alpha_2": "VA",
+    "Nombre del país": "Ciudad del Vaticano",
+    "ISO_num": 336,
+    "ISO_alpha_3": "VAT"
+  },
+  {
+    "ISO_alpha_2": "VC",
+    "Nombre del país": "San Vicente y las Granadinas",
+    "ISO_num": 670,
+    "ISO_alpha_3": "VCT"
+  },
+  {
+    "ISO_alpha_2": "VE",
+    "Nombre del país": "Venezuela",
+    "ISO_num": 862,
+    "ISO_alpha_3": "VEN"
+  },
+  {
+    "ISO_alpha_2": "VG",
+    "Nombre del país": "Islas Vírgenes Británicas",
+    "ISO_num": 92,
+    "ISO_alpha_3": "VGB"
+  },
+  {
+    "ISO_alpha_2": "VI",
+    "Nombre del país": "Islas Vírgenes de los Estados Unidos de América",
+    "ISO_num": 850,
+    "ISO_alpha_3": "VIR"
+  },
+  {
+    "ISO_alpha_2": "VN",
+    "Nombre del país": "Vietnam",
+    "ISO_num": 704,
+    "ISO_alpha_3": "VNM"
+  },
+  {
+    "ISO_alpha_2": "VU",
+    "Nombre del país": "Vanuatu",
+    "ISO_num": 548,
+    "ISO_alpha_3": "VUT"
+  },
+  {
+    "ISO_alpha_2": "WF",
+    "Nombre del país": "Wallis y Futuna",
+    "ISO_num": 876,
+    "ISO_alpha_3": "WLF"
+  },
+  {
+    "ISO_alpha_2": "WS",
+    "Nombre del país": "Samoa",
+    "ISO_num": 882,
+    "ISO_alpha_3": "WSM"
+  },
+  {
+    "ISO_alpha_2": "YE",
+    "Nombre del país": "Yemen",
+    "ISO_num": 887,
+    "ISO_alpha_3": "YEM"
+  },
+  {
+    "ISO_alpha_2": "YT",
+    "Nombre del país": "Mayotte",
+    "ISO_num": 175,
+    "ISO_alpha_3": "MYT"
+  },
+  {
+    "ISO_alpha_2": "ZA",
+    "Nombre del país": "Sudáfrica",
+    "ISO_num": 710,
+    "ISO_alpha_3": "ZAF"
+  }
+]

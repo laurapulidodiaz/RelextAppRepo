@@ -84,8 +84,8 @@ def render_page_content(pathname, click1, tipo_registro, pais, departamento, ani
     #    return table.table_layout()
     elif pathname == menu.DANIEL:
         if click1:
-            return geov.cargar_geo_filtros(tipo_registro, departamento, posicion,
-                                            mes_desde, anio_desde, mes_hasta, anio_hasta)
+            return geov.cargar_geo_filtros(tipo=tipo_registro,pos=posicion, dpt=departamento,
+            anoini=anio_desde,mesini=mes_desde,anofin=anio_hasta, mesfin=mes_hasta)                             
         else:
             return geov.cargar_geo()
     elif pathname == menu.MARI:

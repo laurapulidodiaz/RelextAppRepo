@@ -23,9 +23,9 @@ def cargar_geo():
 
     return layout
 
-def cargar_geo_filtros(tipo=1,pos=None,cat=None,anoini=2021,mesini='Mayo',anofin=2021, mesfin='Mayo'):
+def cargar_geo_filtros(tipo=1,pos=None, dpt=None,anoini=2021,mesini='Mayo',anofin=2021, mesfin='Mayo'):
 
-    grafico= ugc.update_choropleth_world(tipo,anoini,mesini,anofin, mesfin)
+    grafico= ugc.update_choropleth_world(tipo,anoini,mesini,anofin, mesfin, dpt)
 
     layout = html.Div([
         html.P("Exportaciones según el país de destino",
